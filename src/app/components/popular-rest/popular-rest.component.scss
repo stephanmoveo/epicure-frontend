@@ -1,0 +1,46 @@
+@import '../../../assets/styles/extends';
+@import '../../../assets/styles/fonts';
+
+.pop-container {
+  margin-bottom: 87px;
+
+  & .banner-top {
+    margin: 0 0 153px 0;
+    @extend %pop-row;
+    @extend %allRest;
+  }
+
+  .banner-bottom {
+    margin: 0 0 87px 0;
+    @extend %pop-row;
+    @extend %allRest;
+
+    .rest-name {
+      font-family: 'Quicksand-SemiBold';
+      text-align: center;
+      font-size: 30px;
+      margin: 0 0 23px 0;
+    //   font-weight: unset;
+    }
+
+    .card-bottom {
+      img {
+        @extend %absoluteCenter;
+        bottom: 50px;
+        width: 39px;
+      }
+    }
+
+    h3 {
+      font-family: 'Quicksand-SemiBold';
+      font-size: 38.4px;
+      width: 60%;
+      margin: auto;
+    }
+
+    .font24 {
+      width: 90%;
+      margin: 20px auto;
+    }
+  }
+}

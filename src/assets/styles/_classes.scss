@@ -1,0 +1,67 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-no-warp {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.flex-Col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.wtdh80ma {
+  width: 77%;
+  max-width: 1102px;
+  margin: auto;
+  position: relative;
+}
+
+.wtdh100ma {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+.wtdh70ma {
+  width: 55%;
+  margin: auto;
+  min-width: 1042px;
+}
+
+.banner-title {
+  text-align: center;
+  font-size: 30px;
+  margin: 0 0 42px 0;
+  font-weight: unset;
+}
+
+.font24 {
+  font-size: 24px;
+}
+
+.font25 {
+  font-size: 25px;
+}
+
+.font30 {
+  font-size: 30px;
+}
+
+.aTxtDec {
+  text-decoration: none;
+  color: black;
+}

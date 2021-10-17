@@ -1,0 +1,123 @@
+@import './fonts';
+@import"./colors";
+
+%stores {
+  box-sizing: border-box;
+  justify-content: space-evenly;
+  padding: 5px;
+  align-content: center;
+  width: 180px;
+  height: 53px;
+  border: 1px solid;
+  margin: 0px 5% 0 0;
+  border-radius: 9.6px;
+  text-align: center;
+
+  h4 {
+    font-size: 12px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+}
+
+%marginTop-3 {
+  margin: -3px 0 0 0;
+}
+
+%searchWarp {
+  box-sizing: border-box;
+  display: flex;
+  border: solid 2px #c2c2c2;
+  padding: 0px 13px 0 16px;
+  border-radius: 4px;
+  align-items: center;
+}
+
+%searchWarp2 {
+    box-sizing: border-box;
+    display: flex;
+    border: solid 2px #c2c2c2;
+    padding: 0px 13px 0 20px;
+    border-radius: 4px;
+  }
+
+%searchBanner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 222px;
+  width: 50%;
+  max-width: 781px;
+  background-color: rgba(255, 255, 255, 0.88);
+}
+
+%absoluteCenter {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+%pop-row {
+  .pop-row {
+    box-sizing: border-box;
+    justify-content: space-between;
+    position: relative;
+
+    & article {
+      max-width: 360px;
+      position: relative;
+
+      .card-bottom {
+        background-color: $bgcBeige;
+        text-align: center;
+        padding: 28px 35px 20px 35px;
+        margin-top: -3px;
+
+
+        h1 {
+          font-family: Quicksand-SemiBold;
+          font-size: 40px;
+          margin: 0 0 15px 0;
+        }
+
+        .line-price {
+          width: 80%;
+          position: absolute;
+          bottom: 11px;
+          justify-content: space-between;
+          align-items: center;
+
+          .line {
+            border-bottom: 1px solid #C7C6C1;
+            width: 33%;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+%allRest {
+  .allrestaurants {
+    margin: 31px 0 0 0;
+    position: absolute;
+    right: 0;
+    align-items: baseline;
+
+    a {
+      font-size: 30px;
+      font-family: 'Quicksand-SemiBold';
+    }
+
+    img {
+      margin: 0 0 0 12px;
+      width: 24px;
+    }
+  }
+}

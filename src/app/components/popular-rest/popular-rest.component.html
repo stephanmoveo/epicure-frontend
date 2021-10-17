@@ -1,0 +1,43 @@
+<div class="pop-container wtdh80ma">
+  <section class="banner-top">
+    <h1 class="banner-title">THE POPULAR RESTAURANTS IN EPICURE :</h1>
+    <div class="pop-row flex">
+      <article class="dishes" *ngFor="let item of this.restaurantsService.restaurantsArr[0].restArr | slice:0:3">
+        <img [src]="item.img" />
+        <div class="card-bottom">
+          <h1>{{item.restName}}</h1>
+          <p class="font25">{{item.chef}}</p>
+        </div>
+      </article>
+    </div>
+    <div class="allrestaurants flex">
+      <a class="aTxtDec" href="#">All Restaurants</a>
+      <img src={{this.iconsService.arrowIcon}} />
+    </div>
+  </section>
+  <section class="banner-bottom">
+    <h1 class="banner-title">SIGNATURE DISH OF :</h1>
+    <div class="pop-row flex">
+      <div *ngFor="let item of this.restaurantsService.restaurantsArr[0].restArr | slice:2:5 ">
+        <h1 class="rest-name">{{item.restName}}</h1>
+        <article>
+          <div class="dishes" *ngIf="item.dishes">
+            <div *ngFor="let elem of item.dishes">
+              <img src={{elem.img}} />
+              <div class="card-bottom" style="height: 364px;">
+                  <h3>{{elem.dishName}}</h3>
+                  <p class="font24">{{elem.description}}</p>
+                  <img [src]="elem.logo" />
+                <div class="flex line-price">
+                  <div class="line"></div>
+                  <p class="font25">{{elem.price | currency:"ILS":"symbol"}}</p>
+                  <div class="line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>

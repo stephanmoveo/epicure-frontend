@@ -1,0 +1,45 @@
+@import '../../../assets/styles/extends';
+@import '../../../assets/styles/colors';
+@import '../../../assets/styles/fonts';
+
+.about-container {
+  background-color: $bgcGrey;
+  margin: 117px 0 38px 0;
+
+  .about-warp {
+    padding: 30px 0;
+    align-items: center;
+    height: 526px;
+    box-sizing: border-box;
+
+    .about-row-logo {
+      margin: 0 0 0 182px;
+
+      img {
+        width: 178px;
+      }
+    }
+
+    .about-row-txt {
+      h1 {
+        font-size: $fontsize30;
+        font-weight: unset;
+      }
+
+      p {
+        margin: 20px 0;
+        font-size: $fontsize22;
+        width: 567px;
+
+      }
+    }
+
+    .stores {
+      @extend %stores;
+
+      img {
+        width: 23px;
+      }
+    }
+  }
+}

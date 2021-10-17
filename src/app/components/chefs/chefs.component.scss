@@ -1,0 +1,75 @@
+@import '../../../assets/styles/extends';
+@import '../../../assets/styles/functions';
+@import '../../../assets/styles/colors';
+
+.chef-container {
+  margin-top: 100px;
+
+  .chef-week-warp {
+    height: 469px;
+  }
+
+  .banner-title {
+    margin: 0 0 42px 0;
+    font-weight: unset;
+  }
+
+  .chef-row {
+    width: 100%;
+    justify-content: space-between;
+
+    img {
+      width: 443px;
+    }
+
+    .chef-col {
+      width: 43%;
+      height: 338px;
+      max-width: 443px;
+      margin: 0 69px 0 0;
+    }
+
+    h1 {
+      background-color: #ffffffb3;
+      position: relative;
+      bottom: 100px;
+      text-align: center;
+      width: 100%;
+      padding: 24px 0;
+      font-size: $fontsize40;
+    }
+
+    p {
+      font-size: rem(25px);
+    }
+  }
+
+  .chef-rest-warp {
+    margin-top: 58px;
+
+    h1 {
+      margin: 0px 0 23px 0;
+      font-size: $fontsize30;
+      font-weight: unset;
+    }
+
+    .chef-rests {
+      article {
+        margin: 0 20px 0 0;
+        height: 357px;
+
+        img {
+          height: 224px;
+        }
+      }
+
+      .card-bottom {
+        box-sizing: border-box;
+        height: 133px;
+        background-color: $bgcBeige;
+        padding: 20px 2% 20px 2%;
+        @extend %marginTop-3;
+      }
+    }
+  }
+}

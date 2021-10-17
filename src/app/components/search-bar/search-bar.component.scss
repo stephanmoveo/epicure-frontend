@@ -1,0 +1,16 @@
+@import '../../../assets/styles/fonts';
+
+input {
+  font-family: 'Quicksand';
+  border: none;
+  outline: 0;
+  width: 100%;
+  background-color: transparent;
+  font-size: 18px;
+  letter-spacing: 1.29px;
+}
+
+.inputFont {
+  font-size: $fontsize22;
+  letter-spacing: 0.6px;
+}

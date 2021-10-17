@@ -1,0 +1,62 @@
+@import '../../../assets/styles/extends';
+
+nav {
+  box-sizing: border-box;
+  padding: 0 10% 0 10%;
+  height: 62px;
+  justify-content: space-between;
+  width: 100%;
+
+  .nav-items-left {
+    width: 40%;
+    .nav-item {
+      margin: 0 28px 0 0;
+    }
+
+    a {
+      font-size: 18px;
+      text-decoration: none;
+      color: black;
+    }
+
+    div {
+      margin: 0 3px 0 0;
+
+      a {
+        font-size: 27px !important;
+      }
+    }
+
+    .logo-warp {
+      a {
+        margin-left: 15px;
+      }
+
+      img {
+        max-width: 33px;
+      }
+    }
+  }
+
+  .nav-items-right {
+    width: 40%;
+
+    .nav-item {
+      margin: 0 0 0 5%;
+
+      .search-warp {
+        height: 34px;
+        @extend %searchWarp;
+        min-width: 415px;
+
+        app-search-bar {
+          width: 100%;
+        }
+      }
+    }
+
+    img {
+      width: 22px;
+    }
+  }
+}

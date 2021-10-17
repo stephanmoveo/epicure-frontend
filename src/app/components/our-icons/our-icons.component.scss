@@ -1,0 +1,27 @@
+@import '../../../assets/styles/colors';
+@import '../../../assets/styles/fonts';
+.icons-container {
+  background-color: $bgcGrey;
+  height: 265px;
+  box-sizing: border-box;
+  padding: 41px 0;
+
+  h1 {
+    font-weight: unset;
+    font-size: $fontsize30;
+  }
+
+  .icons-row {
+    justify-content: center;
+    align-items: baseline;
+    align-content: center;
+
+    .flex-Col {
+      margin: 0 50px;
+
+      img {
+        margin: 23px 0px;
+      }
+    }
+  }
+}
