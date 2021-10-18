@@ -8,6 +8,17 @@ export class RestaurantsService {
 
   constructor(public iconsService: IconsService) { }
 
+  get filteredChefRest() {
+    const cArr = this.restaurantsArr[1].chefs as any
+    const filterdRests = cArr[0].chefRest
+    return filterdRests
+  }
+
+  get filteredArr() {
+    const sliced = this.restaurantsArr[0].restArr
+    return sliced
+  }
+
   restaurantsArr = [
     {
       restArr: [
