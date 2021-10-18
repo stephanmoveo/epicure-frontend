@@ -1,0 +1,26 @@
+<section class="banner-top">
+  <h1 class="banner-title">THE POPULAR RESTAURANTS IN EPICURE :</h1>
+  <div class="pop-row flex">
+    <swiper [config]="this.swiperService.config" class="main-swiper">
+      <div *ngFor="let item of this.restaurantsService.filteredArr | slice:0:3" class="swiper-slide">
+        <div>
+          <article class="dishes">
+            <img [src]="item.img" />
+            <div class="card-bottom">
+              <h1>{{item.restName}}</h1>
+              <p class="font25">{{item.chef}}</p>
+            </div> 
+          </article>
+        </div>
+      </div>
+    </swiper>
+    <!-- <article class="dishes desktop-top-banner" *ngFor="let item of this.restaurantsService.filteredArr| slice:0:3">
+      <img [src]="item.img" />
+      <div class="card-bottom">
+        <h1>{{item.restName}}</h1>
+        <p class="font25">{{item.chef}}</p>
+      </div>
+    </article> -->
+    </div>
+    <a class="aTxtDec allrestaurants" href="#">All Restaurants<img src={{this.iconsService.arrowIcon}} /></a>
+</section>

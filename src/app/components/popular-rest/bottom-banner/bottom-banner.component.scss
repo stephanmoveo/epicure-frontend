@@ -1,0 +1,53 @@
+@import '../popular-rest.component.scss';
+@import '../../../../assets/styles/extends';
+@import '../../../../assets/styles/fonts';
+@import '../../../../assets/styles/mixing';
+
+.banner-bottom {
+  margin: 153px 0 87px 0;
+  @extend %pop-row;
+  @extend %allRest;
+
+  .main-swiper {
+    width: 100%;
+    // height: 820px;
+  }
+
+  .rest-name {
+    font-family: 'Quicksand-SemiBold';
+    text-align: center;
+    font-size: 30px;
+    margin: 0 0 23px 0;
+  }
+
+  .card-bottom {
+    img {
+      @extend %absoluteCenter;
+      bottom: 50px;
+      width: 39px;
+    }
+  }
+
+  h3 {
+    font-family: 'Quicksand-SemiBold';
+    font-size: 38.4px;
+    width: 60%;
+    margin: auto;
+  }
+
+  .font24 {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+@media only screen and (max-width: 728px) {
+  .main-swiper {
+    display: block !important;
+  }
+
+  .desktop-bottom-banner {
+    display: none;
+  }
+
+}
