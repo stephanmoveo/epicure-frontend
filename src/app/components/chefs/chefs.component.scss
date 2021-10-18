@@ -1,6 +1,7 @@
 @import '../../../assets/styles/extends';
 @import '../../../assets/styles/functions';
 @import '../../../assets/styles/colors';
+@import '../../../../assets/styles/mixing';
 
 .chef-container {
   margin-top: 100px;
@@ -54,6 +55,8 @@
     }
 
     .chef-rests {
+      width: 67%;
+
       article {
         margin: 0 20px 0 0;
         height: 357px;
@@ -71,5 +74,35 @@
         @extend %marginTop-3;
       }
     }
+  }
+}
+
+article {
+  width: fit-content;
+}
+
+.swiper-slide {
+
+  width: 233px !important;
+}
+
+.main-swiper {
+  width: 100%;
+
+}
+
+@media only screen and (max-width: 728px) {
+
+  .wtdh70ma {
+    width: 100%;
+  }
+
+  .swiper-slide {
+
+    width: 100% !important;
+  }
+
+  .chef-row img {
+    width: 100% !important;
   }
 }

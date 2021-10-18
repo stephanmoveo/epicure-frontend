@@ -41,7 +41,12 @@
   margin: auto;
   min-width: 1042px;
 }
-
+@media only screen and (max-width: 728px) {
+    .wtdh70ma {
+        min-width: 0;
+    }
+  }
+  
 .banner-title {
   text-align: center;
   font-size: 30px;

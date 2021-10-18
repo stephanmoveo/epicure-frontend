@@ -1,14 +1,18 @@
 @import '../../../assets/styles/extends';
 @import '../../../assets/styles/fonts';
+@import '../../../assets/styles/mixing';
 
 .pop-container {
   margin-bottom: 87px;
+  @extend %allRest;
 
   & .banner-top {
     margin: 0 0 153px 0;
     @extend %pop-row;
     @extend %allRest;
   }
+
+  
 
   .banner-bottom {
     margin: 0 0 87px 0;
@@ -20,7 +24,7 @@
       text-align: center;
       font-size: 30px;
       margin: 0 0 23px 0;
-    //   font-weight: unset;
+      //   font-weight: unset;
     }
 
     .card-bottom {
@@ -43,4 +47,11 @@
       margin: 20px auto;
     }
   }
+}
+
+@media only screen and (max-width: 728px) {
+    .main-swiper {
+        display: block !important;
+      }
+
 }

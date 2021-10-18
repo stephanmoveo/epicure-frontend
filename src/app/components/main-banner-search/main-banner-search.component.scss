@@ -1,5 +1,6 @@
 @import '../../../assets/styles/extends';
-@import '../../../assets/styles/fonts' ;
+@import '../../../assets/styles/fonts';
+@import '../../../assets/styles/mixing';
 
 .inputFont {
   font-size: 22px !important;
@@ -44,5 +45,12 @@
         position: relative;
       }
     }
+  }
+}
+
+
+@media only screen and (max-width: 728px) {
+  .search-warp {
+    width: 100% !important;
   }
 }

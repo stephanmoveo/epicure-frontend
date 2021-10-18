@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { IconsService } from 'src/app/services/icons.service';
 import { RestaurantsService } from 'src/app/services/restaurants.service';
+import {
+  SwiperComponent,
+  SwiperDirective,
+  SwiperConfigInterface,
+  SwiperScrollbarInterface,
+  SwiperPaginationInterface
+} from 'ngx-swiper-wrapper';
 
 @Component({
   selector: 'app-popular-rest',
@@ -10,13 +17,7 @@ import { RestaurantsService } from 'src/app/services/restaurants.service';
 export class PopularRestComponent implements OnInit {
 
   constructor(public restaurantsService: RestaurantsService, public iconsService: IconsService) { }
-  // arr = [1, 2, 3, 4, 5]
 
-  get filteredArr() {
-    const sliced = this.restaurantsService.restaurantsArr.slice(0, 3)
-    console.log('okkk');
-    return sliced
-  }
   ngOnInit(): void {
   }
 
