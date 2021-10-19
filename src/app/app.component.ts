@@ -17,6 +17,7 @@ export class AppComponent {
 
   active = false
   prepareRoute(outlet: RouterOutlet) {
+    console.log(window.navigator.userAgent.toLowerCase().includes('mobile'))
     if (this.swiperService.innerWidth <= 728)
       return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation']
   }

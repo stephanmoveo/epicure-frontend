@@ -1,10 +1,7 @@
 @import '../../../assets/styles/extends';
 @import '../../../assets/styles/fonts';
+@import '../../../assets/styles/mixing';
 
-
-.inputFont {
-  font-size: 22px !important;
-}
 
 .top-page {
   width: 100%;
@@ -47,13 +44,14 @@
     }
   }
 }
-@import '../../../assets/styles/mixing';
+
 @include for-mobile-layout {
   .top-page {
     height: 269px;
     margin: 0;
-    h1 {
-      font-size: rem(16px) !important;
+
+    .search-banner h1 {
+      font-size: rem(16px);
       letter-spacing: 1px;
     }
 
@@ -61,19 +59,19 @@
       width: 100%;
       max-width: 335px;
       height: 125px;
+
+      .search-warp {
+        padding: 0px 9px;
+        height: 33px;
+        width: 269px;
+        border: solid 1px #c2c2c2;
+
+        img {
+          width: 16px ;
+          margin: 0 5px 0 0 ;
+        }
+      }
     }
   }
 
-  .search-warp {
-    padding: 0px 9px !important;
-    height: 33px !important;
-    width: 269px !important;
-    border: solid 1px #c2c2c2 !important;
-
-
-    img {
-      width: 16px !important;
-      margin: 0 5px 0 0 !important;
-    }
-  }
 }

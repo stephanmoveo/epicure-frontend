@@ -23,19 +23,16 @@ nav {
 
     div {
       margin: 0 3px 0 0;
-
-      a {
-        font-size: 27px !important;
-      }
     }
 
     .logo-warp {
       .hamburger-icon {
         display: none;
-        width: 18px !important;
+        width: 18px;
       }
 
       a {
+        font-size: 27px;
         margin-left: 15px;
       }
 
@@ -71,54 +68,54 @@ nav {
 
 @include for-mobile-layout {
   nav {
-    padding: 0 20px !important;
+    padding: 0 20px;
     height: 45px;
-  }
 
-  .nav-items-left {
-    display: block;
-    // width: 40% !important;
 
-    .logo-warp {
-      display: flex;
+    .nav-items-left {
+      display: block;
 
-      .hamburger-icon {
-        display: inline !important;
+      .logo-warp {
+        display: flex;
 
-      }
+        .hamburger-icon {
+          display: inline;
+        }
 
-      .cutlery-icon {
-        width: 31px !important;
-        position: absolute;
-        right: 0;
-        left: 0;
-        margin: auto;
+        .cutlery-icon {
+          width: 31px;
+          position: absolute;
+          right: 0;
+          left: 0;
+          margin: auto;
+        }
       }
     }
-  }
 
-  .nav-items-left a {
-    display: none;
-  }
-
-  .nav-items-right {
-    // justify-content: inherit;
-    justify-content: end;
-
-    img {
-      width: 18px !important;
-      margin-left: 26px !important;
-    }
-  }
-
-  .search-warp {
-
-    border: none !important;
-    min-width: 0 !important;
-    padding: 0 !important;
-
-    app-search-bar {
+    .nav-items-left a {
       display: none;
     }
+
+    .nav-items-right {
+      justify-content: end;
+
+      .nav-item {
+        width: 18px;
+        margin-left: 26px;
+
+        .search-warp {
+          border: none;
+          min-width: 0;
+          padding: 0;
+
+          app-search-bar {
+            display: none;
+          }
+        }
+      }
+
+
+    }
+
   }
 }

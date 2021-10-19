@@ -3,7 +3,7 @@
 @import '../../../../assets/styles/fonts';
 @import '../../../../assets/styles/mixing';
 @import '../../../../assets/styles//colors';
-//$bgcBeigeMobile
+
 .banner-top {
   @extend %pop-row;
   @extend %allRest;
@@ -21,20 +21,34 @@
     .img-warp {
       height: 224px;
       width: 206px;
-      /* height: 150px; */
       overflow: hidden;
 
       img {
         width: 354px;
-        /* height: 279px; */
         margin: 0px 0 0px -60px;
       }
     }
+    .main-swiper {
+      display: block ;
+      .swiper-slide{
+        margin-right:0 !important;
+    }
+    }
+    .pop-row article .card-bottom {
+        box-sizing: border-box;
+        width: 206px;
+        background-color: $bgcBeigeMobile ;
+    
+        p {
+          font-size: rem(20px) ;
+        }
+    
+        h1 {
+          font-size: rem(25px) ;
+        }
+      }
   }
 
-  .main-swiper {
-    display: block !important;
-  }
 
   .banner-title {
     font-size: 14px;
@@ -44,19 +58,7 @@
   .allrestaurants {
     display: none;
   }
-  .card-bottom {
-    box-sizing: border-box;
-    width: 206px;
-    background-color: $bgcBeigeMobile !important;
 
-    p {
-      font-size: rem(20px) ;
-    }
-
-    h1 {
-      font-size: rem(25px) !important;
-    }
-  }
   .dishes {
     img {
       width: 206px;

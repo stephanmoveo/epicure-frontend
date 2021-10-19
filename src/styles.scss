@@ -14,3 +14,7 @@ body {
 .swiper-pagination{
     display: none;
 }
+
+.swiper-slide{
+    overflow: hidden !important;
+  }

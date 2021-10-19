@@ -4,7 +4,6 @@
 @import '../../../../assets/styles/mixing';
 @import '../../../../assets/styles//colors';
 
-//$bgcBeigeMobile
 .banner-bottom {
   margin: 153px 0 87px 0;
   @extend %pop-row;
@@ -12,7 +11,6 @@
 
   .main-swiper {
     width: 100%;
-    // height: 820px;
   }
 
   .rest-name {
@@ -23,6 +21,8 @@
   }
 
   .card-bottom {
+    height: 364px;
+
     img {
       @extend %absoluteCenter;
       bottom: 50px;
@@ -57,10 +57,10 @@
       margin: 0 0 15px 0;
     }
 
-    .card-bottom {
-      height: 260px !important;
-      padding: 0 !important;
-      background-color: $bgcBeigeMobile !important;
+    .pop-row article .card-bottom {
+      height: 260px;
+      padding: 12px 0 0 0;
+      background-color: $bgcBeigeMobile;
 
       img {
         width: 30px;
@@ -73,18 +73,14 @@
       }
 
       .line-price {
-        width: 100% !important;
-        justify-content: space-evenly !important;
+        width: 100%;
+        justify-content: space-evenly;
 
         .line {
-          width: 25% !important;
-
+          width: 25%;
         }
       }
-
     }
-
-
   }
 
   .dishes {
@@ -97,6 +93,9 @@
 
   .main-swiper {
     display: block !important;
+    .swiper-slide{
+        margin-right: 14px !important;
+    }
   }
 
   .desktop-bottom-banner {

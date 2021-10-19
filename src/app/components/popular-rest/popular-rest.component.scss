@@ -8,7 +8,6 @@
 
   & .banner-top {
     margin: 0 0 153px 0;
-    // @extend %pop-row;
     @extend %allRest;
   }
 
@@ -24,7 +23,6 @@
       text-align: center;
       font-size: 30px;
       margin: 0 0 23px 0;
-      //   font-weight: unset;
     }
 
     .card-bottom {
@@ -55,18 +53,10 @@
     padding: 0 20px;
     box-sizing: border-box;
   }
+
   .banner-title {
     font-size: 14px;
     margin: 0 0 13px 0;
   }
-  .main-swiper {
-    display: block !important;
-  }
-
-  .swiper-slide {
-    overflow: hidden !important;
-  }
-
-
 
 }

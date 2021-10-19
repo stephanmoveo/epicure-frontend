@@ -3,12 +3,19 @@
 @import '../../../assets/styles/colors';
 @import '../../../assets/styles/mixing';
 
+
+// aspect-ratio: 300/200;
+// object-fit: cover;
+
 .chef-container {
-  //    margin-top: 71px;
   margin-top: 100px;
 
   .chef-week-warp {
     height: 469px;
+
+    h1 {
+      text-align: center;
+    }
   }
 
   .banner-title {
@@ -29,7 +36,6 @@
       width: 43%;
       height: 338px;
       max-width: 443px;
-      margin: 0 69px 0 0;
     }
 
     h1 {
@@ -83,14 +89,13 @@ article {
   width: fit-content;
 }
 
-.swiper-slide {
-
-  width: 233px !important;
-}
 
 .main-swiper {
   width: 100%;
 
+  .swiper-slide {
+    width: 233px !important;
+  }
 }
 
 @include for-mobile-layout {
@@ -101,19 +106,19 @@ article {
       height: unset;
     }
 
-    article {
-      margin: 0 !important;
-      width: 153px;
-      height: 237px !important;
-
-      img {
-        width: 100%;
-        height: unset !important;
-      }
-    }
-
     .chef-rest-warp {
       margin-top: 22px;
+
+      .chef-rests article {
+        margin: 0;
+        width: 153px;
+        height: 237px;
+
+        img {
+          width: 100%;
+          height: unset;
+        }
+      }
 
       .chef-rests {
         width: 100%;
@@ -121,16 +126,22 @@ article {
         box-sizing: border-box;
 
         .swiper-slide {
-          overflow: hidden;
           width: unset !important;
           margin-right: 13px !important;
+
+          article .card-bottom {
+            h1 {
+              margin: 0px;
+              font-size: 20px;
+            }
+          }
         }
       }
 
       .banner-title {
         text-align: unset;
         font-size: rem(14px);
-        margin: 0px 0px 19px 20px !important;
+        margin: 0px 0px 19px 20px;
       }
     }
 
@@ -145,24 +156,17 @@ article {
     width: 100%;
   }
 
-  .card-bottom {
-    .font30 {
-      margin: 0px !important;
-      font-size: 20px !important;
-    }
+  .chef-container .chef-row .chef-col img {
+    width: 100%;
   }
 
-  .chef-row img {
-    width: 100% !important;
-  }
-
-  .chef-row .chef-col {
-    margin: auto !important;
-    width: 90% !important;
-    max-width: 334px !important;
-    height: unset !important;
-    max-height: 300px !important;
-    margin-bottom: 21px !important;
+  .chef-container .chef-row .chef-col {
+    margin: auto;
+    width: 90%;
+    max-width: 334px;
+    height: unset;
+    max-height: 300px;
+    margin-bottom: 21px;
 
     h1 {
       font-size: rem(30px);
