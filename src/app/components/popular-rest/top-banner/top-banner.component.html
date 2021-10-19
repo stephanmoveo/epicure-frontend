@@ -5,22 +5,17 @@
       <div *ngFor="let item of this.restaurantsService.filteredArr | slice:0:3" class="swiper-slide">
         <div>
           <article class="dishes">
-            <img [src]="item.img" />
+            <div class="img-warp">
+              <img [src]="item.img" />
+            </div>
             <div class="card-bottom">
               <h1>{{item.restName}}</h1>
               <p class="font25">{{item.chef}}</p>
-            </div> 
+            </div>
           </article>
         </div>
       </div>
     </swiper>
-    <!-- <article class="dishes desktop-top-banner" *ngFor="let item of this.restaurantsService.filteredArr| slice:0:3">
-      <img [src]="item.img" />
-      <div class="card-bottom">
-        <h1>{{item.restName}}</h1>
-        <p class="font25">{{item.chef}}</p>
-      </div>
-    </article> -->
-    </div>
-    <a class="aTxtDec allrestaurants" href="#">All Restaurants<img src={{this.iconsService.arrowIcon}} /></a>
+  </div>
+  <a class="aTxtDec allrestaurants" >All Restaurants<img src={{this.iconsService.arrowIcon}} /></a>
 </section>

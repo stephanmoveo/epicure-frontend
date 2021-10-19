@@ -1,7 +1,7 @@
 @import '../../../assets/styles/extends';
 @import '../../../assets/styles/colors';
 @import '../../../assets/styles/fonts';
-@import '../../../../assets/styles/mixing';
+@import '../../../assets/styles/mixing';
 
 .about-container {
   background-color: $bgcGrey;
@@ -45,17 +45,51 @@
   }
 }
 
-@media only screen and (max-width: 728px) {
-  .about-container .about-warp .about-row-txt p{
+@include for-mobile-layout {
+  .about-container {
+    margin: 97px 0 38px 0;
+    padding: 0 36px;
+    height: 605px;
+    box-sizing: border-box;
+    .banner-title,
+    p {
+      font-size: rem(14px) !important;
+      text-align: center;
+    }
+  }
+
+  .about-container .about-warp .about-row-txt p {
     width: fit-content;
   }
+
   .about-row-logo {
     margin: auto !important;
   }
+
   .wtdh70ma {
     width: 100%;
-}
+  }
 
-  
+  .flex-no-warp {
+    justify-content: space-evenly;
+    width: 100%;
+  }
 
+  .stores {
+    width: 127px !important;
+    height: 37px !important;
+    margin: 34px 0 0 0 !important;
+
+    img {
+      width: 17px !important;
+    }
+
+    h4 {
+      font-size: 9px !important;
+    }
+
+    h3 {
+      font-size: 12px !important;
+    }
+  }
 }

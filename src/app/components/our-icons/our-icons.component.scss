@@ -27,3 +27,30 @@
     }
   }
 }
+
+@include for-mobile-layout {
+
+  .icons-container {
+    height: 134px;
+    padding: 16px 0 0 0;
+    box-sizing: unset;
+
+    h1 {
+      font-size: rem(14px);
+    }
+
+    img {
+      width: 44px;
+      margin: 22px 0 16px 0 !important;
+    }
+
+    h2 {
+      font-size: rem(13px);
+    }
+    .flex {
+        // display: flex;
+        flex-wrap: nowrap; 
+        justify-content: space-evenly;
+    }
+  }
+}

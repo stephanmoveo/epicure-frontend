@@ -2,7 +2,9 @@
 @import '../../../../assets/styles/extends';
 @import '../../../../assets/styles/fonts';
 @import '../../../../assets/styles/mixing';
+@import '../../../../assets/styles//colors';
 
+//$bgcBeigeMobile
 .banner-bottom {
   margin: 153px 0 87px 0;
   @extend %pop-row;
@@ -41,7 +43,58 @@
   }
 }
 
-@media only screen and (max-width: 728px) {
+@include for-mobile-layout {
+  .banner-bottom {
+    margin: 100px 0 87px 0;
+
+    h3 {
+      font-size: rem(27.6px);
+
+    }
+
+    .rest-name {
+      font-size: rem(16px);
+      margin: 0 0 15px 0;
+    }
+
+    .card-bottom {
+      height: 260px !important;
+      padding: 0 !important;
+      background-color: $bgcBeigeMobile !important;
+
+      img {
+        width: 30px;
+
+      }
+
+      .font24 {
+        font-size: 24px;
+        font-size: 17.3px;
+      }
+
+      .line-price {
+        width: 100% !important;
+        justify-content: space-evenly !important;
+
+        .line {
+          width: 25% !important;
+
+        }
+      }
+
+    }
+
+
+  }
+
+  .dishes {
+
+    div>img {
+      width: 260px;
+
+    }
+  }
+
   .main-swiper {
     display: block !important;
   }

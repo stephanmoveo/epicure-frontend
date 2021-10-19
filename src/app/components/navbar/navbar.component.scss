@@ -68,14 +68,16 @@ nav {
   }
 }
 
-@media only screen and (max-width: 728px) {
+
+@include for-mobile-layout {
   nav {
     padding: 0 20px !important;
+    height: 45px;
   }
 
   .nav-items-left {
     display: block;
-    width: 70% !important;
+    // width: 40% !important;
 
     .logo-warp {
       display: flex;
@@ -100,9 +102,13 @@ nav {
   }
 
   .nav-items-right {
-    width: 30% !important;
-    justify-content: inherit;
+    // justify-content: inherit;
+    justify-content: end;
 
+    img {
+      width: 18px !important;
+      margin-left: 26px !important;
+    }
   }
 
   .search-warp {

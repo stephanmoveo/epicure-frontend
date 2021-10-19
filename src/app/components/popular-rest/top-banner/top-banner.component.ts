@@ -19,21 +19,10 @@ export class TopBannerComponent implements OnInit {
     const sliced = this.restaurantsService.restaurantsArr[0].restArr
     return sliced
   }
-  public innerWidth: any;
   @HostListener('window:resize', ['$event'])
-  cloneConfig() {
-    this.innerWidth = window.innerWidth;
-    if (this.innerWidth <= 728) {
-      const newConfig = { ...this.swiperService.config, slidesPerView: 1 }
-      this.swiperService.config = newConfig
-    }
-    else {
-      this.swiperService.config = { ...this.swiperService.config, slidesPerView: 3 }
-    }
 
-  }
   ngOnInit(): void {
-    this.cloneConfig()
+    this.swiperService.cloneConfig()
   }
 
 }

@@ -1,5 +1,6 @@
 @import '../../../assets/styles/fonts';
 @import '../../../assets/styles/mixing';
+@import '../../../assets/styles/functions';
 
 input {
   font-family: 'Quicksand';
@@ -14,4 +15,13 @@ input {
 .inputFont {
   font-size: $fontsize22;
   letter-spacing: 0.6px;
+}
+
+@include for-mobile-layout {
+
+  input {
+    font-size: rem(13px) !important;
+    letter-spacing: 0.07px !important;
+
+  }
 }

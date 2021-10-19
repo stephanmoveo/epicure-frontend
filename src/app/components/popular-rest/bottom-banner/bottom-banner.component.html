@@ -14,7 +14,7 @@
                 <img [src]="elem.logo" />
                 <div class="flex line-price">
                   <div class="line"></div>
-                  <p class="font25">{{elem.price | currency:"ILS":"symbol"}}</p>
+                  <p class="font25">{{elem.price | currency:"ILS":"symbol": '1.0-0'}}</p>
                   <div class="line"></div>
                 </div>
               </div>

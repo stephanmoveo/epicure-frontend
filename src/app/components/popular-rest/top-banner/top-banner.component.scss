@@ -2,37 +2,66 @@
 @import '../../../../assets/styles/extends';
 @import '../../../../assets/styles/fonts';
 @import '../../../../assets/styles/mixing';
-
+@import '../../../../assets/styles//colors';
+//$bgcBeigeMobile
 .banner-top {
-  // margin: 0 0 153px 0;
   @extend %pop-row;
   @extend %allRest;
 
   .main-swiper {
     width: 100%;
-    // height: 420px;
   }
 
 }
 
-
-// @media only screen and (max-width: 728px) {
-//   .main-swiper {
-//     display: block !important;
-//   }
-
-//   .desktop-top-banner {
-//     display: none;
-//   }
-
-// }
-
 @include for-mobile-layout {
+  .banner-top {
+    margin: 51px 0 0 0;
+
+    .img-warp {
+      height: 224px;
+      width: 206px;
+      /* height: 150px; */
+      overflow: hidden;
+
+      img {
+        width: 354px;
+        /* height: 279px; */
+        margin: 0px 0 0px -60px;
+      }
+    }
+  }
+
   .main-swiper {
     display: block !important;
   }
 
-  .desktop-top-banner {
+  .banner-title {
+    font-size: 14px;
+    margin: 0 0 13px 0;
+  }
+
+  .allrestaurants {
     display: none;
+  }
+  .card-bottom {
+    box-sizing: border-box;
+    width: 206px;
+    background-color: $bgcBeigeMobile !important;
+
+    p {
+      font-size: rem(20px) ;
+    }
+
+    h1 {
+      font-size: rem(25px) !important;
+    }
+  }
+  .dishes {
+    img {
+      width: 206px;
+    }
+
+    
   }
 }

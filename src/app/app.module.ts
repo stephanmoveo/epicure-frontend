@@ -19,6 +19,9 @@ import {
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { TopBannerComponent } from './components/popular-rest/top-banner/top-banner.component';
 import { BottomBannerComponent } from './components/popular-rest/bottom-banner/bottom-banner.component';
+import { ChefsRestBtnComponent } from './components/chefs-rest-btn/chefs-rest-btn.component';
+import { NextpageComponent } from './pages/nextpage/nextpage.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // For MDB Angular Free
 // import { CarouselModule, WavesModule } from 'angular-bootstrap-md'; 
@@ -45,13 +48,16 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     AboutComponent,
     ContactComponent,
     TopBannerComponent,
-    BottomBannerComponent
+    BottomBannerComponent,
+    ChefsRestBtnComponent,
+    NextpageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SwiperModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {

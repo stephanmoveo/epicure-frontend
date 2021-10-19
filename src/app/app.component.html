@@ -1,2 +1,4 @@
-<app-homepage></app-homepage>
-<!-- <router-outlet></router-outlet> -->
+<!-- <app-homepage></app-homepage> -->
+<div [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
