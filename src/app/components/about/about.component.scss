@@ -3,6 +3,11 @@
 @import '../../../assets/styles/fonts';
 @import '../../../assets/styles/mixing';
 
+// width: 100%;
+// aspect-ratio: 360/290;
+// object-fit: cover;
+// min-height: 290px;
+
 .about-container {
   background-color: $bgcGrey;
   margin: 117px 0 38px 0;
@@ -50,8 +55,8 @@
   .about-container {
 
     & .about-warp {
-     & .about-row-logo {
-       & .epicue-logo {
+      & .about-row-logo {
+        & .epicue-logo {
           width: 120px;
         }
       }

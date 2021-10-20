@@ -16,14 +16,11 @@ export class SwiperService {
       const newConfig2 = { ...this.config2, slidesPerView: 2.5 }
       const newConfig = { ...this.config, slidesPerView: 1.5 }
       this.config2 = newConfig2
-      this.config = newConfig
-      console.log(newConfig2);
-      
+      this.config = newConfig      
     }
     else {
       this.config = { ...this.config, slidesPerView: 3 }
       this.config2 = { ...this.config, slidesPerView: 3 }
-      console.log(this.config2);
     }
 
   }

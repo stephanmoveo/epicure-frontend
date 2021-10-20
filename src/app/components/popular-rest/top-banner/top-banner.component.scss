@@ -9,6 +9,16 @@
     @extend %pop-row;
   }
 
+  & .img-warp {
+ 
+
+    & .dish-img {
+        width: 100%;
+        aspect-ratio: 360/224;
+        object-fit: cover;
+    }
+  }
+
   @extend %allRest;
 
   .main-swiper {

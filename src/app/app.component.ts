@@ -17,9 +17,7 @@ export class AppComponent {
   title = 'epicure-app';
 
   active = false
-  prepareRoute(outlet: RouterOutlet) {
-    console.log(this.globalService.isMobile);
-    
+  prepareRoute(outlet: RouterOutlet) {    
     if (this.globalService.isMobile)
       return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation']
   }

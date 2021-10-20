@@ -13,6 +13,14 @@
     width: 100%;
   }
 
+  & article .dishes .dish-img {
+
+    width: 100%;
+    aspect-ratio: 360/290;
+    object-fit: cover;
+    min-height: 290px;
+  }
+
   & .rest-name {
     font-family: 'Quicksand-SemiBold';
     text-align: center;
@@ -70,6 +78,14 @@
 @include for-mobile-layout {
   .banner-bottom {
     margin: 100px 0 87px 0;
+
+    & article .dishes .dish-img {
+
+      width: 100%;
+      aspect-ratio: 260/209;
+      object-fit: cover;
+      min-height: 209px;
+    }
 
     & .dish-name {
       font-size: rem(27.6px);

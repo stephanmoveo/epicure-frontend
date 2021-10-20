@@ -16,7 +16,7 @@ export class TopBannerComponent implements OnInit {
   ) { }
 
   get filteredArr() {
-    const sliced = this.restaurantsService.restaurantsArr[0].restArr
+    const sliced = this.restaurantsService.restaurantsArr.restArr
     return sliced
   }
   @HostListener('window:resize', ['$event'])

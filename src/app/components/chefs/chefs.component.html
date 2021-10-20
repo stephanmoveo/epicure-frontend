@@ -1,7 +1,7 @@
 <div class="chef-container wtdh70ma">
   <section class="chef-week-warp">
     <h1 class="banner-title">CHEF OF THE WEEK :</h1>
-    <div *ngFor="let item of this.restaurantsService.restaurantsArr[1].chefs" class="chef-row flex">
+    <div *ngFor="let item of this.restaurantsService.restaurantsArr.chefs" class="chef-row flex">
       <div class="chef-col">
         <div>
           <img class="chef-img" [@rotatedState]='state' src={{item.img}} (click)="rotate()"/>

@@ -9,7 +9,6 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   templateUrl: './chefs.component.html',
   styleUrls: ['./chefs.component.scss'],
   animations: [
-    // Each unique animation requires its own trigger. The first argument of the trigger function is the name
     trigger('rotatedState', [
       state('default', style({ transform: 'rotate(0)' })),
       state('rotated', style({ transform: 'rotate(-360deg)' })),
@@ -31,8 +30,6 @@ export class ChefsComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
 
   ngOnInit(): void {
-    // console.log(this.swiperService.config);
-
   }
 
 }

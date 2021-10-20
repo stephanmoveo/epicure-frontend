@@ -12,7 +12,7 @@ export class HomepageComponent implements OnInit {
 
   constructor(public iconsService: IconsService, public restaurantsService:RestaurantsService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
   }
 
 }

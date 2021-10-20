@@ -7,7 +7,7 @@
         <article>
           <div class="dishes" *ngIf="item.dishes">
             <div *ngFor="let elem of item.dishes">
-              <img src={{elem.img}} />
+              <img class="dish-img" src={{elem.img}} />
               <div class="card-bottom">
                 <h3 class="dish-name">{{elem.dishName}}</h3>
                 <p class="font24">{{elem.description}}</p>
