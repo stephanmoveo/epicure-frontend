@@ -19,7 +19,6 @@ export class TopBannerComponent implements OnInit {
     const sliced = this.restaurantsService.restaurantsArr.restArr
     return sliced
   }
-  @HostListener('window:resize', ['$event'])
 
   ngOnInit(): void {
     this.swiperService.cloneConfig()

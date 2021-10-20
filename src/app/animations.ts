@@ -4,9 +4,7 @@ import {
     style,
     query,
     group,
-    animateChild,
     animate,
-    keyframes,
 } from '@angular/animations';
 
 export const fader =
@@ -28,8 +26,6 @@ export const fader =
             ], { optional: true })
         ]),
     ]);
-
-
 
 export const slider =
     trigger('routeAnimations', [
@@ -62,10 +58,5 @@ function slideTo(direction: string) {
                 animate('600ms ease', style({ [direction]: '0%' }))
             ])
         ]),
-        // Normalize the page style... Might not be necessary
-
-        // Required only if you have child animations on the page
-        // query(':leave', animateChild()),
-        // query(':enter', animateChild()),
     ];
 }

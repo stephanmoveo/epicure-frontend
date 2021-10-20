@@ -3,11 +3,6 @@
 @import '../../../assets/styles/fonts';
 @import '../../../assets/styles/mixing';
 
-// width: 100%;
-// aspect-ratio: 360/290;
-// object-fit: cover;
-// min-height: 290px;
-
 .about-container {
   background-color: $bgcGrey;
   margin: 117px 0 38px 0;
@@ -19,7 +14,8 @@
     box-sizing: border-box;
 
     & .about-row-logo {
-      margin: 0 0 0 182px;
+      // margin: 0 0 0 182px;
+      margin: 0 0 0 5%;
 
       & .epicue-logo {
         width: 178px;

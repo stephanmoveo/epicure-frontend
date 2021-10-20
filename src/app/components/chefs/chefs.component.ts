@@ -27,9 +27,11 @@ export class ChefsComponent implements OnInit {
     public restaurantsService: RestaurantsService,
     public swiperService: SwiperService
   ) { }
-  @HostListener('window:resize', ['$event'])
+  // @HostListener('window:resize', ['$event'])
 
   ngOnInit(): void {
+    console.log(this.swiperService.config2);
+    
   }
 
 }

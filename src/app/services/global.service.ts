@@ -9,3 +9,6 @@ export class GlobalService {
 
   isMobile = window.navigator.userAgent.toLowerCase().includes('mobile')
 }
+
+
+

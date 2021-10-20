@@ -1,18 +1,16 @@
-import { HostListener, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { GlobalService } from './global.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SwiperService {
 
-  constructor() { }
+  constructor(public globalService: GlobalService) { }
 
-  public innerWidth: any;
-  @HostListener('window:resize', ['$event'])
-  cloneConfig() {
-    this.innerWidth = window.innerWidth;
-    if (this.innerWidth <= 728) {
+  cloneConfig() {    
+    if (this.globalService.isMobile) {
       const newConfig2 = { ...this.config2, slidesPerView: 2.5 }
       const newConfig = { ...this.config, slidesPerView: 1.5 }
       this.config2 = newConfig2
@@ -20,7 +18,7 @@ export class SwiperService {
     }
     else {
       this.config = { ...this.config, slidesPerView: 3 }
-      this.config2 = { ...this.config, slidesPerView: 3 }
+      this.config2 = this.config
     }
 
   }
@@ -34,7 +32,7 @@ export class SwiperService {
     scrollbar: false,
     // navigation: true,
     pagination: true
-};
+  };
   public config: SwiperConfigInterface = {
     a11y: true,
     direction: 'horizontal',
@@ -45,5 +43,5 @@ export class SwiperService {
     scrollbar: false,
     // navigation: true,
     pagination: true
-};
+  };
 }
