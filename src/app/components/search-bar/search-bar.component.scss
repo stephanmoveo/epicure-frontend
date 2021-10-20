@@ -17,10 +17,25 @@ input {
   letter-spacing: 0.6px;
 }
 
-@include for-mobile-layout {
+@include screen-1000-layout {
 
   input {
-    font-size: rem(13px) !important;
-    letter-spacing: 0.07px !important;
+    font-size: rem(10.7px);
+    letter-spacing: 0;
+    padding: 0 0 4px 0;
+  }
+
+  .inputFont {
+    font-size: rem(20px);
+    letter-spacing: 0;
+    padding: 0;
+  }
+}
+
+@include for-mobile-layout {
+
+  .inputFont {
+    font-size: rem(13px);
+    letter-spacing: 0.07px;
   }
 }

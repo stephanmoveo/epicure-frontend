@@ -23,7 +23,9 @@
       justify-content: space-between;
 
       & .chef-img {
-        width: 443px;
+        width: 100%;
+        aspect-ratio: 433/390;
+        object-fit: cover;
       }
 
       & .chef-col {
@@ -88,6 +90,24 @@
 
   .swiper-slide {
     width: 233px !important;
+  }
+}
+
+//font-size: 18px;
+@include screen-1000-layout {
+  .chef-container {
+    & .chef-week-warp .chef-row .chef-col {
+
+      .chef-name {
+        font-size: rem(23px);
+        bottom: 81px;
+
+      }
+
+      .chef-desc {
+        font-size: rem(18px);
+      }
+    }
   }
 }
 

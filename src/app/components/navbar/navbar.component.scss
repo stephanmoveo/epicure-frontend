@@ -37,16 +37,26 @@
     }
   }
 
- & .nav-items-right {
-    width: 40%;
+  & .nav-items-right {
+    width: 34%;
 
-    & .nav-item {    
+    & .search-content {
+      display: contents;
+    }
+
+    & .nav-item {
       margin: 0 0 0 5%;
 
       & .search-warp {
-        height: 34px;
         @extend %searchWarp;
-        min-width: 415px;
+        height: 34px;
+        max-width: 415px;
+        width: 168%;
+
+        .search-icon {
+          margin: 0 0px 0 10px;
+
+        }
 
         app-search-bar {
           width: 100%;
@@ -60,6 +70,11 @@
   }
 }
 
+@include screen-1000-layout {
+  .navbar .nav-items-right .nav-item .search-warp .search-icon {
+    width: 16px;
+  }
+}
 
 @include for-mobile-layout {
   .navbar {

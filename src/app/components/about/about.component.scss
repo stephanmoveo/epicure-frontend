@@ -10,7 +10,7 @@
   & .about-warp {
     padding: 30px 0;
     align-items: center;
-    height: 526px;
+    min-height: 526px;
     box-sizing: border-box;
 
     & .about-row-logo {
@@ -31,7 +31,7 @@
       & .about-text {
         margin: 20px 0;
         font-size: $fontsize22;
-        width: 567px;
+        max-width: 567px;
 
       }
     }
@@ -41,6 +41,27 @@
 
       & .store-logo {
         width: 23px;
+      }
+    }
+  }
+}
+
+@include screen-1000-layout {
+  .about-container {
+
+    & .about-warp {
+     & .about-row-logo {
+       & .epicue-logo {
+          width: 120px;
+        }
+      }
+
+      & .about-row-txt {
+
+        & .about-text {
+          font-size: rem(17px);
+
+        }
       }
     }
   }
@@ -90,11 +111,11 @@
     }
   }
 
-   .wtdh70ma {
+  .wtdh70ma {
     width: 100%;
   }
 
-   .flex-no-warp {
+  .flex-no-warp {
     justify-content: space-evenly;
     width: 100%;
   }

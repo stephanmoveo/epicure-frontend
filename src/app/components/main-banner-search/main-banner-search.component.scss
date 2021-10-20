@@ -14,7 +14,7 @@
   & .search-banner {
     @extend %searchBanner;
 
-    & .search-banner-txt{
+    & .search-banner-txt {
       margin: 0 0 18px 0;
       font-size: $fontsize35;
       font-weight: unset;
@@ -22,7 +22,8 @@
 
     & .search-warp {
       @extend %searchWarp2;
-      width: 511px;
+      max-width: 511px;
+      width: 80%;
       height: 48px;
 
       & .search-icon {
@@ -39,6 +40,26 @@
   }
 }
 
+@include screen-1000-layout {
+  .top-page {
+
+    & .search-banner {
+
+      & .search-warp {
+        & .search-icon {
+          width: 19px;
+          margin: 0 10px 0 0;
+
+        }
+      }
+
+      & .search-banner-txt {
+        font-size: rem(26px);
+      }
+    }
+  }
+}
+
 @include for-mobile-layout {
   .top-page {
     height: 269px;
@@ -49,11 +70,12 @@
       width: 100%;
       max-width: 335px;
       height: 125px;
-      & .search-banner-txt{
+
+      & .search-banner-txt {
         font-size: rem(16px);
         letter-spacing: 1px;
       }
-  
+
       & .search-warp {
         padding: 0px 9px;
         height: 33px;
@@ -61,8 +83,8 @@
         border: solid 1px #c2c2c2;
 
         & .search-icon {
-          width: 16px ;
-          margin: 0 5px 0 0 ;
+          width: 16px;
+          margin: 0 5px 0 0;
         }
       }
     }

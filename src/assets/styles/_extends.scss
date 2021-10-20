@@ -36,14 +36,15 @@
 }
 
 %searchWarp2 {
-    box-sizing: border-box;
-    display: flex;
-    border: solid 2px #c2c2c2;
-    padding: 0px 13px 0 20px;
-    border-radius: 4px;
-  }
+  box-sizing: border-box;
+  display: flex;
+  border: solid 2px #c2c2c2;
+  padding: 0px 13px 0 20px;
+  border-radius: 4px;
+}
 
 %searchBanner {
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,8 +63,8 @@
   margin: auto;
 }
 
-%pop-row {
-  .pop-row {
+// %pop-row {
+    %pop-row {
     box-sizing: border-box;
     justify-content: space-between;
     position: relative;
@@ -101,7 +102,7 @@
     }
 
   }
-}
+// }
 
 %allRest {
   .allrestaurants {

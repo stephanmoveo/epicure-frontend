@@ -23,7 +23,7 @@
   & .card-bottom {
     height: 364px;
 
-    &  .type-icon-img {
+    & .type-icon-img {
       @extend %absoluteCenter;
       bottom: 50px;
       width: 39px;
@@ -40,6 +40,30 @@
   & .font24 {
     width: 90%;
     margin: 20px auto;
+  }
+}
+
+@include screen-1000-layout {
+
+  .banner-bottom {
+
+    & .pop-row {
+
+      & article {
+
+        & .card-bottom {
+
+          & .dish-name {
+            font-size: rem(25px);
+          }
+
+          & .font24 {
+            font-size: 20px;
+
+          }
+        }
+      }
+    }
   }
 }
 
@@ -66,10 +90,11 @@
       padding: 12px 0 0 0;
       background-color: $bgcBeigeMobile;
 
-      & .type-icon-img  {
+      & .type-icon-img {
         width: 30px;
 
       }
+
       & .font24 {
         font-size: rem(17.3px);
       }
