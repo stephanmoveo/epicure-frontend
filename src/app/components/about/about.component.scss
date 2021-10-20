@@ -56,6 +56,8 @@
 
     & .about-warp {
       & .about-row-logo {
+        margin: 0 30px 0 0;
+
         & .epicue-logo {
           width: 120px;
         }
@@ -74,12 +76,12 @@
 
 @include for-mobile-layout {
   .about-container {
-    margin: 97px 0 38px 0;
+    margin: 97px 0 22px 0;
     padding: 0 36px;
-    height: 605px;
     box-sizing: border-box;
 
     & .about-warp {
+        padding: 30px 0 62px 0;
 
       & .about-row-logo {
         margin: auto;

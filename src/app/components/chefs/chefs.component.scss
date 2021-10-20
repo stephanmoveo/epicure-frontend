@@ -21,17 +21,21 @@
     & .chef-row {
       width: 100%;
       justify-content: space-between;
+      //    min-height: 275px;
 
-      & .chef-img {
-        width: 100%;
-        aspect-ratio: 433/390;
-        object-fit: cover;
-      }
+
 
       & .chef-col {
         width: 43%;
         height: 338px;
         max-width: 443px;
+
+        & .chef-img {
+          width: 100%;
+          aspect-ratio: 433/390;
+          object-fit: cover;
+          min-height: 390px;
+        }
 
         & .chef-name {
           background-color: #ffffffb3;
@@ -83,6 +87,10 @@
       }
     }
   }
+
+  .chef-img:hover {
+    cursor: pointer;
+  }
 }
 
 .main-swiper {
@@ -97,14 +105,17 @@
 @include screen-1000-layout {
   .chef-container {
     & .chef-week-warp .chef-row .chef-col {
+      & .chef-img {
+        min-height: 275px;
+      }
 
-      .chef-name {
+     & .chef-name {
         font-size: rem(23px);
         bottom: 81px;
 
       }
 
-      .chef-desc {
+     & .chef-desc {
         font-size: rem(18px);
       }
     }
@@ -141,6 +152,7 @@
           width: 100%;
           object-fit: cover;
           aspect-ratio: 334/240;
+          min-height: 240px;
         }
       }
     }
