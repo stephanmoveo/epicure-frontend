@@ -11,38 +11,16 @@
     @extend %allRest;
   }
 
-
-
-  .banner-bottom {
+  & .banner-bottom {
     margin: 0 0 87px 0;
     @extend %pop-row;
     @extend %allRest;
 
-    .rest-name {
+    & .rest-name {
       font-family: 'Quicksand-SemiBold';
       text-align: center;
       font-size: 30px;
       margin: 0 0 23px 0;
-    }
-
-    .card-bottom {
-      img {
-        @extend %absoluteCenter;
-        bottom: 50px;
-        width: 39px;
-      }
-    }
-
-    h3 {
-      font-family: 'Quicksand-SemiBold';
-      font-size: 38.4px;
-      width: 60%;
-      margin: auto;
-    }
-
-    .font24 {
-      width: 90%;
-      margin: 20px auto;
     }
   }
 }
@@ -50,7 +28,7 @@
 @include for-mobile-layout {
   .wtdh80ma {
     width: 100%;
-    padding: 0 20px;
+    padding: 0 0px 0 20px;
     box-sizing: border-box;
   }
 

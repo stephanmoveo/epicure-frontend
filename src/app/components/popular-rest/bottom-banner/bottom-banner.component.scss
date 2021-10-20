@@ -9,35 +9,35 @@
   @extend %pop-row;
   @extend %allRest;
 
-  .main-swiper {
+  & .main-swiper {
     width: 100%;
   }
 
-  .rest-name {
+  & .rest-name {
     font-family: 'Quicksand-SemiBold';
     text-align: center;
     font-size: 30px;
     margin: 0 0 23px 0;
   }
 
-  .card-bottom {
+  & .card-bottom {
     height: 364px;
 
-    img {
+    &  .type-icon-img {
       @extend %absoluteCenter;
       bottom: 50px;
       width: 39px;
     }
   }
 
-  h3 {
+  & .dish-name {
     font-family: 'Quicksand-SemiBold';
     font-size: 38.4px;
     width: 60%;
     margin: auto;
   }
 
-  .font24 {
+  & .font24 {
     width: 90%;
     margin: 20px auto;
   }
@@ -47,54 +47,51 @@
   .banner-bottom {
     margin: 100px 0 87px 0;
 
-    h3 {
+    & .dish-name {
       font-size: rem(27.6px);
 
     }
 
-    .rest-name {
+    & .rest-name {
       font-size: rem(16px);
       margin: 0 0 15px 0;
     }
 
-    .pop-row article .card-bottom {
+    & .pop-row article {
+      max-width: 260px;
+    }
+
+    & .pop-row article .card-bottom {
       height: 260px;
       padding: 12px 0 0 0;
       background-color: $bgcBeigeMobile;
 
-      img {
+      & .type-icon-img  {
         width: 30px;
 
       }
-
-      .font24 {
-        font-size: 24px;
-        font-size: 17.3px;
+      & .font24 {
+        font-size: rem(17.3px);
       }
 
-      .line-price {
+      & .line-price {
         width: 100%;
         justify-content: space-evenly;
 
-        .line {
+        & .line {
           width: 25%;
         }
       }
     }
   }
 
-  .dishes {
-
-    div>img {
-      width: 260px;
-
-    }
-  }
-
   .main-swiper {
     display: block !important;
-    .swiper-slide{
-        margin-right: 14px !important;
+
+    .swiper-slide {
+      margin-right: 14px !important;
+      position: relative;
+      right: 70px;
     }
   }
 

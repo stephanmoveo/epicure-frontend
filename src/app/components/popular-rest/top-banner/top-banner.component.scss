@@ -18,52 +18,49 @@
   .banner-top {
     margin: 51px 0 0 0;
 
-    .img-warp {
+    & .img-warp {
       height: 224px;
       width: 206px;
       overflow: hidden;
 
-      img {
+      & .dish-img {
         width: 354px;
         margin: 0px 0 0px -60px;
       }
     }
+
     .main-swiper {
-      display: block ;
-      .swiper-slide{
-        margin-right:0 !important;
-    }
-    }
-    .pop-row article .card-bottom {
-        box-sizing: border-box;
-        width: 206px;
-        background-color: $bgcBeigeMobile ;
-    
-        p {
-          font-size: rem(20px) ;
-        }
-    
-        h1 {
-          font-size: rem(25px) ;
-        }
+      display: block;
+
+      & .swiper-slide {
+        width: 206px !important;
+        margin-right: 14px !important;
+        position: relative;
+        right: 40px;
       }
+    }
+
+    & .pop-row article .card-bottom {
+      box-sizing: border-box;
+      width: 206px;
+      background-color: $bgcBeigeMobile;
+
+      & .chef-name {
+        font-size: rem(20px);
+      }
+
+      & .rest-name-title {
+        font-size: rem(25px);
+      }
+    }
   }
 
-
-  .banner-title {
+   .banner-title {
     font-size: 14px;
     margin: 0 0 13px 0;
   }
 
   .allrestaurants {
     display: none;
-  }
-
-  .dishes {
-    img {
-      width: 206px;
-    }
-
-    
   }
 }

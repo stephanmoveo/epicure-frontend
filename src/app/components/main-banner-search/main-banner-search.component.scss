@@ -11,27 +11,21 @@
   justify-content: center;
   margin: 0 0 140px 0;
 
-  .search-banner {
+  & .search-banner {
     @extend %searchBanner;
 
-    h1 {
+    & .search-banner-txt{
       margin: 0 0 18px 0;
       font-size: $fontsize35;
       font-weight: unset;
     }
 
-    div {
-      font-size: $fontsize35;
-    }
-
-    .search-warp {
+    & .search-warp {
       @extend %searchWarp2;
       width: 511px;
       height: 48px;
 
-
-
-      img {
+      & .search-icon {
         width: 31px;
         margin: 0 20px 0 0;
       }
@@ -50,23 +44,23 @@
     height: 269px;
     margin: 0;
 
-    .search-banner h1 {
-      font-size: rem(16px);
-      letter-spacing: 1px;
-    }
 
-    .search-banner {
+    & .search-banner {
       width: 100%;
       max-width: 335px;
       height: 125px;
-
-      .search-warp {
+      & .search-banner-txt{
+        font-size: rem(16px);
+        letter-spacing: 1px;
+      }
+  
+      & .search-warp {
         padding: 0px 9px;
         height: 33px;
         width: 269px;
         border: solid 1px #c2c2c2;
 
-        img {
+        & .search-icon {
           width: 16px ;
           margin: 0 5px 0 0 ;
         }

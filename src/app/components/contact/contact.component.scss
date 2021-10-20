@@ -4,7 +4,7 @@
 .contact-container {
   justify-content: center;
 
-  a {
+  & .contact-link {
     margin: 0 3% 0 0;
   }
 }
@@ -15,7 +15,7 @@
     flex-direction: column;
     text-align: center;
 
-    a {
+    & .contact-link {
       margin: 0 0 18px 0;
     }
   }

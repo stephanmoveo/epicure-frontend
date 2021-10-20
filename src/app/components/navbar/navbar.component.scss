@@ -1,54 +1,49 @@
 @import '../../../assets/styles/extends';
 @import '../../../assets/styles/mixing';
 
-nav {
+.navbar {
   box-sizing: border-box;
   padding: 0 10% 0 10%;
   height: 62px;
   justify-content: space-between;
   width: 100%;
 
-  .nav-items-left {
+  & .nav-items-left {
     width: 40%;
 
-    .nav-item {
+    & .nav-item {
       margin: 0 28px 0 0;
-    }
-
-    a {
       font-size: 18px;
       text-decoration: none;
       color: black;
     }
 
-    div {
+    & .logo-warp {
       margin: 0 3px 0 0;
-    }
 
-    .logo-warp {
-      .hamburger-icon {
+      & .hamburger-icon {
         display: none;
         width: 18px;
       }
 
-      a {
+      & .epicure {
         font-size: 27px;
         margin-left: 15px;
       }
 
-      .cutlery-icon {
+      & .cutlery-icon {
         width: 33px;
       }
     }
   }
 
-  .nav-items-right {
+ & .nav-items-right {
     width: 40%;
 
-    .nav-item {
+    & .nav-item {    
       margin: 0 0 0 5%;
 
-      .search-warp {
+      & .search-warp {
         height: 34px;
         @extend %searchWarp;
         min-width: 415px;
@@ -59,7 +54,7 @@ nav {
       }
     }
 
-    img {
+    & .nav-icon {
       width: 22px;
     }
   }
@@ -67,22 +62,22 @@ nav {
 
 
 @include for-mobile-layout {
-  nav {
+  .navbar {
     padding: 0 20px;
     height: 45px;
 
 
-    .nav-items-left {
+    & .nav-items-left {
       display: block;
 
-      .logo-warp {
+      & .logo-warp {
         display: flex;
 
-        .hamburger-icon {
+        & .hamburger-icon {
           display: inline;
         }
 
-        .cutlery-icon {
+        & .cutlery-icon {
           width: 31px;
           position: absolute;
           right: 0;
@@ -90,20 +85,21 @@ nav {
           margin: auto;
         }
       }
+
+      & .nav-item {
+        display: none;
+      }
     }
 
-    .nav-items-left a {
-      display: none;
-    }
 
-    .nav-items-right {
+    & .nav-items-right {
       justify-content: end;
 
-      .nav-item {
+      & .nav-item {
         width: 18px;
         margin-left: 26px;
 
-        .search-warp {
+        & .search-warp {
           border: none;
           min-width: 0;
           padding: 0;
@@ -113,9 +109,6 @@ nav {
           }
         }
       }
-
-
     }
-
   }
 }

@@ -4,24 +4,24 @@
     <div *ngFor="let item of this.restaurantsService.restaurantsArr[1].chefs" class="chef-row flex">
       <div class="chef-col">
         <div>
-          <img [@rotatedState]='state' src={{item.img}} (click)="rotate()"/>
+          <img class="chef-img" [@rotatedState]='state' src={{item.img}} (click)="rotate()"/>
         </div>
-        <h1>{{item.chef}}</h1>
+        <h1 class="chef-name">{{item.chef}}</h1>
       </div>
       <div class="chef-col">
-        <p>{{item.description}}</p>
+        <p class="chef-desc">{{item.description}}</p>
       </div>
     </div>
   </section>
   <section class="chef-rest-warp">
-    <h1 class="banner-title">Yossi’s restaurants :</h1>
+    <h1 class="banner-title chef-rest-title">Yossi’s restaurants :</h1>
     <div class="flex chef-rests">
       <swiper [config]="this.swiperService.config2" class="main-swiper">
         <div class="swiper-slide" *ngFor="let elem of this.restaurantsService.filteredChefRest">
           <article>
-              <img src={{elem.img}} />
+              <img class="chef-rest-img" src={{elem.img}} />
               <div class="card-bottom">
-                <h1 class="t-center font30">{{elem.restName}}</h1>
+                <h1 class="t-center font30 chef-rest-name-title">{{elem.restName}}</h1>
               </div>
           </article>
         </div>

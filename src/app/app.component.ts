@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { slider, fader } from './animations';
+import { GlobalService } from './services/global.service';
 import { SwiperService } from './services/swiper.service';
 
 @Component({
@@ -11,14 +12,15 @@ import { SwiperService } from './services/swiper.service';
 })
 export class AppComponent {
 
-  constructor(public swiperService: SwiperService) { }
+  constructor(public swiperService: SwiperService, public globalService: GlobalService) { }
 
   title = 'epicure-app';
 
   active = false
   prepareRoute(outlet: RouterOutlet) {
-    console.log(window.navigator.userAgent.toLowerCase().includes('mobile'))
-    if (this.swiperService.innerWidth <= 728)
+    console.log(this.globalService.isMobile);
+    
+    if (this.globalService.isMobile)
       return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation']
   }
 

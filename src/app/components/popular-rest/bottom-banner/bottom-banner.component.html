@@ -8,12 +8,10 @@
           <div class="dishes" *ngIf="item.dishes">
             <div *ngFor="let elem of item.dishes">
               <img src={{elem.img}} />
-              <div class="card-bottom"
-              
-               >
-                <h3>{{elem.dishName}}</h3>
+              <div class="card-bottom">
+                <h3 class="dish-name">{{elem.dishName}}</h3>
                 <p class="font24">{{elem.description}}</p>
-                <img [src]="elem.logo" />
+                <img class="type-icon-img" [src]="elem.logo" />
                 <div class="flex line-price">
                   <div class="line"></div>
                   <p class="font25">{{elem.price | currency:"ILS":"symbol": '1.0-0'}}</p>
@@ -25,26 +23,5 @@
         </article>
       </div>
     </swiper>
-    <!-- <div *ngFor="let item of this.restaurantsService.filteredArr | slice:2:5" class="desktop-bottom-banner">
-        <h1 class="rest-name">{{item.restName}}</h1>
-        <article>
-          <div class="dishes" *ngIf="item.dishes">
-            <div *ngFor="let elem of item.dishes">
-              <img src={{elem.img}} />
-              <div class="card-bottom" style="height: 364px;">
-                <h3>{{elem.dishName}}</h3>
-                <p class="font24">{{elem.description}}</p>
-                <img [src]="elem.logo" />
-                <div class="flex line-price">
-                  <div class="line"></div>
-                  <p class="font25">{{elem.price | currency:"ILS":"symbol"}}</p>
-                  <div class="line"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div> -->
-
   </div>
 </section>

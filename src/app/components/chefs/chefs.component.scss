@@ -10,71 +10,69 @@
 .chef-container {
   margin-top: 100px;
 
-  .chef-week-warp {
+  & .chef-week-warp {
     height: 469px;
 
-    h1 {
-      text-align: center;
-    }
-  }
-
-  .banner-title {
-    margin: 0 0 42px 0;
-    font-weight: unset;
-    text-align: start;
-  }
-
-  .chef-row {
-    width: 100%;
-    justify-content: space-between;
-
-    img {
-      width: 443px;
-    }
-
-    .chef-col {
-      width: 43%;
-      height: 338px;
-      max-width: 443px;
-    }
-
-    h1 {
-      background-color: #ffffffb3;
-      position: relative;
-      bottom: 100px;
-      text-align: center;
-      width: 100%;
-      padding: 24px 0;
-      font-size: $fontsize40;
-    }
-
-    p {
-      font-size: rem(25px);
-    }
-  }
-
-  .chef-rest-warp {
-    margin-top: 58px;
-
-    h1 {
-      margin: 0px 0 23px 0;
-      font-size: $fontsize30;
+    & .banner-title {
+      margin: 0 0 42px 0;
       font-weight: unset;
     }
 
-    .chef-rests {
+    & .chef-row {
+      width: 100%;
+      justify-content: space-between;
+
+      & .chef-img {
+        width: 443px;
+      }
+
+      & .chef-col {
+        width: 43%;
+        height: 338px;
+        max-width: 443px;
+
+        & .chef-name {
+          background-color: #ffffffb3;
+          position: relative;
+          bottom: 100px;
+          text-align: center;
+          width: 100%;
+          padding: 24px 0;
+          font-size: $fontsize40;
+        }
+      }
+
+
+      & .chef-desc {
+        font-size: rem(25px);
+      }
+    }
+  }
+
+  & .chef-rest-warp {
+    margin-top: 58px;
+
+    & .chef-rest-title {
+      margin: 0px 0 23px 0;
+      font-size: $fontsize30;
+      font-weight: unset;
+      text-align: left;
+    }
+
+    & .chef-rests {
       width: 67%;
 
-      article {
+      & article {
         margin: 0 20px 0 0;
         height: 357px;
+        width: fit-content;
 
-        img {
+        & .chef-rest-img {
           height: 224px;
         }
       }
 
-      .card-bottom {
+      & .card-bottom {
         box-sizing: border-box;
         height: 133px;
         background-color: $bgcBeige;
@@ -84,11 +82,6 @@
     }
   }
 }
-
-article {
-  width: fit-content;
-}
-
 
 .main-swiper {
   width: 100%;
@@ -102,35 +95,62 @@ article {
   .chef-container {
     margin-top: 71px;
 
-    .chef-week-warp {
+    & .chef-week-warp {
       height: unset;
+
+      & .chef-row .chef-col {
+        margin: auto;
+        width: 90%;
+        max-width: 334px;
+        height: unset;
+        max-height: 240px;
+        margin-bottom: 21px;
+
+        & .chef-name {
+          font-size: rem(30px);
+          height: 30px;
+          bottom: 82px;
+        }
+
+        & .chef-desc {
+          font-size: 13.5px;
+          text-align: center;
+        }
+
+        & .chef-img {
+          width: 100%;
+          object-fit: cover;
+          aspect-ratio: 334/240;
+        }
+      }
     }
 
-    .chef-rest-warp {
+
+    & .chef-rest-warp {
       margin-top: 22px;
 
-      .chef-rests article {
+      & .chef-rests article {
         margin: 0;
         width: 153px;
         height: 237px;
 
-        img {
+        & .chef-rest-img {
           width: 100%;
           height: unset;
         }
       }
 
-      .chef-rests {
+      & .chef-rests {
         width: 100%;
         padding: 0 0px 0 20px;
         box-sizing: border-box;
 
-        .swiper-slide {
+        & .swiper-slide {
           width: unset !important;
           margin-right: 13px !important;
 
-          article .card-bottom {
-            h1 {
+          & article .card-bottom {
+            .chef-rest-name-title {
               margin: 0px;
               font-size: 20px;
             }
@@ -138,14 +158,14 @@ article {
         }
       }
 
-      .banner-title {
+      & .banner-title {
         text-align: unset;
         font-size: rem(14px);
         margin: 0px 0px 19px 20px;
       }
     }
 
-    .banner-title {
+    & .banner-title {
       font-size: rem(14px);
       margin: 0 0 13px 0;
       text-align: center;
@@ -154,29 +174,5 @@ article {
 
   .wtdh70ma {
     width: 100%;
-  }
-
-  .chef-container .chef-row .chef-col img {
-    width: 100%;
-  }
-
-  .chef-container .chef-row .chef-col {
-    margin: auto;
-    width: 90%;
-    max-width: 334px;
-    height: unset;
-    max-height: 300px;
-    margin-bottom: 21px;
-
-    h1 {
-      font-size: rem(30px);
-      height: 30px;
-      bottom: 82px;
-    }
-
-    p {
-      font-size: 13.5px;
-      text-align: center;
-    }
   }
 }
