@@ -1,0 +1,144 @@
+@import '../popular-rest.component.scss';
+@import '../../../../../assets/styles/fonts';
+@import '../../../../../assets/styles/extends';
+@import '../../../../../assets/styles/functions';
+@import '../../../../../assets/styles/colors';
+@import '../../../../../assets/styles/mixing';
+
+.banner-bottom {
+  margin: 153px 0 87px 0;
+  @extend %pop-row;
+  @extend %allRest;
+
+  & .main-swiper {
+    width: 100%;
+  }
+
+  & article .dishes .dish-img {
+
+    width: 100%;
+    aspect-ratio: 360/290;
+    object-fit: cover;
+    min-height: 290px;
+  }
+
+  & .rest-name {
+    font-family: 'Quicksand-SemiBold';
+    text-align: center;
+    font-size: 30px;
+    margin: 0 0 23px 0;
+  }
+
+  & .card-bottom {
+    height: 364px;
+
+    & .type-icon-img {
+      @extend %absoluteCenter;
+      bottom: 50px;
+      width: 39px;
+    }
+  }
+
+  & .dish-name {
+    font-family: 'Quicksand-SemiBold';
+    font-size: 38.4px;
+    width: 60%;
+    margin: auto;
+  }
+
+  & .font24 {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+@include screen-1000-layout {
+
+  .banner-bottom {
+
+    & .pop-row {
+
+      & article {
+
+        & .card-bottom {
+
+          & .dish-name {
+            font-size: rem(25px);
+          }
+
+          & .font24 {
+            font-size: 20px;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+@include for-mobile-layout {
+  .banner-bottom {
+    margin: 100px 0 87px 0;
+
+    & article .dishes .dish-img {
+
+      width: 100%;
+      aspect-ratio: 260/209;
+      object-fit: cover;
+      min-height: 209px;
+    }
+
+    & .dish-name {
+      font-size: rem(27.6px);
+
+    }
+
+    & .rest-name {
+      font-size: rem(16px);
+      margin: 0 0 15px 0;
+    }
+
+    & .pop-row article {
+      max-width: 260px;
+    }
+
+    & .pop-row article .card-bottom {
+      height: 260px;
+      padding: 12px 0 0 0;
+      background-color: $bgcBeigeMobile;
+
+      & .type-icon-img {
+        width: 30px;
+
+      }
+
+      & .font24 {
+        font-size: rem(17.3px);
+      }
+
+      & .line-price {
+        width: 100%;
+        justify-content: space-evenly;
+
+        & .line {
+          width: 25%;
+        }
+      }
+    }
+  }
+
+  .main-swiper {
+    display: block !important;
+
+    .swiper-slide {
+      margin-right: 14px !important;
+      position: relative;
+      right: 70px;
+    }
+  }
+
+  .desktop-bottom-banner {
+    display: none;
+  }
+
+}

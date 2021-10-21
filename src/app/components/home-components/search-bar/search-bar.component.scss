@@ -1,0 +1,43 @@
+@import '../../../../assets/styles/fonts';
+@import '../../../../assets/styles/extends';
+@import '../../../../assets/styles/functions';
+@import '../../../../assets/styles/colors';
+@import '../../../../assets/styles/mixing'; 
+
+input {
+  font-family: 'Quicksand';
+  border: none;
+  outline: 0;
+  width: 100%;
+  background-color: transparent;
+  font-size: 18px;
+  letter-spacing: 0.29px;
+}
+
+.inputFont {
+  font-size: $fontsize22;
+  letter-spacing: 0.6px;
+}
+
+@include screen-1000-layout {
+
+  input {
+    font-size: rem(10.7px);
+    letter-spacing: 0;
+    padding: 0 0 4px 0;
+  }
+
+  .inputFont {
+    font-size: rem(20px);
+    letter-spacing: 0;
+    padding: 0;
+  }
+}
+
+@include for-mobile-layout {
+
+  .inputFont {
+    font-size: rem(13px);
+    letter-spacing: 0.07px;
+  }
+}

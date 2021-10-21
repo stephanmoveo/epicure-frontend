@@ -1,0 +1,31 @@
+@import '../../../../../assets/styles/extends';
+@import '../../../../../assets/styles/fonts';
+@import '../../../../../assets/styles/mixing';
+@import '../../../../../assets/styles//colors';
+
+article {
+  max-width: 360px;
+  position: relative;
+
+  & .img-warp {
+
+    & .dish-img {
+      width: 100%;
+      aspect-ratio: 360/224;
+      object-fit: cover;
+    }
+  }
+
+ & .card-bottom {
+    background-color: $bgcBeige;
+    text-align: center;
+    padding: 28px 35px 20px 35px;
+    margin-top: -3px;
+
+   & .rest-name-title {
+      font-family: Quicksand-SemiBold;
+      font-size: 40px;
+      margin: 0 0 15px 0;
+    }
+  }
+}

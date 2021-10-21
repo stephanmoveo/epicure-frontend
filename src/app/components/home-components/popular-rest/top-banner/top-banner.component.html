@@ -1,0 +1,11 @@
+<section class="banner-top">
+  <h1 class="banner-title">THE POPULAR RESTAURANTS IN EPICURE :</h1>
+  <div class="pop-row flex">
+    <swiper [config]="this.swiperService.config" class="main-swiper">
+      <div *ngFor="let item of this.restaurantsService.filteredArr | slice:0:3" class="swiper-slide">
+          <app-top-card [item]="item"></app-top-card>
+      </div>
+    </swiper>
+  </div>
+  <a class="aTxtDec allrestaurants" routerLink='restaurants' >All Restaurants<img src={{this.iconsService.arrowIcon}} /></a>
+</section>

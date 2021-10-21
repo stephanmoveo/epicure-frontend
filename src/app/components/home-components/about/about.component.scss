@@ -1,0 +1,125 @@
+@import '../../../../assets/styles/extends';
+@import '../../../../assets/styles/colors';
+@import '../../../../assets/styles/fonts';
+@import '../../../../assets/styles/mixing';
+
+.about-container {
+  background-color: $bgcGrey;
+  margin: 117px 0 38px 0;
+
+  & .about-warp {
+    padding: 30px 0;
+    align-items: center;
+    min-height: 526px;
+    box-sizing: border-box;
+
+    & .about-row-logo {
+      // margin: 0 0 0 182px;
+      margin: 0 0 0 5%;
+
+      & .epicue-logo {
+        width: 178px;
+      }
+    }
+
+    & .about-row-txt {
+      & .about-title {
+        font-size: $fontsize30;
+        font-weight: unset;
+        text-align: start;
+      }
+
+      & .about-text {
+        margin: 20px 0;
+        font-size: $fontsize22;
+        max-width: 567px;
+
+      }
+    }
+
+    & .stores {
+      @extend %stores;
+
+      & .store-logo {
+        width: 23px;
+      }
+    }
+  }
+}
+
+@include screen-1000-layout {
+  .about-container {
+
+    & .about-warp {
+      & .about-row-logo {
+        margin: 0 30px 0 0;
+
+        & .epicue-logo {
+          width: 120px;
+        }
+      }
+
+      & .about-row-txt {
+
+        & .about-text {
+          font-size: rem(17px);
+
+        }
+      }
+    }
+  }
+}
+
+@include for-mobile-layout {
+  .about-container {
+    margin: 97px 0 22px 0;
+    padding: 0 36px;
+    box-sizing: border-box;
+
+    & .about-warp {
+        padding: 30px 0 62px 0;
+
+      & .about-row-logo {
+        margin: auto;
+      }
+
+      & .stores {
+        width: 127px;
+        height: 37px;
+        margin: 34px 0 0 0;
+
+        & .store-logo {
+          width: 17px;
+        }
+
+        & .store-text-h4 {
+          font-size: 9px;
+        }
+
+        & .store-text-h3 {
+          font-size: 12px;
+        }
+      }
+
+      & .about-row-txt .about-title {
+        text-align: center;
+        font-size: rem(14px);
+      }
+
+      & .about-row-txt .about-text {
+        width: fit-content;
+        font-size: rem(14px);
+        text-align: center;
+      }
+    }
+  }
+
+  .wtdh70ma {
+    width: 100%;
+  }
+
+  .flex-no-warp {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}

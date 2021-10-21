@@ -23,7 +23,8 @@ import { ChefsRestBtnComponent } from './components/home-components/chefs-rest-b
 import { NextpageComponent } from './pages/nextpage/nextpage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RestaurantsPageComponent } from '../app/pages/restaurants-page/restaurants-page.component';
-import { RestNavComponent } from './components/restaurants-components/rest-nav/rest-nav.component'
+import { RestNavComponent } from './components/restaurants-components/rest-nav/rest-nav.component';
+import { TopCardComponent } from './components/home-components/popular-rest/top-card/top-card.component'
 
 
 
@@ -53,7 +54,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ChefsRestBtnComponent,
     NextpageComponent,
     RestaurantsPageComponent,
-    RestNavComponent
+    RestNavComponent,
+    TopCardComponent
   ],
   imports: [
     BrowserModule,

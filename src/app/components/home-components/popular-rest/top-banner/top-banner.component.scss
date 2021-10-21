@@ -1,0 +1,97 @@
+@import '../../../../../assets/styles/extends';
+@import '../../../../../assets/styles/fonts';
+@import '../../../../../assets/styles/mixing';
+@import '../../../../../assets/styles//colors';
+
+.banner-top {
+  & .pop-row {
+    @extend %pop-row;
+  }
+
+  & .img-warp {
+ 
+
+    & .dish-img {
+        width: 100%;
+        aspect-ratio: 360/224;
+        object-fit: cover;
+    }
+  }
+
+  @extend %allRest;
+
+  .main-swiper {
+    width: 100%;
+  }
+
+}
+
+@include screen-1000-layout {
+
+  .banner-top {
+
+    & .pop-row {
+
+      & article {
+
+        & .card-bottom {
+
+          & .rest-name-title {
+            font-size: rem(30px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include for-mobile-layout {
+  .banner-top {
+    margin: 51px 0 0 0;
+
+    & .img-warp {
+      height: 224px;
+      width: 206px;
+      overflow: hidden;
+
+      & .dish-img {
+        width: 354px;
+        margin: 0px 0 0px -60px;
+      }
+    }
+
+    .main-swiper {
+      display: block;
+
+      & .swiper-slide {
+        width: 206px !important;
+        margin-right: 14px !important;
+        position: relative;
+        right: 40px;
+      }
+    }
+
+    & .pop-row article .card-bottom {
+      box-sizing: border-box;
+      width: 206px;
+      background-color: $bgcBeigeMobile;
+
+      & .chef-name {
+        font-size: rem(20px);
+      }
+
+      & .rest-name-title {
+        font-size: rem(25px);
+      }
+    }
+  }
+
+  .banner-title {
+    font-size: 14px;
+    margin: 0 0 13px 0;
+  }
+
+  .allrestaurants {
+    display: none;
+  }
+}
