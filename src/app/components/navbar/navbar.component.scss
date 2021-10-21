@@ -3,6 +3,8 @@
 @import '../../../assets/styles/fonts';
 @import '../../../assets/styles/mixing';
 @import '../../../assets/styles/functions';
+//    border-bottom: 2px solid #F0CE8C;
+
 .navbar {
   box-sizing: border-box;
   padding: 0 10% 0 10%;
@@ -13,7 +15,24 @@
 
   & .nav-items-left {
     width: 40%;
-    margin: 0px 12% 0 0;
+
+    // margin: 0px 12% 0 0;
+    & .navlink-warp {
+      height: 30px;
+      border-bottom: 2px solid #F0CE8C;
+      // width: 100px;
+      box-sizing: border-box;
+      position: relative;
+      top: 6px;
+    }
+
+    .danger {
+      border-bottom: 2px solid #F0CE8C;
+    }
+
+    .success {
+      border: none;
+    }
 
     & .nav-item {
       margin: 0 28px 0 0;
@@ -114,7 +133,7 @@
 
     & .nav-items-right {
       justify-content: end;
-   
+
       & .nav-item {
         width: 18px;
         margin-left: 26px;
