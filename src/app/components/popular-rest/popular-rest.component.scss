@@ -1,0 +1,33 @@
+@import '../../../assets/styles/extends';
+@import '../../../assets/styles/colors';
+@import '../../../assets/styles/fonts';
+@import '../../../assets/styles/mixing';
+@import '../../../assets/styles/functions';
+
+.pop-container {
+  margin-bottom: 87px;
+
+  & .banner-top {
+    margin: 0 0 153px 0;
+  }
+
+  & .banner-bottom {
+    margin: 0 0 87px 0;
+
+    & .rest-name {
+      font-family: 'Quicksand-SemiBold';
+      text-align: center;
+      font-size: 30px;
+      margin: 0 0 23px 0;
+    }
+  }
+}
+
+@include for-mobile-layout {
+  .wtdh80ma {
+    width: 100%;
+    padding: 0 0px 0 20px;
+    box-sizing: border-box;
+  }
+
+}

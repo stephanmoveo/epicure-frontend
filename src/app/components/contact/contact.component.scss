@@ -1,0 +1,22 @@
+@import '../../../assets/styles/mixing';
+
+
+.contact-container {
+  justify-content: center;
+
+  & .contact-link {
+    margin: 0 3% 0 0;
+  }
+}
+
+@include for-mobile-layout {
+
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+
+    & .contact-link {
+      margin: 0 0 18px 0;
+    }
+  }
+}

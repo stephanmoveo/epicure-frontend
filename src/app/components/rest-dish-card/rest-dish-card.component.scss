@@ -1,0 +1,129 @@
+@import '../../../assets/styles/extends';
+@import '../../../assets/styles/fonts';
+@import '../../../assets/styles/mixing';
+@import '../../../assets/styles//colors';
+
+article .dishes .dish-img {
+
+  width: 100%;
+  aspect-ratio: 360/290;
+  object-fit: cover;
+  min-height: 290px;
+}
+
+.rest-name {
+  font-family: 'Quicksand-SemiBold';
+  text-align: center;
+  font-size: 30px;
+  margin: 0 0 23px 0;
+}
+
+.card-bottom {
+  height: 364px;
+  background-color: #F9F5EA;
+  text-align: center;
+  padding: 28px 35px 20px 35px;
+  margin-top: -3px;
+
+  & .type-icon-img {
+    @extend %absoluteCenter;
+    bottom: 50px;
+    width: 39px;
+  }
+
+  .line-price {
+    width: 80%;
+    position: absolute;
+    bottom: 11px;
+    justify-content: space-between;
+    align-items: center;
+
+    .line {
+      border-bottom: 1px solid #C7C6C1;
+      width: 33%;
+    }
+  }
+}
+
+.dish-name {
+  font-family: 'Quicksand-SemiBold';
+  font-size: 38.4px;
+  width: 60%;
+  margin: auto;
+}
+
+.font24 {
+  width: 90%;
+  margin: 20px auto;
+}
+
+@include screen-1000-layout {
+
+  article {
+
+    & .card-bottom {
+
+      & .dish-name {
+        font-size: rem(25px);
+      }
+
+      & .font24 {
+        font-size: 20px;
+
+      }
+    }
+  }
+
+
+}
+
+@include for-mobile-layout {
+
+
+  article .dishes .dish-img {
+
+    width: 100%;
+    aspect-ratio: 260/209;
+    object-fit: cover;
+    min-height: 209px;
+  }
+
+  .dish-name {
+    font-size: rem(27.6px);
+
+  }
+
+  .rest-name {
+    font-size: rem(16px);
+    margin: 0 0 15px 0;
+  }
+
+  article {
+    max-width: 260px;
+  }
+
+  article .card-bottom {
+    height: 260px;
+    padding: 12px 0 0 0;
+    background-color: $bgcBeigeMobile;
+
+    & .type-icon-img {
+      width: 30px;
+
+    }
+
+    & .font24 {
+      font-size: rem(17.3px);
+    }
+
+    & .line-price {
+      width: 100%;
+      justify-content: space-evenly;
+
+      & .line {
+        width: 25%;
+      }
+    }
+  }
+
+}

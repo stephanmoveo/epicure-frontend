@@ -1,0 +1,136 @@
+@import '../../../assets/styles/extends';
+@import '../../../assets/styles/colors';
+@import '../../../assets/styles/fonts';
+@import '../../../assets/styles/mixing';
+@import '../../../assets/styles/functions';
+.navbar {
+  box-sizing: border-box;
+  padding: 0 10% 0 10%;
+  height: 62px;
+  border-bottom: 1px #d5d5d5 solid;
+  width: 100%;
+  justify-content: space-between;
+
+  & .nav-items-left {
+    width: 40%;
+    margin: 0px 12% 0 0;
+
+    & .nav-item {
+      margin: 0 28px 0 0;
+      font-size: 18px;
+      text-decoration: none;
+      color: black;
+    }
+
+    & .logo-warp {
+      margin: 0 3px 0 0;
+
+      & .hamburger-icon {
+        display: none;
+        width: 18px;
+      }
+
+      & .epicure {
+        font-size: 27px;
+        margin-left: 15px;
+      }
+
+      & .cutlery-icon {
+        width: 33px;
+      }
+    }
+  }
+
+  & .nav-items-right {
+    width: 40%;
+    justify-content: flex-end;
+
+    & .search-content {
+      display: contents;
+    }
+
+    & .nav-item {
+      margin: 0 0 0 5%;
+
+      & .search-warp {
+        @extend %searchWarp;
+        height: 34px;
+        max-width: 415px;
+        width: 168%;
+
+        .search-icon {
+          margin: 0 0px 0 10px;
+
+        }
+
+        app-search-bar {
+          width: 100%;
+        }
+      }
+    }
+
+    & .nav-icon {
+      width: 22px;
+    }
+  }
+}
+
+@include screen-1000-layout {
+  .navbar .nav-items-right .nav-item .search-warp .search-icon {
+    width: 16px;
+  }
+}
+
+@include for-mobile-layout {
+  .navbar {
+    padding: 0 20px;
+    height: 45px;
+
+
+    & .nav-items-left {
+      display: block;
+
+      & .logo-warp {
+        display: flex;
+
+        & .hamburger-icon {
+          display: inline;
+        }
+
+        & .cutlery-icon {
+          width: 31px;
+          position: absolute;
+          right: 0;
+          left: 0;
+          margin: auto;
+        }
+      }
+
+      & .nav-item {
+        display: none;
+      }
+    }
+
+
+    & .nav-items-right {
+      justify-content: end;
+   
+      & .nav-item {
+        width: 18px;
+        margin-left: 26px;
+
+        & .search-warp {
+          border: none;
+          min-width: 0;
+          padding: 0;
+          width: unset;
+
+
+          app-search-bar {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

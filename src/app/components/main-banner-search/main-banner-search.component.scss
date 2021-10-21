@@ -1,0 +1,94 @@
+@import '../../../assets/styles/extends';
+@import '../../../assets/styles/colors';
+@import '../../../assets/styles/fonts';
+@import '../../../assets/styles/mixing';
+@import '../../../assets/styles/functions';
+
+.top-page {
+  width: 100%;
+  height: 669px;
+  background-image: url("../../../assets/img/hero-picture.png");
+  background-size: cover;
+  justify-content: center;
+  margin: 0 0 140px 0;
+
+  & .search-banner {
+    @extend %searchBanner;
+
+    & .search-banner-txt {
+      margin: 0 0 18px 0;
+      font-size: $fontsize35;
+      font-weight: unset;
+    }
+
+    & .search-warp {
+      @extend %searchWarp2;
+      max-width: 511px;
+      width: 80%;
+      height: 48px;
+
+      & .search-icon {
+        width: 31px;
+        margin: 0 20px 0 0;
+      }
+
+      app-search-bar {
+        width: 100%;
+        display: flex;
+        position: relative;
+      }
+    }
+  }
+}
+
+@include screen-1000-layout {
+  .top-page {
+
+    & .search-banner {
+
+      & .search-warp {
+        & .search-icon {
+          width: 19px;
+          margin: 0 10px 0 0;
+
+        }
+      }
+
+      & .search-banner-txt {
+        font-size: rem(26px);
+      }
+    }
+  }
+}
+
+@include for-mobile-layout {
+  .top-page {
+    height: 269px;
+    margin: 0;
+
+
+    & .search-banner {
+      width: 100%;
+      max-width: 335px;
+      height: 125px;
+
+      & .search-banner-txt {
+        font-size: rem(16px);
+        letter-spacing: 1px;
+      }
+
+      & .search-warp {
+        padding: 0px 9px;
+        min-height: 33px;
+        width: 269px;
+        border: solid 1px #c2c2c2;
+
+        & .search-icon {
+          width: 16px;
+          margin: 0 5px 0 0;
+        }
+      }
+    }
+  }
+
+}

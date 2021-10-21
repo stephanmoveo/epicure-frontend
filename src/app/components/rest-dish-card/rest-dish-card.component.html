@@ -1,0 +1,18 @@
+<h1 class="rest-name">{{item.restName}}</h1>
+<article>
+  <div class="dishes" *ngIf="item.dishes">
+    <div *ngFor="let elem of item.dishes">
+      <img class="dish-img" src={{elem.img}} />
+      <div class="card-bottom">
+        <h3 class="dish-name">{{elem.dishName}}</h3>
+        <p class="font24">{{elem.description}}</p>
+        <img class="type-icon-img" [src]="elem.logo" />
+        <div class="flex line-price">
+          <div class="line"></div>
+          <p class="font25">{{elem.price | currency:"ILS":"symbol": '1.0-0'}}</p>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

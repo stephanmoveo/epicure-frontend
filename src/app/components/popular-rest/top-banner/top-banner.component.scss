@@ -1,0 +1,45 @@
+@import '../../../../assets/styles/fonts';
+@import '../../../../assets/styles/extends';
+@import '../../../../assets/styles/functions';
+@import '../../../../assets/styles/colors';
+@import '../../../../assets/styles/mixing';
+
+.banner-top {
+  & .pop-row {
+    @extend %pop-row;
+  }
+
+  @extend %allRest;
+
+  .main-swiper {
+    width: 100%;
+  }
+
+}
+
+
+@include for-mobile-layout {
+  .banner-top {
+    margin: 51px 0 0 0;
+
+    .main-swiper {
+      display: block;
+
+      & .swiper-slide {
+        width: 206px !important;
+        margin-right: 14px !important;
+        position: relative;
+        right: 40px;
+      }
+    }
+  }
+
+  .banner-title {
+    font-size: 14px;
+    margin: 0 0 13px 0;
+  }
+
+  .allrestaurants {
+    display: none;
+  }
+}

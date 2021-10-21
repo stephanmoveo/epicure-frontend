@@ -50,8 +50,8 @@ export class RestaurantsService {
       },
       {
         restName: 'Kab Kem',
-        img: '',
-        chef: '',
+        img: 'assets/img/Rests/All/kab-kem.jpg',
+        chef: 'Yariv Malili',
         dishes: [
           {
             dishName: 'Garbanzo Frito',
@@ -65,8 +65,8 @@ export class RestaurantsService {
       //epicure-app/src/assets/img/Rests/messa_2021-10-20/messa.png
       {
         restName: 'Popina',
-        img: '',
-        chef: '',
+        img: 'assets/img/Rests/All/popina.jpg',
+        chef: 'Yariv Malili',
         dishes: [
           {
             dishName: 'Smoked Pizza',
@@ -79,7 +79,7 @@ export class RestaurantsService {
       },
       {
         restName: 'Messa',
-        img: '',
+        img: 'assets/img/Rests/messa_2021-10-20/messa.png',
         chef: 'Aviv Moshe',
         dishes: [
           {

@@ -1,0 +1,23 @@
+<header>
+  <nav class="flex-center navbar">
+    <div class="nav-items-left flex-center">
+      <div class="logo-warp flex-center">
+        <img src={{this.iconsService.hamburgerIcon}} class="hamburger-icon"/>
+        <img src={{this.iconsService.cutleryLogo}} class="cutlery-icon" routerLink=''/>
+        <a class="nav-item epicure" routerLink=''>EPICURE</a>
+      </div>
+      <a href="#" class="nav-item" routerLink='restaurants/All'>Restaurants</a>
+      <a href="#" class="nav-item">Chefs</a>
+    </div>
+    <div class="nav-items-right flex-center">
+      <div class="nav-item search-content">
+        <div class="search-warp">
+          <app-search-bar></app-search-bar>
+          <img class="search-icon" src={{this.iconsService.serachIconLogo}} /> 
+        </div>
+      </div>
+      <img class="nav-item nav-icon" src={{this.iconsService.profileLogo}} />
+      <img class="nav-item nav-icon" src={{this.iconsService.bagIcon}} />
+    </div>
+  </nav>
+</header>
