@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestaurantsService } from 'src/app/services/restaurants.service';
 
 @Component({
   selector: 'app-rest-nav',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestNavComponent implements OnInit {
 
-  constructor() { }
+  constructor(public restaurantsService:RestaurantsService) { }
 
   ngOnInit(): void {
   }
