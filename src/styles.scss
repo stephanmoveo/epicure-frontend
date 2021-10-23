@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0 0 100px 0;
+  font-family: Quicksand;
 }
 
 @import './assets/styles/fonts';
@@ -14,6 +15,10 @@ body {
 .swiper-pagination{
     display: none;
 }
+
+// .active {
+//   border-bottom: 2px solid #F0CE8C;
+// }
 
 .swiper-slide{
     overflow: hidden !important;

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AllChefsComponent } from './components/all-chefs/all-chefs.component';
 import { AllRestaurantsComponent } from './components/all-restaurants/all-restaurants.component';
 import { NewRestComponent } from './components/new-rest/new-rest.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
@@ -13,11 +14,15 @@ const routes: Routes = [
       { path: 'All', component: AllRestaurantsComponent },
       { path: 'New', component: NewRestComponent }
     ]
-  }
+  },
+  { path: 'Chefs', component: AllChefsComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+}
+

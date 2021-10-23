@@ -18,7 +18,7 @@ export class SwiperService {
     }
     else {
       this.config = { ...this.config, slidesPerView: 3 }
-      this.config2 = this.config
+      this.config2 = { ...this.config2, slidesPerView: 3 }
     }
 
   }
@@ -30,7 +30,7 @@ export class SwiperService {
     keyboard: true,
     mousewheel: true,
     scrollbar: false,
-    // navigation: true,
+    spaceBetween: 20,
     pagination: true
   };
   public config: SwiperConfigInterface = {
@@ -41,7 +41,6 @@ export class SwiperService {
     keyboard: true,
     mousewheel: true,
     scrollbar: false,
-    // navigation: true,
     pagination: true
   };
 }

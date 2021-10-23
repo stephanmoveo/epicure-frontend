@@ -1,8 +1,11 @@
 .rest-container {
-  margin: 53px 0 0 0;
+  margin: 53px 0 40px 0;
 
   & .rest-row {
 
+    .active{
+      font-family: Quicksand-SemiBold;
+    }
 
     & .rest-nav-link {
       margin: 0 20px;

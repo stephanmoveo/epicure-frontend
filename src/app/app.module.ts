@@ -27,12 +27,13 @@ import { RestChefCardComponent } from './components/rest-chef-card/rest-chef-car
 import { RestDishCardComponent } from './components/rest-dish-card/rest-dish-card.component';
 import { AllRestaurantsComponent } from './components/all-restaurants/all-restaurants.component';
 import { NewRestComponent } from './components/new-rest/new-rest.component';
+import { AllChefsComponent } from './components/all-chefs/all-chefs.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   observer: true,
   direction: 'horizontal',
   threshold: 50,
-  spaceBetween: 5,
+  spaceBetween: 11,
   slidesPerView: 1,
   centeredSlides: true
 };
@@ -57,7 +58,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     RestChefCardComponent,
     RestDishCardComponent,
     AllRestaurantsComponent,
-    NewRestComponent
+    NewRestComponent,
+    AllChefsComponent
   ],
   imports: [
     BrowserModule,

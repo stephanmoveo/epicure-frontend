@@ -3,7 +3,6 @@
 @import '../../../assets/styles/fonts';
 @import '../../../assets/styles/mixing';
 @import '../../../assets/styles/functions';
-//    border-bottom: 2px solid #F0CE8C;
 
 .navbar {
   box-sizing: border-box;
@@ -16,22 +15,15 @@
   & .nav-items-left {
     width: 40%;
 
-    // margin: 0px 12% 0 0;
-    & .navlink-warp {
-      height: 30px;
+    .active {
       border-bottom: 2px solid #F0CE8C;
-      // width: 100px;
-      box-sizing: border-box;
+    }
+
+   & .nav-link {
       position: relative;
-      top: 6px;
-    }
-
-    .danger {
-      border-bottom: 2px solid #F0CE8C;
-    }
-
-    .success {
-      border: none;
+      top: 4px;
+      height: 30px;
+      box-sizing: border-box;
     }
 
     & .nav-item {

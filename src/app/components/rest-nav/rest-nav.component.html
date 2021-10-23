@@ -1,5 +1,6 @@
 <div class="rest-container">
   <div class="rest-row flx-j-ctr">
-    <a class="rest-nav-link aTxtDec"  *ngFor="let item of menuLinksArr" routerLink={{item}}>{{item}}</a>
+    <a class="rest-nav-link aTxtDec" *ngFor="let item of menuLinksArr" routerLinkActive='active'
+      [routerLink]="item.to">{{item.link}}</a>
   </div>
 </div>

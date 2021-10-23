@@ -6,7 +6,6 @@ import { Injectable } from '@angular/core';
 export class GlobalService {
 
   constructor() { }
-
   isMobile = window.navigator.userAgent.toLowerCase().includes('mobile')
 }
 

@@ -1,5 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import { IconsService } from 'src/app/services/icons.service';
+import { Component, OnInit } from '@angular/core';
 import { RestaurantsService } from 'src/app/services/restaurants.service';
 import { SwiperService } from 'src/app/services/swiper.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
@@ -27,11 +26,8 @@ export class ChefsComponent implements OnInit {
     public restaurantsService: RestaurantsService,
     public swiperService: SwiperService
   ) { }
-  // @HostListener('window:resize', ['$event'])
 
   ngOnInit(): void {
-    console.log(this.swiperService.config2);
-    
   }
 
 }

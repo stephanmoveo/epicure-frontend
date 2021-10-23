@@ -90,13 +90,24 @@
 
 .main-swiper {
   width: 100%;
-
+//    right: 18px;
   .swiper-slide {
     width: 233px !important;
     position: relative;
   }
 }
+@include screen-1440-layout{
 
+  .main-swiper .swiper-slide {
+    left: 25px;
+  }
+  .chef-container .chef-rest-warp .chef-rests{
+    width: 75%;
+}
+  .wtdh70ma {
+    width: 70%;
+  }
+}
 @include screen-1000-layout {
   .chef-container {
     & .chef-week-warp .chef-row .chef-col {
