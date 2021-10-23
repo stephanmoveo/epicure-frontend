@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { restuarantsInterface, chef, restuarant } from '../shared/interfaces/restuarantsInterface';
+import { restuarantsInterface } from '../shared/interfaces/restuarantsInterface';
 import { IconsService } from './icons.service';
 @Injectable({
   providedIn: 'root'
@@ -62,7 +62,6 @@ export class RestaurantsService {
           }
         ]
       },
-      //epicure-app/src/assets/img/Rests/messa_2021-10-20/messa.png
       {
         restName: 'Popina',
         img: 'assets/img/Rests/All/popina.jpg',
