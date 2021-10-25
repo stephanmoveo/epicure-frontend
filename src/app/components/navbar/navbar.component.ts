@@ -10,9 +10,13 @@ export class NavbarComponent implements OnInit {
 
   constructor(public iconsService: IconsService) { }
 
+  // navLinksArr = [
+  //   { name: 'Restaurants', to: 'restaurants', },
+  //   { name: 'Chefs', to: 'Chefs' },
+  // ]
   navLinksArr = [
-    { name: 'restaurants', to: 'restaurants',  },
-    { name: 'chefs', to: 'Chefs' },
+    { id: '1', name: 'Restaurants', to: 'restaurants', },
+    { id: '2', name: 'Chefs', to: 'Chefs' },
   ]
 
   ngOnInit(): void {

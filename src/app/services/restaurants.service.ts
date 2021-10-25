@@ -8,6 +8,12 @@ export class RestaurantsService {
 
   constructor(public iconsService: IconsService) { }
 
+  get filteredNewRest() {
+    const cArr = this.restaurantsArr.restArr
+    const lastThree = cArr.slice(-3).reverse();
+    return lastThree
+  }
+
   get filteredChefRest() {
     const cArr = this.restaurantsArr.chefs
     const filterdRests = cArr[0].chefRest
@@ -97,7 +103,7 @@ export class RestaurantsService {
       {
         chef: 'Yossi Shitrit',
         img: 'assets/img/Rests/All/yossi.jpg',
-        description: "Chef Yossi Shitrit has been living and breathing his culinary dreams for more than two decades, including running the kitchen in his first restaurant, the fondly-remembered Violet, located in Moshav  Udim. Shitrit's creativity and culinary  acumen born of long experience  are expressed in the every detail of each andevery dish.",
+        description: "Chef Yossi Shitrit has been living and breathing his culinary dreams for more than two decades, including running the kitchen in his first restaurant, the fondly-remembered Violet, located in Moshav Udim. Shitrit's creativity and culinary acumen born of long experience are expressed in the every detail of each and every dish.",
         chefRest: [
           { restName: 'Onza', img: 'assets/img/Rests/All/onza.jpg' },
           { restName: 'Kitchen Market', img: 'assets/img/Rests/All/kitchen-market.jpg' },

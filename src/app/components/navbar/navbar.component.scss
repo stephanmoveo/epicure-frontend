@@ -4,141 +4,158 @@
 @import '../../../assets/styles/mixing';
 @import '../../../assets/styles/functions';
 
-.navbar {
-  box-sizing: border-box;
-  padding: 0 10% 0 10%;
-  height: 62px;
-  border-bottom: 1px #d5d5d5 solid;
-  width: 100%;
-  justify-content: space-between;
 
-  & .nav-items-left {
-    width: 40%;
 
-    .active {
-      border-bottom: 2px solid #F0CE8C;
-    }
+header {
+  background-color: white;
+  z-index: 9;
+  position: sticky;
+  top: 0;
 
-   & .nav-link {
-      position: relative;
-      top: 4px;
-      height: 30px;
-      box-sizing: border-box;
-    }
+  & .navbar {
+    box-sizing: border-box;
+    padding: 0 10% 0 10%;
+    height: 62px;
+    border-bottom: 1px #d5d5d5 solid;
+    width: 100%;
+    // position: fixed;
 
-    & .nav-item {
-      margin: 0 28px 0 0;
-      font-size: 18px;
-      text-decoration: none;
-      color: black;
-    }
+    & .nav-items-left {
+      width: 50%;
 
-    & .logo-warp {
-      margin: 0 3px 0 0;
-
-      & .hamburger-icon {
-        display: none;
-        width: 18px;
+      .active {
+        border-bottom: 2px solid #F0CE8C;
       }
 
-      & .epicure {
-        font-size: 27px;
-        margin-left: 15px;
+      & .nav-link {
+        position: relative;
+        top: 4px;
+        height: 30px;
+        box-sizing: border-box;
       }
 
-      & .cutlery-icon {
-        width: 33px;
+      & .nav-item {
+        margin: 0 28px 0 0;
+        font-size: 18px;
+        text-decoration: none;
+        color: black;
       }
-    }
-  }
 
-  & .nav-items-right {
-    width: 40%;
-    justify-content: flex-end;
+      & .logo-warp {
+        margin: 0 3px 0 0;
 
-    & .search-content {
-      display: contents;
-    }
-
-    & .nav-item {
-      margin: 0 0 0 5%;
-
-      & .search-warp {
-        @extend %searchWarp;
-        height: 34px;
-        max-width: 415px;
-        width: 168%;
-
-        .search-icon {
-          margin: 0 0px 0 10px;
-
+        & .hamburger-icon {
+          display: none;
+          width: 18px;
         }
 
-        app-search-bar {
+        & .epicure {
+          font-size: 27px;
+          margin-left: 15px;
+        }
+
+        & .cutlery-icon {
+          width: 33px;
+        }
+      }
+    }
+
+    & .nav-items-right {
+      width: 50%;
+      justify-content: flex-end;
+
+      & .search-content {
+        display: contents;
+      }
+
+      & .nav-item {
+        margin: 0 0 0 5%;
+
+        & .search-warp {
+          @extend %searchWarp;
+          height: 34px;
+          max-width: 415px;
           width: 100%;
+
+          .search-icon {
+            margin: 0 0px 0 10px;
+
+          }
+
+          app-search-bar {
+            width: 100%;
+          }
         }
       }
-    }
 
-    & .nav-icon {
-      width: 22px;
+      & .nav-icon {
+        width: 22px;
+      }
     }
   }
 }
 
 @include screen-1000-layout {
-  .navbar .nav-items-right .nav-item .search-warp .search-icon {
-    width: 16px;
+  .navbar .nav-items-right .nav-item .search-warp {
+    width: 50%;
+
+    .search-icon {
+      width: 16px;
+    }
   }
 }
 
 @include for-mobile-layout {
-  .navbar {
-    padding: 0 20px;
-    height: 45px;
+  header {
 
 
-    & .nav-items-left {
-      display: block;
+    .navbar {
+      padding: 0 20px;
+      height: 45px;
 
-      & .logo-warp {
-        display: flex;
 
-        & .hamburger-icon {
-          display: inline;
+      & .nav-items-left {
+        display: block;
+
+        & .logo-warp {
+          display: flex;
+
+          & .hamburger-icon {
+            display: inline;
+          }
+
+          & .cutlery-icon {
+            width: 31px;
+            position: absolute;
+            right: 0;
+            left: 0;
+            margin: auto;
+          }
         }
 
-        & .cutlery-icon {
-          width: 31px;
-          position: absolute;
-          right: 0;
-          left: 0;
-          margin: auto;
+        & .nav-item {
+          display: none;
         }
       }
 
-      & .nav-item {
-        display: none;
-      }
-    }
+
+      & .nav-items-right {
+        justify-content: end;
+
+        & .nav-item {
+          width: 18px;
+          margin-left: 26px;
+
+          & .search-warp {
+            border: none;
+            min-width: 0;
+            padding: 0;
+            width: unset;
 
 
-    & .nav-items-right {
-      justify-content: end;
-
-      & .nav-item {
-        width: 18px;
-        margin-left: 26px;
-
-        & .search-warp {
-          border: none;
-          min-width: 0;
-          padding: 0;
-          width: unset;
-
-
-          app-search-bar {
-            display: none;
+            app-search-bar {
+              display: none;
+            }
           }
         }
       }

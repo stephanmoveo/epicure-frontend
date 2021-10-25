@@ -13,9 +13,11 @@
     align-items: center;
     min-height: 526px;
     box-sizing: border-box;
+    justify-content: space-between;
 
     & .about-row-logo {
-      margin: 0 0 0 5%;
+      // margin: 0 0 0 5%;
+      width: 25%;
 
       & .epicue-logo {
         width: 178px;
@@ -88,6 +90,7 @@
 
       & .about-row-logo {
         margin: auto;
+        width: unset;
       }
 
       & .stores {

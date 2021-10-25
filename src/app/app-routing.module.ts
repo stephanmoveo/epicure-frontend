@@ -11,6 +11,11 @@ const routes: Routes = [
   {
     path: 'restaurants', component: RestaurantsPageComponent, data: { animation: 'isRight' },
     children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'All'
+     },
       { path: 'All', component: AllRestaurantsComponent },
       { path: 'New', component: NewRestComponent }
     ]

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RestaurantsService } from 'src/app/services/restaurants.service';
+import { SwiperService } from 'src/app/services/swiper.service';
 
 @Component({
   selector: 'app-new-rest',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewRestComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public restaurantsService: RestaurantsService,
+    public swiperService: SwiperService
+  ) { }
 
   ngOnInit(): void {
   }

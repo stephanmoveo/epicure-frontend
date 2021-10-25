@@ -6,8 +6,8 @@
         <img src={{this.iconsService.cutleryLogo}} class="cutlery-icon" routerLink='' />
         <a class="nav-item epicure" routerLink=''>EPICURE</a>
       </div>
-      <a *ngFor="let item of this.navLinksArr" class="nav-item nav-link" [routerLink]="item.to"
-        routerLinkActive='active'>{{item.name}}</a>
+      <a *ngFor="let item of this.navLinksArr" class="nav-item nav-link" 
+        [routerLink]="item.to" routerLinkActive='active'>{{item.name}}</a>
     </div>
     <div class="nav-items-right flex-center">
       <div class="nav-item search-content">
