@@ -20,5 +20,5 @@ export class IconsService {
   arrowIcon = 'assets/images/all-restaurants-arrows.svg';
   chilyIcon = 'assets/images/group-2.svg';
   leafIcon = 'assets/images/group-7-copy.svg';
-  hamburgerIcon = 'assets/images/hamburger-icon.svg'
+  hamburgerIcon = 'assets/images/hamburger-icon.svg';
 }

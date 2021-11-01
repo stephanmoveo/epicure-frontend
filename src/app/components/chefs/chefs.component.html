@@ -1,12 +1,12 @@
 <div class="chef-container wtdh70ma">
   <section class="chef-week-warp">
     <h1 class="banner-title">CHEF OF THE WEEK :</h1>
-    <div *ngFor="let item of this.restaurantsService.restaurantsArr.chefs" class="chef-row flex">
+    <div *ngFor="let item of chefArr" class="chef-row flex">
       <div class="chef-col m-right">
         <div>
-          <img class="chef-img" [@rotatedState]='state' src={{item.img}} (click)="rotate()"/>
+          <img class="chef-img" [@rotatedState]='state' src={{item.image}} (click)="rotate()"/>
         </div>
-        <h1 class="chef-name">{{item.chef}}</h1>
+        <h1 class="chef-name">{{item.firstName}} {{item.lastName}}</h1>
       </div>
       <div class="chef-col">
         <p class="chef-desc">{{item.description}}</p>
@@ -17,11 +17,11 @@
     <h1 class="banner-title chef-rest-title">Yossi’s restaurants :</h1>
     <div class="flex chef-rests">
       <swiper [config]="this.swiperService.config2" class="main-swiper">
-        <div class="swiper-slide" *ngFor="let elem of this.restaurantsService.filteredChefRest">
+        <div class="swiper-slide" *ngFor="let elem of chefArr[0].restaurants">
           <article>
-              <img class="chef-rest-img" src={{elem.img}} />
+              <img class="chef-rest-img" src={{elem.image}} />
               <div class="card-bottom">
-                <h1 class="t-center font30 chef-rest-name-title">{{elem.restName}}</h1>
+                <h1 class="t-center font30 chef-rest-name-title">{{elem.name}}</h1>
               </div>
           </article>
         </div>

@@ -3,24 +3,21 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { GlobalService } from './global.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SwiperService {
+  constructor(public globalService: GlobalService) {}
 
-  constructor(public globalService: GlobalService) { }
-
-  cloneConfig() {    
+  cloneConfig() {
     if (this.globalService.isMobile) {
-      const newConfig2 = { ...this.config2, slidesPerView: 2.5 }
-      const newConfig = { ...this.config, slidesPerView: 1.5 }
-      this.config2 = newConfig2
-      this.config = newConfig      
+      const newConfig2 = { ...this.config2, slidesPerView: 2.5 };
+      const newConfig = { ...this.config, slidesPerView: 1.5 };
+      this.config2 = newConfig2;
+      this.config = newConfig;
+    } else {
+      this.config = { ...this.config, slidesPerView: 3 };
+      this.config2 = { ...this.config2, slidesPerView: 3 };
     }
-    else {
-      this.config = { ...this.config, slidesPerView: 3 }
-      this.config2 = { ...this.config2, slidesPerView: 3 }
-    }
-
   }
   public config2: SwiperConfigInterface = {
     a11y: true,
@@ -31,7 +28,7 @@ export class SwiperService {
     mousewheel: true,
     scrollbar: false,
     spaceBetween: 20,
-    pagination: true
+    pagination: true,
   };
   public config: SwiperConfigInterface = {
     a11y: true,

@@ -2,8 +2,13 @@
   <h1 class="banner-title">SIGNATURE DISH OF :</h1>
   <div class="pop-row flex">
     <swiper [config]="this.swiperService.config" class="main-swiper">
-      <div *ngFor="let item of this.restaurantsService.filteredArr| slice:2:5 " class="swiper-slide">
-        <app-rest-dish-card [item]="item"></app-rest-dish-card>
+      <div
+        *ngFor="let item of filteredrests"
+        class="swiper-slide"
+      >
+        <app-rest-dish-card
+          [item]="item"
+        ></app-rest-dish-card>
       </div>
     </swiper>
   </div>

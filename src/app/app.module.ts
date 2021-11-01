@@ -28,14 +28,16 @@ import { RestDishCardComponent } from './components/rest-dish-card/rest-dish-car
 import { AllRestaurantsComponent } from './components/all-restaurants/all-restaurants.component';
 import { NewRestComponent } from './components/new-rest/new-rest.component';
 import { AllChefsComponent } from './components/all-chefs/all-chefs.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   observer: true,
   direction: 'horizontal',
   threshold: 50,
   spaceBetween: 11,
-  slidesPerView: 1,
-  centeredSlides: true
+  slidesPerView: 3,
+  // centeredSlides: true,
+  loop: true,
 };
 
 @NgModule({
@@ -66,7 +68,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     AppRoutingModule,
     SwiperModule,
     IvyCarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [
     {

@@ -1,12 +1,12 @@
-<h1 class="rest-name">{{item.restName}}</h1>
+<h1 class="rest-name">{{item.name}}</h1>
 <article>
-  <div class="dishes" *ngIf="item.dishes">
+  <div class="dishes">
     <div *ngFor="let elem of item.dishes">
-      <img class="dish-img" src={{elem.img}} />
+      <img class="dish-img" src={{elem.image}} />
       <div class="card-bottom">
-        <h3 class="dish-name">{{elem.dishName}}</h3>
+        <h3 class="dish-name">{{elem.name}}</h3>
         <p class="font24">{{elem.description}}</p>
-        <img class="type-icon-img" [src]="elem.logo" />
+        <img class="type-icon-img" [src]="elem.typeIcon.spicy && this.iconsService.spicyIcon || elem.typeIcon.vegan && this.iconsService.veganIcon || !elem.typeIcon.spicy && !elem.typeIcon.spicy && null" />
         <div class="flex line-price">
           <div class="line"></div>
           <p class="font25">{{elem.price | currency:"ILS":"symbol": '1.0-0'}}</p>

@@ -11,7 +11,7 @@ export class RestChefCardComponent implements OnInit {
   
   @Input() item = [] as any;
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
   }
 
 }
