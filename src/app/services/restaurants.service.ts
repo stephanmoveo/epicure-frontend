@@ -20,7 +20,7 @@ export class RestaurantsService {
       this.allRestaurantsArrSubject.next(data);
     });
   }
-
+//lll
   dbAllRestaurants(): Observable<any> {
     return this.http.get(`http://localhost:3000/restaurants/allRestaurants`);
   }
