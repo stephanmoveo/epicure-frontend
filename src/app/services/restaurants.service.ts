@@ -14,7 +14,6 @@ export class RestaurantsService {
   );
   $allRestaurantsArr: Observable<any[]> =
     this.allRestaurantsArrSubject.asObservable();
-//lllsss
   getAllRestaurants() {
     this.dbAllRestaurants().subscribe((data) => {
       this.allRestaurantsArrSubject.next(data);
@@ -22,9 +21,9 @@ export class RestaurantsService {
   }
 
   dbAllRestaurants(): Observable<any> {
-    return this.http.get(`http://localhost:3000/restaurants/allRestaurants`);
+    return this.http.get(`http://localhost:3000/restaurants/readAllRestaurants`);
   }
   findChef(): Observable<any> {
-    return this.http.get(`http://localhost:3000/chef/findChef/Shitrit`);
+    return this.http.get(`http://localhost:3000/chef/readFindChef/Shitrit`);
   }
 }
