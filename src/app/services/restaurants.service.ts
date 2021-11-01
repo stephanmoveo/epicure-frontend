@@ -14,7 +14,7 @@ export class RestaurantsService {
   );
   $allRestaurantsArr: Observable<any[]> =
     this.allRestaurantsArrSubject.asObservable();
-
+//lllsss
   getAllRestaurants() {
     this.dbAllRestaurants().subscribe((data) => {
       this.allRestaurantsArrSubject.next(data);
