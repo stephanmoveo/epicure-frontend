@@ -31,5 +31,6 @@ export class AppComponent implements OnInit {
   }
   ngOnInit() {
     this.restaurantsService.getAllRestaurants();
+    this.restaurantsService.getAllDishes()
   }
 }

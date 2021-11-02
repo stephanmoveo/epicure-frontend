@@ -19,18 +19,25 @@ export class BottomBannerComponent implements OnInit {
   rests: any;
 
   ngOnInit(): void {
-    this.restaurantsService.$allRestaurantsArr.subscribe((res) => {
-      this.rests = res;
-    });
+    // this.restaurantsService.$allRestaurantsArr.subscribe((res) => {
+    //   this.rests = res;
+    //   console.log(this.rests);
+    // });
+    this.restaurantsService.$allDishes.subscribe((res)=>{
+      this.rests = res
+      console.log(this.rests);
+    })
+    
+    
   }
 
-  get filteredrests(): any[] {
-    if (!this.rests) {
-      return [];
-    }
-    const filtered = this.rests.filter((rest: any) => {
-      return rest.dishes.length > 0 && rest;
-    });
-    return filtered;
-  }
+  // get filteredrests(): any[] {
+  //   if (!this.rests) {
+  //     return [];
+  //   }
+  //   const filtered = this.rests.filter((rest: any) => {
+  //     return rest.dishes.length > 0 && rest;
+  //   });
+  //   return filtered;
+  // }
 }

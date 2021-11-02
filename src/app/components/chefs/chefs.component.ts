@@ -36,6 +36,8 @@ export class ChefsComponent implements OnInit {
   getChef() {
     this.restaurantsService.findChef().subscribe((data: any) => {
       this.chefArr = data;
+      console.log(data);
+      
     });
   }
   ngOnInit(): void {

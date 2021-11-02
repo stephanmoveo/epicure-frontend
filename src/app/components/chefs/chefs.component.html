@@ -4,12 +4,12 @@
     <div *ngFor="let item of chefArr" class="chef-row flex">
       <div class="chef-col m-right">
         <div>
-          <img class="chef-img" [@rotatedState]='state' src={{item.image}} (click)="rotate()"/>
+          <img class="chef-img" [@rotatedState]='state' src={{item.chef.image}} (click)="rotate()"/>
         </div>
-        <h1 class="chef-name">{{item.firstName}} {{item.lastName}}</h1>
+        <h1 class="chef-name">{{item.chef.firstName}} {{item.chef.lastName}}</h1>
       </div>
       <div class="chef-col">
-        <p class="chef-desc">{{item.description}}</p>
+        <p class="chef-desc">{{item.chef.description}}</p>
       </div>
     </div>
   </section>

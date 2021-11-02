@@ -36,8 +36,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   threshold: 50,
   spaceBetween: 11,
   slidesPerView: 3,
-  // centeredSlides: true,
-  loop: true,
+  // centeredSlides: true
 };
 
 @NgModule({

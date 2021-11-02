@@ -22,22 +22,22 @@ export class SwiperService {
   public config2: SwiperConfigInterface = {
     a11y: true,
     direction: 'horizontal',
-    loop: true,
-    slidesPerView: 3,
+    // slidesPerView: 3,
     keyboard: true,
     mousewheel: true,
     scrollbar: false,
     spaceBetween: 20,
-    pagination: true,
+    loop: true,
+
   };
   public config: SwiperConfigInterface = {
     a11y: true,
     direction: 'horizontal',
-    loop: true,
-    slidesPerView: 3,
+    // slidesPerView: 3,
     keyboard: true,
     mousewheel: true,
     scrollbar: false,
-    pagination: true
+    loop: true,
+
   };
 }
