@@ -3,8 +3,8 @@
     <div class="nav-items-left flex-center">
       <div class="logo-warp flex-center">
         <img src={{this.iconsService.hamburgerIcon}} class="hamburger-icon" />
-        <img src={{this.iconsService.cutleryLogo}} class="cutlery-icon" routerLink='' />
-        <a class="nav-item epicure" routerLink=''>EPICURE</a>
+        <img src={{this.iconsService.cutleryLogo}} class="cutlery-icon" routerLink='homepage' />
+        <a class="nav-item epicure" routerLink='homepage'>EPICURE</a>
       </div>
       <a *ngFor="let item of this.navLinksArr" class="nav-item nav-link" 
         [routerLink]="item.to" routerLinkActive='active'>{{item.name}}</a>
@@ -17,7 +17,7 @@
         </div>
       </div>
       <img class="nav-item nav-icon" src={{this.iconsService.profileLogo}} />
-      <img class="nav-item nav-icon" src={{this.iconsService.bagIcon}} />
+      <img class="nav-item nav-icon" src={{this.iconsService.bagIcon}} (click)='this.globalService.logOut()' />
     </div>
   </nav>
 </header>

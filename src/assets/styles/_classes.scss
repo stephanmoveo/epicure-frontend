@@ -25,7 +25,9 @@
 .t-center {
   text-align: center;
 }
-
+.mg-b_t-30 {
+  margin: 30px 0;
+}
 .wtdh80ma {
   width: 77%;
   max-width: 1102px;
@@ -48,7 +50,7 @@
 //         min-width: 0;
 //     }
 //   }
-  
+
 .banner-title {
   text-align: center;
   font-size: 30px;
@@ -71,4 +73,89 @@
 .aTxtDec {
   text-decoration: none;
   color: black;
+}
+
+.admin-item {
+  background-color: aliceblue;
+  width: 25%;
+  margin: 20px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+.admin-item:hover{
+  cursor: pointer;
+  background-color: rgb(186, 215, 240);
+}
+.dishes-item {
+  border-radius: 5px;
+  background-color: aliceblue;
+  width: 100%;
+  margin: 20px;
+  text-align: center;
+  padding: 10px;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dishes-item:hover {
+  cursor: pointer;
+  background-color: rgb(120, 186, 243);
+}
+.btn-primary {
+  border: none;
+  background: #61b7f7;
+  padding: 10px 0;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.btn-secondery {
+  border: none;
+  background: #ffe9c8;
+  padding: 10px 0;
+  color: black;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.btn-secondery:hover {
+  background: #ffd18d;
+  cursor: pointer;
+}
+.btn-danger {
+  border: none;
+  background: red;
+  padding: 10px 0;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.btn-danger:hover {
+  background: rgb(255, 110, 110);
+  cursor: pointer;
+}
+.btn-primary:hover {
+  cursor: pointer;
+  background: #0091ff;
+}
+
+.ad-mdl-img {
+  width: 100%;
+  border-radius: 50%;
+  aspect-ratio: 300/300;
+  object-fit: cover;
+  width: 300px;
+}
+.bold {
+  font-family: Quicksand-SemiBold;
+}
+.spicy {
+  color: red;
+}
+.vegeterian {
+  color: green;
+}
+.vegan {
+  color: #1fbd42;
 }

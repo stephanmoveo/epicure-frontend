@@ -31,16 +31,20 @@ export class ChefsComponent implements OnInit {
     public restaurantsService: RestaurantsService,
     public swiperService: SwiperService
   ) {}
-  chefArr = [] as any;
 
-  getChef() {
-    this.restaurantsService.findChef().subscribe((data: any) => {
-      this.chefArr = data;
-      console.log(data);
-      
-    });
+  get dishes() {
+    if(!this.chefArr)
+    return
+    const dishes = this.chefArr[0].restaurants
+    return dishes;
   }
+
+  chefArr = [] as any;
+//$chef
+
   ngOnInit(): void {
-    this.getChef();
+    this.restaurantsService.$chef.subscribe((res) => {
+      this.chefArr = res;
+    });
   }
 }

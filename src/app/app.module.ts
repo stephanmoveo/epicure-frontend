@@ -29,14 +29,27 @@ import { AllRestaurantsComponent } from './components/all-restaurants/all-restau
 import { NewRestComponent } from './components/new-rest/new-rest.component';
 import { AllChefsComponent } from './components/all-chefs/all-chefs.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminPageComponent } from './pages/admin-page/admin-page/admin-page.component';
+import { AdminNavComponent } from './admin-components/admin-nav/admin-nav.component';
+import { AdminRestaurantsComponent } from './admin-components/admin-restaurants/admin-restaurants.component';
+import { AdminChefsComponent } from './admin-components/admin-chefs/admin-chefs.component';
+import { AdminDishesComponent } from './admin-components/admin-dishes/admin-dishes.component';
+import { ChefCardComponent } from './admin-components/chef-card/chef-card.component';
+import { EditModalComponent } from './admin-components/edit-modal/edit-modal.component';
+import { ModalCardComponent } from './admin-components/edit-modal/rest-modal-card/modal-card.component';
+import { CreateRestaurantComponent } from './admin-components/create-restaurant/create-restaurant.component';
+import { CreateDishComponent } from './admin-components/create-dish/create-dish.component';
+import { DishModalCardComponent } from './admin-components/edit-modal/dish-modal-card/dish-modal-card.component';
+import { CreateChefComponent } from './admin-components/create-chef/create-chef.component';
+import { ChefModalCardComponent } from './admin-components/edit-modal/chef-modal-card/chef-modal-card.component';
+import { LoginComponent } from './components/login/login.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   observer: true,
-  direction: 'horizontal',
+  // direction: 'horizontal',
   threshold: 50,
-  spaceBetween: 11,
-  slidesPerView: 3,
-  // centeredSlides: true
+  // spaceBetween: 11,
+  // loop: true
 };
 
 @NgModule({
@@ -60,7 +73,21 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     RestDishCardComponent,
     AllRestaurantsComponent,
     NewRestComponent,
-    AllChefsComponent
+    AllChefsComponent,
+    AdminPageComponent,
+    AdminNavComponent,
+    AdminRestaurantsComponent,
+    AdminChefsComponent,
+    AdminDishesComponent,
+    ChefCardComponent,
+    EditModalComponent,
+    ModalCardComponent,
+    CreateRestaurantComponent,
+    CreateDishComponent,
+    DishModalCardComponent,
+    CreateChefComponent,
+    ChefModalCardComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

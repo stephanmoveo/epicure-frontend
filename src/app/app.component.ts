@@ -4,6 +4,7 @@ import { slider, fader } from './animations';
 import { GlobalService } from './services/global.service';
 import { RestaurantsService } from './services/restaurants.service';
 import { SwiperService } from './services/swiper.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ export class AppComponent implements OnInit {
   constructor(
     public swiperService: SwiperService,
     public globalService: GlobalService,
-    public restaurantsService:RestaurantsService
+    public restaurantsService: RestaurantsService,
+    public router: Router
   ) {}
 
   title = 'epicure-app';
@@ -29,8 +31,20 @@ export class AppComponent implements OnInit {
         outlet.activatedRouteData['animation']
       );
   }
+
+  routerNev() {
+    const admin = JSON.parse(localStorage.getItem('token') as any);
+    if(!admin)
+    return
+    if (admin.admin) this.router.navigate(['admin']);
+  }
+
   ngOnInit() {
+    // this.routerNev();
+    this.restaurantsService.getAllUserDishes() 
+    this.restaurantsService.getAllChefs();
+    this.restaurantsService.getChef();
     this.restaurantsService.getAllRestaurants();
-    this.restaurantsService.getAllDishes()
+    this.restaurantsService.getAllDishes();
   }
 }

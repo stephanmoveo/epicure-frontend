@@ -1,5 +1,5 @@
-@import './fonts';
-@import"./colors";
+@import "./fonts";
+@import "./colors";
 
 %stores {
   box-sizing: border-box;
@@ -64,44 +64,42 @@
 }
 
 // %pop-row {
-    %pop-row {
-    box-sizing: border-box;
-    justify-content: space-between;
+%pop-row {
+  box-sizing: border-box;
+  justify-content: space-between;
+  position: relative;
+
+  & article {
+    max-width: 360px;
     position: relative;
 
-    & article {
-      max-width: 360px;
-      position: relative;
+    .card-bottom {
+      background-color: $bgcBeige;
+      text-align: center;
+      padding: 28px 35px 20px 35px;
+      margin-top: -3px;
 
-      .card-bottom {
-        background-color: $bgcBeige;
-        text-align: center;
-        padding: 28px 35px 20px 35px;
-        margin-top: -3px;
+      h1 {
+        font-family: Quicksand-SemiBold;
+        font-size: 40px;
+        margin: 0 0 15px 0;
+      }
 
+      .line-price {
+        width: 80%;
+        position: absolute;
+        bottom: 11px;
+        justify-content: space-between;
+        align-items: center;
 
-        h1 {
-          font-family: Quicksand-SemiBold;
-          font-size: 40px;
-          margin: 0 0 15px 0;
-        }
-
-        .line-price {
-          width: 80%;
-          position: absolute;
-          bottom: 11px;
-          justify-content: space-between;
-          align-items: center;
-
-          .line {
-            border-bottom: 1px solid #C7C6C1;
-            width: 33%;
-          }
+        .line {
+          border-bottom: 1px solid #c7c6c1;
+          width: 33%;
         }
       }
     }
-
   }
+}
 // }
 
 %allRest {
@@ -111,12 +109,30 @@
     right: 0;
     align-items: baseline;
     font-size: 30px;
-    font-family: 'Quicksand-SemiBold';
-
+    font-family: "Quicksand-SemiBold";
 
     img {
       margin: 0 0 0 12px;
       width: 24px;
     }
+  }
+}
+
+%form-margin {
+  input,
+  label,
+  img,
+  // button,
+  .checkbox-warp {
+    margin: 5px 0;
+  }
+}
+%admin-inputs {
+  input {
+    border-radius: 5px;
+    outline: 0;
+    padding: 5px;
+    color: #979797;
+    border: 1px solid #bfbfbf;
   }
 }
