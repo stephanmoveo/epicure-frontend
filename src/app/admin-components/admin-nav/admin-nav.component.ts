@@ -13,9 +13,9 @@ export class AdminNavComponent implements OnInit {
     public iconsService: IconsService
   ) {}
   navLinksArr = [
-    { id: '1', name: 'Edit Restaurants', to: 'adminRestaurants' },
-    { id: '2', name: 'Edit Chefs', to: 'adminChefs' },
-    { id: '3', name: 'Edit Dishes', to: 'adminDishes' },
+    { id: '1', name: 'Edit Restaurant', to: 'adminRestaurants' },
+    { id: '2', name: 'Edit Chef', to: 'adminChefs' },
+    { id: '3', name: 'Edit Dish', to: 'adminDishes' },
     { id: '4', name: 'Create Restaurant', to: 'createRestaurant' },
     { id: '5', name: 'Create Dish', to: 'createDish' },
     { id: '6', name: 'Create Chef', to: 'createChef' },

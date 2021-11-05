@@ -16,6 +16,7 @@ export class CreateDishComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {}
+
   createDish(obj: Object) {
     this.adminService.createDish(obj).subscribe((data) => {
       if (data.succses) {
