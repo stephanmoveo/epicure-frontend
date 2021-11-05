@@ -1,0 +1,29 @@
+.admin-header {
+  background-color: white;
+  z-index: 9;
+  position: sticky;
+  top: 0;
+  & .admin-nav {
+    & .nav-row {
+      background-color: #78c9ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      & .admin-nav-link {
+        text-align: center;
+        background-color: #78c9ff;
+        width: 11%;
+        padding: 15px 0;
+        max-width: 150px;
+        color: white;
+        // margin: 0 2px;
+        font-weight: bold;
+      }
+      .admin-nav-link:hover{
+        background-color: #23a7ff;
+
+      }
+    }
+  }
+}

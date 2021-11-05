@@ -1,0 +1,17 @@
+.chef-card-warp {
+  border: 1px solid #dbdbdb;
+  max-width: 300px;
+  margin: 20px 0;
+  text-align: center;
+  height: 330px;
+
+  & .chef-title {
+    margin: 10px 0;
+  }
+  & .chef-image {
+    width: 90%;
+    aspect-ratio: 300/290;
+    object-fit: cover;
+    min-height: 220px;
+  }
+}
