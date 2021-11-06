@@ -28,6 +28,8 @@ export class AdminDishesComponent implements OnInit {
   }
 
   getItemsInModal(dish: any, cat: string) {
+    console.log(dish);
+    
     this.adminService.isCategoryModal = cat;
     this.adminService.modalData = dish;
     this.adminService.isModalOpen();

@@ -16,6 +16,15 @@
     <label class="vegeterian">Vegeterian</label>
     <input #vegeterianCheckbox type="checkbox" />
   </div>
+  <div class="flex-Col">
+    <label>Valid</label>
+    <input
+      #isvalid
+      type="checkbox"
+      [checked]="this.adminService.modalData.valid"
+    />
+  </div>
+
   <img class="ad-mdl-img" [src]="this.adminService.modalData.image" />
   <button
     class="btn-secondery"
@@ -30,7 +39,8 @@
           spicy: spicyCheckbox.checked,
           vegan: veganCheckbox.checked,
           vegeterian: vegeterianCheckbox.checked
-        }
+        },
+        isvalid:isvalid.checked
       })
     "
   >
