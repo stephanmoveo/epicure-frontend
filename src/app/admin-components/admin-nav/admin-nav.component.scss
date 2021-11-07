@@ -3,7 +3,11 @@
   z-index: 9;
   position: sticky;
   top: 0;
+  background-color: #78c9ff;
+
   & .admin-nav {
+    margin: auto;
+    width: 80%;
     & .nav-row {
       background-color: #78c9ff;
       display: flex;
@@ -11,11 +15,12 @@
       align-items: center;
       height: 100%;
       & .admin-nav-link {
+        width: 15%;
         text-align: center;
         background-color: #78c9ff;
-        width: 11%;
+        // width: 11%;
         padding: 15px 0;
-        max-width: 150px;
+        // max-width: 150px;
         color: white;
         // margin: 0 2px;
         font-weight: bold;

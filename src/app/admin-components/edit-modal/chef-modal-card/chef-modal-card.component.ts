@@ -26,6 +26,8 @@ export class ChefModalCardComponent implements OnInit {
     this.adminService.deleteChef(id).subscribe(() => {
       this.adminService.isModalOpen();
       this.restaurantsService.getAllChefs();
+      this.restaurantsService.getAllDishes()
+      this.restaurantsService.getAllRestaurants()
     });
   }
 }

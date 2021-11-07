@@ -19,17 +19,7 @@ export class AdminDishesComponent implements OnInit {
 
   dishes: any;
 
-  get filterDishes() {
-    if (!this.dishes) return;
-    const dishesRests = this.dishes.filter(
-      (dish: any) => dish.dishes.length > 0
-    );
-    return dishesRests;
-  }
-
   getItemsInModal(dish: any, cat: string) {
-    console.log(dish);
-    
     this.adminService.isCategoryModal = cat;
     this.adminService.modalData = dish;
     this.adminService.isModalOpen();

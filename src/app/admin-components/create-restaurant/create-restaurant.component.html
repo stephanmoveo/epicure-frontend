@@ -6,8 +6,9 @@
         <label>Restaurant image URL</label>
         <input #restimage/>
         <label>Restaurant chef id</label>
-        <input #restChef/>
-
+        <select #restChef >
+            <option *ngFor="let item of allChefs" [value]="item._id" >{{item.firstName}} {{item.lastName}}</option>
+          </select>
         <button
         class="btn-primary"
 

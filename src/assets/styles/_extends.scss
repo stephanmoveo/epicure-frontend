@@ -122,13 +122,14 @@
   input,
   label,
   img,
+  select, 
   // button,
   .checkbox-warp {
     margin: 5px 0;
   }
 }
 %admin-inputs {
-  input {
+  input, select {
     border-radius: 5px;
     outline: 0;
     padding: 5px;

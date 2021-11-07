@@ -13,17 +13,25 @@ export class CreateRestaurantComponent implements OnInit {
     public adminService: AdminService,
     public restaurantsService: RestaurantsService,
     public router: Router
-  ) {}
-
+  ) {
+    this.restaurantsService.$allChefs.subscribe((res) => {
+      this.allChefs = res;
+      console.log(res);
+      
+    });
+  }
+  allChefs: any;
   ngOnInit(): void {}
 
-  createRestaurant(obj: Object) {
-    this.adminService.createRestaurant(obj).subscribe((data: any) => {
-      if (data.succses) {
-        this.restaurantsService.getAllRestaurants();
-        this.router.navigate(['admin/adminRestaurants']);
-        alert('Restaurant created !!');
-      }
-    });
+  createRestaurant(obj: any) {
+    console.log(obj);
+    
+    // this.adminService.createRestaurant(obj).subscribe((data: any) => {
+    //   if (data.succses) {
+    //     this.restaurantsService.getAllRestaurants();
+    //     this.router.navigate(['admin/adminRestaurants']);
+    //     alert('Restaurant created !!');
+    //   }
+    // });
   }
 }

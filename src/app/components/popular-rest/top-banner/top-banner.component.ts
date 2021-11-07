@@ -12,13 +12,13 @@ export class TopBannerComponent implements OnInit {
     public restaurantsService: RestaurantsService,
     public iconsService: IconsService,
     public swiperService: SwiperService
-  ) {}
-  rests: any;
-
-  ngOnInit(): void {
+  ) {
     this.swiperService.cloneConfig();
     this.restaurantsService.$allRestaurantsArr.subscribe((res) => {
       this.rests = res;
     });
   }
+  rests: any;
+
+  ngOnInit(): void {}
 }

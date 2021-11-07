@@ -78,7 +78,7 @@
 .admin-item {
   background-color: aliceblue;
   width: 25%;
-  margin: 20px;
+  margin: 20px 0;
   text-align: center;
   padding: 10px;
   border-radius: 5px;
@@ -91,11 +91,10 @@
 .dishes-item {
   border-radius: 5px;
   background-color: aliceblue;
-  width: 100%;
+  width: 25%;
   margin: 20px;
   text-align: center;
   padding: 10px;
-  max-width: 200px;
   display: flex;
   align-items: center;
   justify-content: space-between;

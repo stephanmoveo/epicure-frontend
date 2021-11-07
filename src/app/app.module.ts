@@ -34,7 +34,6 @@ import { AdminNavComponent } from './admin-components/admin-nav/admin-nav.compon
 import { AdminRestaurantsComponent } from './admin-components/admin-restaurants/admin-restaurants.component';
 import { AdminChefsComponent } from './admin-components/admin-chefs/admin-chefs.component';
 import { AdminDishesComponent } from './admin-components/admin-dishes/admin-dishes.component';
-import { ChefCardComponent } from './admin-components/chef-card/chef-card.component';
 import { EditModalComponent } from './admin-components/edit-modal/edit-modal.component';
 import { ModalCardComponent } from './admin-components/edit-modal/rest-modal-card/modal-card.component';
 import { CreateRestaurantComponent } from './admin-components/create-restaurant/create-restaurant.component';
@@ -46,10 +45,10 @@ import { LoginComponent } from './components/login/login.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   observer: true,
-  // direction: 'horizontal',
+  direction: 'horizontal',
   threshold: 50,
   // spaceBetween: 11,
-  // loop: true
+  loop: true
 };
 
 @NgModule({
@@ -79,7 +78,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     AdminRestaurantsComponent,
     AdminChefsComponent,
     AdminDishesComponent,
-    ChefCardComponent,
     EditModalComponent,
     ModalCardComponent,
     CreateRestaurantComponent,

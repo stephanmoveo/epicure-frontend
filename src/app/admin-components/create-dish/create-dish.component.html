@@ -9,8 +9,10 @@
     <input #dishDescription />
     <label>Price</label>
     <input #dishPrice />
-    <label>Restaurant ID</label>
-    <input #dishRestId />
+    <label>Select Restaurant</label>
+    <select #dishRestId >
+      <option *ngFor="let item of restaurants" [value]="item._id">{{item.name}}</option>
+    </select>
     <div class="flex checkbox-warp">
       <label class="spicy">Spicy</label>
       <input #spicyCheckbox type="checkbox" />

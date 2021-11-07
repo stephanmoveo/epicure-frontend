@@ -13,11 +13,16 @@ export class CreateDishComponent implements OnInit {
     public adminService: AdminService,
     public restaurantsService: RestaurantsService,
     public router: Router
-  ) {}
+  ) {
+    this.restaurantsService.$allRestaurantsArr.subscribe((res) => {
+      this.restaurants = res;
+      console.log(res);    
+    });
+  }
 
   ngOnInit(): void {}
-
-  createDish(obj: Object) {
+  restaurants: any;
+  createDish(obj: Object) {    
     this.adminService.createDish(obj).subscribe((data) => {
       if (data.succses) {
         this.restaurantsService.getAllDishes();

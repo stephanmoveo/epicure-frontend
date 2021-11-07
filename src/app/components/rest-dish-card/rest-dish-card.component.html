@@ -1,22 +1,22 @@
 <h1 class="rest-name">{{ item.name }}</h1>
 <article>
   <div class="dishes">
-    <img class="dish-img" src="{{ item.image }}" />
+    <img class="dish-img" src="{{ item.dishes[0].image }}" />
     <div class="card-bottom">
-      <h3 class="dish-name">{{ item.name }}</h3>
-      <p class="font24">{{ item.description }}</p>
+      <h3 class="dish-name">{{ item.dishes[0].name }}</h3>
+      <p class="font24">{{ item.dishes[0].description }}</p>
       <img
         class="type-icon-img"
         [src]="
-          (item.typeIcon.spicy && this.iconsService.spicyIcon) ||
-          (item.typeIcon.vegan && this.iconsService.veganIcon) ||
-          (!item.typeIcon.spicy && !item.typeIcon.spicy && null)
+          (item.dishes[0].typeIcon.spicy && this.iconsService.spicyIcon) ||
+          (item.dishes[0].typeIcon.vegan && this.iconsService.veganIcon) ||
+          (!item.dishes[0].typeIcon.spicy && !item.dishes[0].typeIcon.spicy && null)
         "
       />
       <div class="flex line-price">
         <div class="line"></div>
         <p class="font25">
-          {{ item.price | currency: "ILS":"symbol":"1.0-0" }}
+          {{ item.dishes[0].price | currency: "ILS":"symbol":"1.0-0" }}
         </p>
         <div class="line"></div>
       </div>

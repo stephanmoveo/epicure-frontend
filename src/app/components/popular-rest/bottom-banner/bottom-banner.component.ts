@@ -3,7 +3,6 @@ import { IconsService } from 'src/app/services/icons.service';
 import { RestaurantsService } from 'src/app/services/restaurants.service';
 import { SwiperService } from 'src/app/services/swiper.service';
 
-
 @Component({
   selector: 'app-bottom-banner',
   templateUrl: './bottom-banner.component.html',
@@ -14,13 +13,11 @@ export class BottomBannerComponent implements OnInit {
     public restaurantsService: RestaurantsService,
     public iconsService: IconsService,
     public swiperService: SwiperService
-  ) {}
-
-  rests: any;
-
-  ngOnInit(): void {
-    this.restaurantsService.$allUserDishes.subscribe((res) => {
+  ) {
+    this.restaurantsService.$allDishes.subscribe((res) => {
       this.rests = res;
     });
   }
+  rests: any;
+  ngOnInit(): void {}
 }
