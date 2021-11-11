@@ -31,17 +31,10 @@ export class AppComponent implements OnInit {
         outlet.activatedRouteData['animation']
       );
   }
-
-  routerNev() {
-    const admin = JSON.parse(localStorage.getItem('token') as any);
-    if(!admin)
-    return
-    if (admin.admin) this.router.navigate(['admin']);
-  }
+  isUser: boolean = false;
 
   ngOnInit() {
-    // this.routerNev();
-    this.restaurantsService.getAllUserDishes() 
+    this.restaurantsService.getAllUserDishes();
     this.restaurantsService.getAllChefs();
     this.restaurantsService.getChef();
     this.restaurantsService.getAllRestaurants();

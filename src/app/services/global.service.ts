@@ -5,11 +5,15 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class GlobalService {
-  constructor(public router: Router) {}
+  constructor(
+    public router: Router,
+    ) {}
   isMobile = window.navigator.userAgent.toLowerCase().includes('mobile');
+  isAdmin: boolean = false;
 
   logOut() {
     localStorage.clear();
+    this.isAdmin = false
     this.router.navigate(['']);
   }
 }

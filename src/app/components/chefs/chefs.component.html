@@ -16,7 +16,7 @@
   <section class="chef-rest-warp">
     <h1 class="banner-title chef-rest-title">Yossi’s restaurants :</h1>
     <div class="flex chef-rests">
-      <swiper [config]="this.swiperService.config2" class="main-swiper">
+      <swiper [config]="this.swiperService.config2" class="main-swiper" > 
         <div class="swiper-slide" *ngFor="let elem of dishes">
           <article>
               <img class="chef-rest-img" src={{elem.image}} />

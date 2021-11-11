@@ -1,11 +1,4 @@
-<!-- <app-homepage></app-homepage> -->
-<!-- <div
- [@routeAnimations]="prepareRoute(outlet)"
- > -->
- <div>
-   <!-- <app-login></app-login> -->
-   <router-outlet #outlet="outlet"></router-outlet> 
-
-  <!-- <app-navbar ></app-navbar> -->
-  <!-- <app-admin-page></app-admin-page> -->
+<div [@routeAnimations]="prepareRoute(outlet)">
+  <app-navbar *ngIf="this.globalService.isAdmin"></app-navbar>
+  <router-outlet #outlet="outlet"></router-outlet>
 </div>

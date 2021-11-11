@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { token } from '../../shared/interfaces/tokenInterface';
 import { Router } from '@angular/router';
+import { GlobalService } from 'src/app/services/global.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor(public router: Router) {}
+  constructor(
+    public router: Router,
+    public globalService: GlobalService,
+    ) {}
   ngOnInit(): void {}
   login(obj: token, e:any) {
     e.preventDefault();
@@ -32,6 +36,7 @@ export class LoginComponent implements OnInit {
           admin: false,
         })
       );
+      this.globalService.isAdmin = true
       this.router.navigate(['homepage']);
     }
   }
