@@ -33,7 +33,6 @@ export class ChefsComponent implements OnInit {
   ) {
     this.restaurantsService.$chef.subscribe((res) => {
       this.chefArr = res;
-      console.log(res);
     });
   }
 
@@ -41,7 +40,6 @@ export class ChefsComponent implements OnInit {
 
   get dishes() {
     if (this.chefArr.length === 0) return;
-
     const { restaurants } = this.chefArr[0];
     return restaurants;
   }

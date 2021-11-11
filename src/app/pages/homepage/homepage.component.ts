@@ -15,8 +15,10 @@ export class HomepageComponent implements OnInit {
     public restaurantsService: RestaurantsService,
     public router: Router,
     public globalService: GlobalService
-  ) {}
-  ngOnInit(): void {
+  ) {
     if (this.router.url === '/homepage') this.globalService.isAdmin = true;
+
+  }
+  ngOnInit(): void {
   }
 }
