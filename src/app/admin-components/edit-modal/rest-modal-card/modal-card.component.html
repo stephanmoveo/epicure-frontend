@@ -1,17 +1,18 @@
 <article class="modal-card">
-  <div style="color: #a7a7a7">ID: {{ this.adminService.modalData._id }}</div>
   <label>Restaurant Name</label>
   <input #restName [value]="this.adminService.modalData.name" />
   <label>New Image URL</label>
   <input #newImage [value]="this.adminService.modalData.image" />
   <label>Restaurant Chef</label>
-  <input
-    [value]="
-      this.adminService.modalData.chef.firstName +
-      ' ' +
-      this.adminService.modalData.chef.lastName
-    "
-  />
+  <select #chefId>
+    <option [value]="this.adminService.modalData.chef._id">
+      {{ this.adminService.modalData.chef.firstName }}
+      {{ this.adminService.modalData.chef.lastName }}
+    </option>
+    <option *ngFor="let item of allChefs" [value]="item._id">
+      {{ item.firstName }} {{ item.lastName }}
+    </option>
+  </select>
   <img class="ad-mdl-img" [src]="this.adminService.modalData.image" />
   <button
     class="btn-secondery"
@@ -19,7 +20,8 @@
       updateRestaurant({
         name: restName.value,
         image: newImage.value,
-        id: this.adminService.modalData._id
+        id: this.adminService.modalData._id,
+        chefId: chefId.value
       })
     "
   >
@@ -33,4 +35,4 @@
   </button>
 </article>
 
-<!-- <pre>{{ this.adminService.modalData.chef.firstName | json }}</pre> -->
+<!-- <pre>{{ this.adminService.modalData.chef| json }}</pre> -->

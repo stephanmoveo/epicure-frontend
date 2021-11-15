@@ -28,7 +28,7 @@ import { RestDishCardComponent } from './components/rest-dish-card/rest-dish-car
 import { AllRestaurantsComponent } from './components/all-restaurants/all-restaurants.component';
 import { NewRestComponent } from './components/new-rest/new-rest.component';
 import { AllChefsComponent } from './components/all-chefs/all-chefs.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AdminPageComponent } from './pages/admin-page/admin-page/admin-page.component';
 import { AdminNavComponent } from './admin-components/admin-nav/admin-nav.component';
 import { AdminRestaurantsComponent } from './admin-components/admin-restaurants/admin-restaurants.component';
@@ -42,6 +42,8 @@ import { DishModalCardComponent } from './admin-components/edit-modal/dish-modal
 import { CreateChefComponent } from './admin-components/create-chef/create-chef.component';
 import { ChefModalCardComponent } from './admin-components/edit-modal/chef-modal-card/chef-modal-card.component';
 import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { MainInterceptor } from './services/main.interceptor';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   observer: true,
@@ -93,9 +95,11 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SwiperModule,
     IvyCarouselModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: MainInterceptor, multi: true },
     {
       provide: SWIPER_CONFIG,
       useValue: DEFAULT_SWIPER_CONFIG

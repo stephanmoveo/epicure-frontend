@@ -16,7 +16,6 @@ export class CreateDishComponent implements OnInit {
   ) {
     this.restaurantsService.$allRestaurantsArr.subscribe((res) => {
       this.restaurants = res;
-      console.log(res);    
     });
   }
 

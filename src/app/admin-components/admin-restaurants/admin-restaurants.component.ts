@@ -13,9 +13,7 @@ export class AdminRestaurantsComponent implements OnInit {
     public adminService: AdminService
   ) {
     this.restaurantsService.$allRestaurantsArr.subscribe((data) => {
-      this.rests = data;
-      console.log(data);
-      
+      this.rests = data;      
     });
   }
 

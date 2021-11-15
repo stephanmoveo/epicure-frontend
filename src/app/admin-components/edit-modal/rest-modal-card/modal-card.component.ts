@@ -15,21 +15,33 @@ export class ModalCardComponent implements OnInit {
     public adminService: AdminService,
     public http: HttpClient,
     public restaurantsService: RestaurantsService
-  ) {}
+  ) {
+    this.restaurantsService.$allChefs.subscribe((res) => {
+      this.allChefs = res;
+    });
+  }
+  allChefs: any;
+
+//   get filtered() {
+// if(this.)
+
+
+//     return;
+//   }
 
   updateRestaurant(obj: Object) {
-    this.adminService.updateRestaurant(obj).subscribe(()=>{
-      this.adminService.isModalOpen();
-      this.restaurantsService.getAllRestaurants();
-    })
-  }
-
-  deleteRest(id: any) {
-    if(confirm("Are you sure to delete restaurant?"))    
-    this.adminService.deleteRset(id).subscribe(() => {
+    this.adminService.updateRestaurant(obj).subscribe(() => {
       this.adminService.isModalOpen();
       this.restaurantsService.getAllRestaurants();
     });
+  }
+
+  deleteRest(id: any) {
+    if (confirm('Are you sure to delete restaurant?'))
+      this.adminService.deleteRset(id).subscribe(() => {
+        this.adminService.isModalOpen();
+        this.restaurantsService.getAllRestaurants();
+      });
   }
   ngOnInit(): void {}
 }

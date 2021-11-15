@@ -1,10 +1,8 @@
-@import '../../../assets/styles/extends';
-@import '../../../assets/styles/colors';
-@import '../../../assets/styles/fonts';
-@import '../../../assets/styles/mixing';
-@import '../../../assets/styles/functions';
-
-
+@import "../../../assets/styles/extends";
+@import "../../../assets/styles/colors";
+@import "../../../assets/styles/fonts";
+@import "../../../assets/styles/mixing";
+@import "../../../assets/styles/functions";
 
 header {
   background-color: white;
@@ -24,7 +22,7 @@ header {
       width: 50%;
 
       .active {
-        border-bottom: 2px solid #F0CE8C;
+        border-bottom: 2px solid #f0ce8c;
       }
 
       & .nav-link {
@@ -79,7 +77,6 @@ header {
 
           .search-icon {
             margin: 0 0px 0 10px;
-
           }
 
           app-search-bar {
@@ -90,6 +87,9 @@ header {
 
       & .nav-icon {
         width: 22px;
+      }
+      .nav-icon:hover {
+        cursor: pointer;
       }
     }
   }
@@ -115,7 +115,6 @@ header {
       padding: 0 20px;
       height: 45px;
 
-
       & .nav-items-left {
         display: block;
 
@@ -140,7 +139,6 @@ header {
         }
       }
 
-
       & .nav-items-right {
         justify-content: end;
 
@@ -153,7 +151,6 @@ header {
             min-width: 0;
             padding: 0;
             width: unset;
-
 
             app-search-bar {
               display: none;

@@ -16,6 +16,9 @@ export class AdminService {
 
   rests: any;
 
+  localHost: string = 'http://localhost:3000/admin/';
+
+
   isModalOpen() {
     return this.isModal ? (this.isModal = false) : (this.isModal = true);
   }
@@ -28,61 +31,61 @@ export class AdminService {
 
   deleteChef(id: any): Observable<any> {
     return this.http.get(
-      `http://localhost:3000/chef/deleteChef/${id}`
+      `${this.localHost}${id}`
     );
   }
 
   updateChef(obj: Object){
     return this.http.post<any>(
-      `http://localhost:3000/chef/updateChef`,
+      `${this.localHost}chef/updateChef`,
       obj
     );
   }
 
   createChef(obj: Object){
     return this.http.post<any>(
-      `http://localhost:3000/chef/createChef`,
+      `${this.localHost}chef/createChef`,
       obj
     );
   }
 
   deleteDish(id: any): Observable<any> {
     return this.http.get(
-      `http://localhost:3000/dish/deleteDish/${id}`
+      `${this.localHost}dish/deleteDish/${id}`
     );
   }
 
   updateDish(obj: Object): Observable<any> {
     return this.http.post<any>(
-      `http://localhost:3000/dish/updateDish`,
+      `${this.localHost}dish/updateDish`,
       obj
     );
   }
 
   createDish(obj: Object) {
     return this.http.post<any>(
-      `http://localhost:3000/dish/createDish`,
+      `${this.localHost}dish/createDish`,
       obj
     );
   }
 
   createRestaurant(obj: Object) {
     return this.http.post<any>(
-      `http://localhost:3000/restaurants/createRestaurant`,
+      `${this.localHost}restaurants/createRestaurant`,
       obj
     );
   }
 
   updateRestaurant(obj: Object): Observable<any> {
     return this.http.post<any>(
-      `http://localhost:3000/restaurants/updateRestaurant`,
+      `${this.localHost}restaurants/updateRestaurant`,
       obj
     );
   }
 
   deleteRset(id: any): Observable<any> {
     return this.http.get(
-      `http://localhost:3000/restaurants/deleteRestaurant/${id}`
+      `${this.localHost}restaurants/deleteRestaurant/${id}`
     );
   }
 }
