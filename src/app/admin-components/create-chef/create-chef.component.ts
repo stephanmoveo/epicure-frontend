@@ -23,6 +23,7 @@ export class CreateChefComponent implements OnInit {
         this.router.navigate(['admin/adminChefs']);
         alert('chef created !!');
       }
+      if (data.error) return alert('Must fill all fields');
     });
   }
 }

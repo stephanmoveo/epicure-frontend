@@ -28,6 +28,7 @@ export class CreateRestaurantComponent implements OnInit {
         this.router.navigate(['admin/adminRestaurants']);
         alert('Restaurant created !!');
       }
+      if (data.error) return alert('Must fill all fields');
     });
   }
 }

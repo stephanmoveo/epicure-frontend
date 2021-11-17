@@ -21,13 +21,14 @@ export class CreateDishComponent implements OnInit {
 
   ngOnInit(): void {}
   restaurants: any;
-  createDish(obj: Object) {    
+  createDish(obj: Object) {
     this.adminService.createDish(obj).subscribe((data) => {
       if (data.succses) {
         this.restaurantsService.getAllDishes();
         this.router.navigate(['admin/adminDishes']);
-        alert('dish created !!');
+        return alert('dish created !!');
       }
+      if (data.error) return alert('Must fill all fields');
     });
   }
 }

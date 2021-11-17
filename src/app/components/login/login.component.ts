@@ -32,6 +32,9 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['homepage']);
         }
       }
+      else{
+        alert('wrong password')
+      }
     });
   }
 }

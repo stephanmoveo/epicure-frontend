@@ -31,7 +31,7 @@ export class AdminService {
 
   deleteChef(id: any): Observable<any> {
     return this.http.get(
-      `${this.localHost}${id}`
+      `${this.localHost}chef/deleteChef/${id}`
     );
   }
 

@@ -22,13 +22,6 @@ export class ModalCardComponent implements OnInit {
   }
   allChefs: any;
 
-//   get filtered() {
-// if(this.)
-
-
-//     return;
-//   }
-
   updateRestaurant(obj: Object) {
     this.adminService.updateRestaurant(obj).subscribe(() => {
       this.adminService.isModalOpen();

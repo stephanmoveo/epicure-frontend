@@ -85,8 +85,9 @@
   font-family: 'Quicksand-SemiBold';
 }
 .admin-item:hover{
+  transform: scale(1.06);
   cursor: pointer;
-  background-color: #78baf3;
+  // background-color: #78baf3;
 }
 .dishes-item {
   border-radius: 5px;
@@ -103,7 +104,7 @@
 }
 .dishes-item:hover {
   cursor: pointer;
-  background-color: rgb(120, 186, 243);
+  transform: scale(1.06);
 }
 .btn-primary {
   border: none;

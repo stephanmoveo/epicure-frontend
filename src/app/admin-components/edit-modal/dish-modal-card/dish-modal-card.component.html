@@ -10,11 +10,11 @@
   <label>Dish Type</label>
   <div class="flex checkbox-warp">
     <label class="spicy">Spicy</label>
-    <input #spicyCheckbox type="checkbox" />
+    <input #spicyCheckbox type="checkbox"  [checked]="this.adminService.modalData.typeIcon.spicy"/>
     <label class="vegan">Vegan</label>
-    <input #veganCheckbox type="checkbox" />
+    <input #veganCheckbox type="checkbox" [checked]="this.adminService.modalData.typeIcon.vegan"/>
     <label class="vegeterian">Vegeterian</label>
-    <input #vegeterianCheckbox type="checkbox" />
+    <input #vegeterianCheckbox type="checkbox" [checked]="this.adminService.modalData.typeIcon.vegeterian"/>
   </div>
   <div class="flex-Col">
     <label>Valid</label>

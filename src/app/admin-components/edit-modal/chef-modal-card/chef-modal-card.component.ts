@@ -15,13 +15,12 @@ export class ChefModalCardComponent implements OnInit {
 
   ngOnInit(): void {}
   updateChef(obj: Object) {
-    console.log(obj);
     this.adminService.updateChef(obj).subscribe(() => {
       this.adminService.isModalOpen();
       this.restaurantsService.getAllChefs();
     });
   }
-  deleteChef(id: any) {
+  deleteChef(id: any) {    
     if(confirm("Are you sure to delete chef?"))    
     this.adminService.deleteChef(id).subscribe(() => {
       this.adminService.isModalOpen();
