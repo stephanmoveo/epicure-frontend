@@ -8,8 +8,8 @@ export class LoginService {
 
   constructor(public http: HttpClient) { }
 
-  localHost: string = 'http://localhost:3000/';
-
+  localHost: string = 'http://3.16.43.251/';
+//http://3.16.43.251/
 
   login(obj:any): Observable<any> {
     return this.http.post(`${this.localHost}user/login`, obj);
