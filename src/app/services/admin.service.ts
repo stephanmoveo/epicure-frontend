@@ -16,7 +16,7 @@ export class AdminService {
 
   rests: any;
 
-  localHost: string = 'hhttp://3.16.43.251/admin/';
+  localHost: string = 'http://3.16.43.251/admin/';
 //http://3.16.43.251/
 
   isModalOpen() {
