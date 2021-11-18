@@ -8,7 +8,9 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class RestaurantsService {
   constructor(public iconsService: IconsService, public http: HttpClient) {}
 
-  localHost: string = 'http://18.190.158.74/admin/';
+  localHost: string = 'http://3.16.43.251/admin/'; 
+  //http://18.190.158.74/
+  //http://3.16.43.251/
 
   allRestaurantsArrSubject: BehaviorSubject<any[]> = new BehaviorSubject<any[]>(
     []
