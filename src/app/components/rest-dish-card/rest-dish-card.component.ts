@@ -18,9 +18,6 @@ export class RestDishCardComponent implements OnInit {
 
   get filterArr() {
     if (!this.item) return;
-    // if (this.item.dishes.length > 0) 
-    // console.log(this.item.dishes[0].name);
-
     return this.item.dishes.length > 0;
   }
 

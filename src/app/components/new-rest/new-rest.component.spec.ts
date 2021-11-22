@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { NewRestComponent } from './new-rest.component';
 
@@ -8,9 +10,9 @@ describe('NewRestComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NewRestComponent ]
-    })
-    .compileComponents();
+      declarations: [NewRestComponent],
+      imports: [RouterTestingModule.withRoutes([]), HttpClientTestingModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {

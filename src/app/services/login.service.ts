@@ -1,17 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { GlobalService } from './global.service';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoginService {
+  constructor(public http: HttpClient, public globalService: GlobalService) {}
 
-  constructor(public http: HttpClient) { }
+  localHost = this.globalService.userLocalHost;
 
-  localHost: string = 'http://3.16.43.251/';
-//http://3.16.43.251/
-
-  login(obj:any): Observable<any> {
+  login(obj: any): Observable<any> {
     return this.http.post(`${this.localHost}user/login`, obj);
   }
 }

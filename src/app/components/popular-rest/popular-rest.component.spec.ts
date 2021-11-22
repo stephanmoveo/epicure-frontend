@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { PopularRestComponent } from './popular-rest.component';
 
@@ -8,9 +10,9 @@ describe('PopularRestComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PopularRestComponent ]
-    })
-    .compileComponents();
+      declarations: [PopularRestComponent],
+      imports: [RouterTestingModule.withRoutes([]), HttpClientTestingModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {

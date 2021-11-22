@@ -44,6 +44,8 @@ import { ChefModalCardComponent } from './admin-components/edit-modal/chef-modal
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { MainInterceptor } from './services/main.interceptor';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   observer: true,
@@ -96,7 +98,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     IvyCarouselModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    HttpClientTestingModule,
+    RouterTestingModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: MainInterceptor, multi: true },

@@ -2,13 +2,19 @@ import { Injectable } from '@angular/core';
 import { IconsService } from './icons.service';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { GlobalService } from './global.service';
 @Injectable({
   providedIn: 'root',
 })
 export class RestaurantsService {
-  constructor(public iconsService: IconsService, public http: HttpClient) {}
+  constructor(
+    public iconsService: IconsService,
+    public globalService: GlobalService,
+    public http: HttpClient
+  ) {}
 
-  localHost: string = 'http://3.16.43.251/admin/'; 
+  localHost = this.globalService.localHost;
+  // localHost: string = 'http://3.21.27.193/api/admin/';
   //http://18.190.158.74/
   //http://3.16.43.251/
 
@@ -44,13 +50,13 @@ export class RestaurantsService {
 
   getAllUserDishes() {
     this.allDishesss().subscribe((data) => {
-      this.allUserDishesSubject.next(data);      
+      this.allUserDishesSubject.next(data);
     });
   }
 
   getAllDishes() {
     this.allDishes().subscribe((data) => {
-      this.allDishesSubject.next(data);      
+      this.allDishesSubject.next(data);
     });
   }
   getAllChefs() {
@@ -72,7 +78,9 @@ export class RestaurantsService {
     return this.http.get(`${this.localHost}dish/readAllDishes`);
   }
   allDishes(): Observable<any> {
-    return this.http.get(`${this.localHost}restaurants/findRestaurantsWithDishes`);
+    return this.http.get(
+      `${this.localHost}restaurants/findRestaurantsWithDishes`
+    );
   }
   allChefs(): Observable<any> {
     return this.http.get(`${this.localHost}chef/allChefs`);
