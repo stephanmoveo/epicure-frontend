@@ -3,13 +3,26 @@
     <h1>LOGIN</h1>
     <input type="text" placeholder="username" #userName />
     <input type="password" placeholder="password" #password />
+    <!-- <button
+      type="submit"
+      class="btn-primary"
+      (click)="
+        login(
+          {
+            userName: userName.value,
+            password: password.value
+          },
+          $event
+        )
+      "
+    > -->
     <button
       class="btn-primary"
       (click)="
         login({
           userName: userName.value,
           password: password.value
-        }, $event)
+        })
       "
     >
       LOGIN

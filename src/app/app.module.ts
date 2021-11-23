@@ -99,8 +99,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    HttpClientTestingModule,
-    RouterTestingModule
+    // HttpClientTestingModule,
+    // RouterTestingModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: MainInterceptor, multi: true },

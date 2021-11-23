@@ -3,6 +3,7 @@
   <div class="admin-rest-row flex">
     <div *ngFor="let item of rests" class="admin-item my-box-shadow" (click)="getItemsInModal(item, 'rests')">
       <div class="rest-name" >{{item.name}}</div>
+      <!-- <pre>{{item | json}}</pre> -->
     </div>
   </div>
 </div>

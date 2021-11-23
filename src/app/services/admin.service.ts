@@ -27,9 +27,6 @@ export class AdminService {
     return this.isModal ? (this.isModal = false) : (this.isModal = true);
   }
 
-  
-
-
   deleteChef(id: any): Observable<any> {
     return this.http.get(
       `${this.localHost}chef/deleteChef/${id}`

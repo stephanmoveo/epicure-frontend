@@ -16,10 +16,10 @@ export class MainInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     const userToken = JSON.parse(localStorage.getItem('token') as any);
-    // console.log(userToken);
+    // console.log('helooo');
     const modifiedReq = req.clone({
-      headers: req.headers.set('Authorization', `Bearer ${ userToken}`),
+      headers: req.headers.set('Authorization', `Bearer ${userToken}`),
     });
     return next.handle(modifiedReq);
-  }
+  } 
 }
