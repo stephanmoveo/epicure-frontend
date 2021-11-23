@@ -21,7 +21,7 @@ export class AdminService {
 
   rests: any;
 
-  // localHost: string = 'http://3.21.27.193/api/admin/';
+  localHost = this.globalService.localHost;
 
   isModalOpen() {
     return this.isModal ? (this.isModal = false) : (this.isModal = true);
@@ -32,61 +32,61 @@ export class AdminService {
 
   deleteChef(id: any): Observable<any> {
     return this.http.get(
-      `${this.globalService.localHost}chef/deleteChef/${id}`
+      `${this.localHost}chef/deleteChef/${id}`
     );
   }
 
   updateChef(obj: Object){
     return this.http.post<any>(
-      `${this.globalService.localHost}chef/updateChef`,
+      `${this.localHost}chef/updateChef`,
       obj
     );
   }
 
   createChef(obj: Object){
     return this.http.post<any>(
-      `${this.globalService.localHost}chef/createChef`,
+      `${this.localHost}chef/createChef`,
       obj
     );
   }
 
   deleteDish(id: any): Observable<any> {
     return this.http.get(
-      `${this.globalService.localHost}dish/deleteDish/${id}`
+      `${this.localHost}dish/deleteDish/${id}`
     );
   }
 
   updateDish(obj: Object): Observable<any> {
     return this.http.post<any>(
-      `${this.globalService.localHost}dish/updateDish`,
+      `${this.localHost}dish/updateDish`,
       obj
     );
   }
 
   createDish(obj: Object) {
     return this.http.post<any>(
-      `${this.globalService.localHost}dish/createDish`,
+      `${this.localHost}dish/createDish`,
       obj
     );
   }
 
   createRestaurant(obj: Object) {
     return this.http.post<any>(
-      `${this.globalService.localHost}restaurants/createRestaurant`,
+      `${this.localHost}restaurants/createRestaurant`,
       obj
     );
   }
 
   updateRestaurant(obj: Object): Observable<any> {
     return this.http.post<any>(
-      `${this.globalService.localHost}restaurants/updateRestaurant`,
+      `${this.localHost}restaurants/updateRestaurant`,
       obj
     );
   }
 
   deleteRset(id: any): Observable<any> {
     return this.http.get(
-      `${this.globalService.localHost}restaurants/deleteRestaurant/${id}`
+      `${this.localHost}restaurants/deleteRestaurant/${id}`
     );
   }
 }

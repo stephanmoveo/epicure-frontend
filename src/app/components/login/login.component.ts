@@ -15,25 +15,24 @@ export class LoginComponent implements OnInit {
     public loginService: LoginService
   ) {}
   ngOnInit(): void {}
+
   login(obj: any, e: any) {
     e.preventDefault();
     if (obj.password === '') return alert('must fill password');
-    this.loginService.login(obj).subscribe((res: any) => {      
+    this.loginService.login(obj).subscribe((res: any) => {
+      console.log(obj);
+
       if (res.succes) {
         if (res.token.user.admin) {
           localStorage.setItem('token', JSON.stringify(res.token.token));
           this.router.navigate(['admin']);
         } else {
-          localStorage.setItem(
-            'token',
-            JSON.stringify(res.token.token)
-          );
+          localStorage.setItem('token', JSON.stringify(res.token.token));
           this.globalService.isAdmin = true;
           this.router.navigate(['homepage']);
         }
-      }
-      else{
-        alert('wrong password')
+      } else {
+        alert('wrong password');
       }
     });
   }

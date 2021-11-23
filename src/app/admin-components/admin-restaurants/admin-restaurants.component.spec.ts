@@ -10,17 +10,20 @@ describe('AdminRestaurantsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdminRestaurantsComponent ],
-      imports: [RouterTestingModule.withRoutes([]),
-      HttpClientTestingModule],
-    })
-    .compileComponents();
+      declarations: [AdminRestaurantsComponent],
+      imports: [RouterTestingModule.withRoutes([]), HttpClientTestingModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AdminRestaurantsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+  });
+
+  it('gets items in modal', () => {
+    const item = {};
+    component.getItemsInModal(item, 'rests');
   });
 
   it('should create', () => {
