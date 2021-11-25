@@ -32,12 +32,12 @@ export class LoginComponent implements OnInit {
         if (res.token.user.admin) {
           localStorage.setItem('token', JSON.stringify(res.token.token));
           this.router.navigate(['admin']);
-          this.appComponent.fetchAllUserData();
+          this.loginService.fetchAllUserData();
         } else {
           localStorage.setItem('token', JSON.stringify(res.token.token));
           this.globalService.isAdmin = true;
           this.router.navigate(['homepage']);
-          this.appComponent.fetchAllUserData();
+          this.loginService.fetchAllUserData();
         }
       } else {
         alert('wrong password');

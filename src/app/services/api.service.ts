@@ -8,9 +8,6 @@ import { HttpHandlerService } from './http-handler.service';
 export class ApiService extends HttpHandlerService {
   login(params: any): Observable<any> {
     const url = 'user/login';
-    debugger
     return this.post(url, params);
   }
-
-  
 }

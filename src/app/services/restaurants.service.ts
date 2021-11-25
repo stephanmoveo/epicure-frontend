@@ -14,9 +14,6 @@ export class RestaurantsService {
   ) {}
 
   localHost = this.globalService.localHost;
-  // localHost: string = 'http://3.21.27.193/api/admin/';
-  //http://18.190.158.74/
-  //http://3.16.43.251/
 
   allRestaurantsArrSubject: BehaviorSubject<any[]> = new BehaviorSubject<any[]>(
     []
