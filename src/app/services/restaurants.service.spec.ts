@@ -21,7 +21,7 @@ describe('RestaurantsService', () => {
   afterEach(() => {
     httpMoke.verify();
   });
-
+//TODO - it vs test
   it('get all retsts', () => {
     const dummyRests = [
       {

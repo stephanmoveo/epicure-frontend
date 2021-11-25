@@ -31,13 +31,15 @@ export class AppComponent implements OnInit {
         outlet.activatedRouteData['animation']
       );
   }
-  isUser: boolean = false;
-
-  ngOnInit() {
+  user = JSON.parse(localStorage.getItem('token') as any);
+  fetchAllUserData() {
     this.restaurantsService.getAllUserDishes();
     this.restaurantsService.getAllChefs();
     this.restaurantsService.getChef();
     this.restaurantsService.getAllRestaurants();
     this.restaurantsService.getAllDishes();
+  }
+  ngOnInit() {
+    if (this.user) this.fetchAllUserData();
   }
 }

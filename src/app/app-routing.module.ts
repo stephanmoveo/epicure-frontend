@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminRestaurantsComponent } from './admin-components';
 import { AdminChefsComponent } from './admin-components/admin-chefs/admin-chefs.component';
 import { AdminDishesComponent } from './admin-components/admin-dishes/admin-dishes.component';
-import { AdminRestaurantsComponent } from './admin-components/admin-restaurants/admin-restaurants.component';
+// import { AdminRestaurantsComponent } from './admin-components/admin-restaurants/admin-restaurants.component';
 import { CreateChefComponent } from './admin-components/create-chef/create-chef.component';
 import { CreateDishComponent } from './admin-components/create-dish/create-dish.component';
 import { CreateRestaurantComponent } from './admin-components/create-restaurant/create-restaurant.component';

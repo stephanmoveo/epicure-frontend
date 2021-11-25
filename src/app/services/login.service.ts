@@ -11,7 +11,6 @@ export class LoginService {
   localHost = this.globalService.userLocalHost;
 
   login(obj: any): Observable<any> {
-
     return this.http.post(`${this.localHost}user/login`, obj);
   }
 }

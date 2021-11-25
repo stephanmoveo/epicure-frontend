@@ -1,16 +1,34 @@
 <h1 class="rest-name">{{ item.name }}</h1>
 <article>
   <div class="dishes">
-    <img class="dish-img" src="{{ item.dishes[0].image }}" />
+    <img
+      alt="{{ item.dishes[0].name }}"
+      class="dish-img"
+      src="{{ item.dishes[0].image }}"
+    />
     <div class="card-bottom">
       <h3 class="dish-name">{{ item.dishes[0].name }}</h3>
       <p class="font24">{{ item.dishes[0].description }}</p>
       <img
+        *ngIf="
+          item.dishes[0].typeIcon.spicy ||
+          item.dishes[0].typeIcon.vegan ||
+          item.dishes[0].typeIcon.vegeterian
+        "
+        alt="{{
+          item.dishes[0].typeIcon.spicy
+            ? 'dish is spicy'
+            : item.dishes[0].typeIcon.vegan
+            ? 'dish is vegan'
+            : item.dishes[0].typeIcon.vegeterian && 'dish is vegeterian'
+        }}"
         class="type-icon-img"
         [src]="
-          (item.dishes[0].typeIcon.spicy && this.iconsService.spicyIcon) ||
-          (item.dishes[0].typeIcon.vegan && this.iconsService.veganIcon) ||
-          (!item.dishes[0].typeIcon.spicy && !item.dishes[0].typeIcon.spicy && null)
+          item.dishes[0].typeIcon.spicy
+            ? this.iconsService.spicyIcon
+            : item.dishes[0].typeIcon.vegan
+            ? this.iconsService.veganIcon
+            : item.dishes[0].typeIcon.vegeterian && this.iconsService.vegeterian
         "
       />
       <div class="flex line-price">

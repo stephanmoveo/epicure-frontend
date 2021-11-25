@@ -4,7 +4,7 @@
     <div *ngFor="let item of chefArr" class="chef-row flex">
       <div class="chef-col m-right">
         <div>
-          <img class="chef-img" [@rotatedState]='state' src={{item.chef.image}} (click)="rotate()"/>
+          <img alt='chef-image' class="chef-img" [@rotatedState]='state' src={{item.chef.image}} (click)="rotate()"/>
         </div>
         <h1 class="chef-name">{{item.chef.firstName}} {{item.chef.lastName}}</h1>
       </div>
@@ -19,7 +19,7 @@
       <swiper [config]="this.swiperService.config2" class="main-swiper" > 
         <div class="swiper-slide" *ngFor="let elem of dishes">
           <article>
-              <img class="chef-rest-img" src={{elem.image}} />
+              <img alt="{{elem.name}} restaurant image" class="chef-rest-img" src={{elem.image}} />
               <div class="card-bottom">
                 <h1 class="t-center font30 chef-rest-name-title">{{elem.name}}</h1>
               </div>

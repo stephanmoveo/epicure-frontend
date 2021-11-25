@@ -1,9 +1,27 @@
 <div class="login-container">
   <form class="login-row">
-    <h1>LOGIN</h1>
-    <input type="text" placeholder="username" #userName />
-    <input type="password" placeholder="password" #password />
-    <!-- <button
+    <h1 id="login-form">LOGIN</h1>
+    <label for="username" class="visuallyhidden">Username: </label>
+    <input
+      name="username"
+      id="username"
+      type="text"
+      placeholder="username"
+      #userName
+      aria-label="username is required here"
+      aria-labelledby="login-form"
+    />
+    <label for="password" class="visuallyhidden">Password: </label>
+    <input
+      name="password"
+      id="password"
+      type="password"
+      placeholder="password"
+      #password
+      aria-label="password is required here"
+      aria-labelledby="login-form"
+    />
+    <button
       type="submit"
       class="btn-primary"
       (click)="
@@ -14,15 +32,6 @@
           },
           $event
         )
-      "
-    > -->
-    <button
-      class="btn-primary"
-      (click)="
-        login({
-          userName: userName.value,
-          password: password.value
-        })
       "
     >
       LOGIN

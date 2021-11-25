@@ -35,7 +35,8 @@ article {
   article {
     & .card-bottom {
       & .rest-name-title {
-        font-size: rem(30px);
+        font-size: rem(30px);//    font-size: 18px;
+
       }
     }
   }
@@ -71,11 +72,11 @@ article {
     background-color: $bgcBeigeMobile;
 
     & .chef-name {
-      font-size: rem(20px);
+      font-size: rem(16px);
     }
 
     & .rest-name-title {
-      font-size: rem(25px);
+      font-size: rem(18px);
     }
   }
 }

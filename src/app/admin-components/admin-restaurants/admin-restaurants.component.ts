@@ -25,3 +25,4 @@ export class AdminRestaurantsComponent implements OnInit {
   rests: any;
   ngOnInit(): void {}
 }
+//TODO - onItemsClick
