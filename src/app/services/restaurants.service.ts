@@ -26,7 +26,7 @@ export class RestaurantsService {
 
   allUserDishesSubject: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
   $allUserDishes: Observable<any[]> = this.allUserDishesSubject.asObservable();
-  //allDishesss
+  
   chefSubject: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
   $chef: Observable<any[]> = this.chefSubject.asObservable();
 
@@ -34,7 +34,7 @@ export class RestaurantsService {
   $allChefs: Observable<any[]> = this.allChefsSubject.asObservable();
 
   getChef() {
-    this.findChef().subscribe((data: any) => {      
+    this.findChef().subscribe((data: any) => {
       this.chefSubject.next(data);
     });
   }
@@ -79,7 +79,7 @@ export class RestaurantsService {
       `${this.localHost}restaurants/findRestaurantsWithDishes`
     );
   }
-  allChefs(): Observable<any> {    
+  allChefs(): Observable<any> {
     return this.http.get(`${this.localHost}chef/allChefs`);
   }
 }

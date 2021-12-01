@@ -49,7 +49,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   observer: true,
   direction: 'horizontal',
   threshold: 50,
-  // spaceBetween: 11,
   loop: true    
 };
 
