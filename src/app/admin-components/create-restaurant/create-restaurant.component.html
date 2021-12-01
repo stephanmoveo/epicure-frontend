@@ -1,0 +1,23 @@
+<div class="create-rest-container t-center">
+    <h1 class=" mg-b_t-30">Create Restaurant</h1>
+    <div class="create-rest-row">
+        <label>Restaurant Name</label>
+        <input #restName/>
+        <label>Restaurant image URL</label>
+        <input #restimage/>
+        <label>Restaurant chef id</label>
+        <select #restChef >
+            <option *ngFor="let item of allChefs" [value]="item._id" >{{item.firstName}} {{item.lastName}}</option>
+          </select>
+        <button
+        class="btn-primary"
+
+        (click)="createRestaurant({
+            name:restName.value,
+            image:restimage.value,
+            chefId:restChef.value
+        })"
+        >CREATE</button>
+    </div>
+</div>
+

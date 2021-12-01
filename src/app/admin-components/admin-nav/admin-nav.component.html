@@ -1,0 +1,21 @@
+<header class="admin-header">
+  <nav class="admin-nav">
+    <div class="nav-row">
+      <a
+        *ngFor="let item of this.navLinksArr"
+        class="admin-nav-link aTxtDec"
+        [routerLink]="item.to"
+        routerLinkActive="active"
+      >
+        {{ item.name }}
+      </a>
+      <a
+        class="admin-nav-link aTxtDec"
+        (click)="this.globalService.logOut()"
+        style="cursor: pointer"
+        >Log Out<img src="assets/images/off_icon.svg" alt="off">
+        </a
+      >
+    </div>
+  </nav>
+</header>

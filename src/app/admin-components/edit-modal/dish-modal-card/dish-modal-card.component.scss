@@ -1,0 +1,12 @@
+@import "../../../../assets/styles/extends";
+// @import "../../../../assets/styles/extends";
+.modal-card {
+  display: grid;
+  @extend %form-margin;
+  @extend %admin-inputs;
+}
+.checkbox-warp {
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid grey;
+}

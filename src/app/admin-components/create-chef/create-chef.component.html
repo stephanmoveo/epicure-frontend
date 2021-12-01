@@ -1,0 +1,27 @@
+<div class="create-chef-container t-center">
+  <h1 class="t-center mg-b_t-30">Create Chef</h1>
+  <div class="create-chef-row">
+    <label>First Name</label>
+    <input #firstName />
+    <label>Last Name</label>
+    <input #lastName />
+    <label>Chef Image URL</label>
+    <input #chefImage />
+    <label>Description</label>
+    <input #description />
+    <button
+    class="btn-primary"
+
+      (click)="
+        createChef({
+          firstName: firstName.value,
+          lastName: lastName.value,
+          image: chefImage.value,
+          description: description.value
+        })
+      "
+    >
+      CREATE
+    </button>
+  </div>
+</div>

@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { RestNavComponent } from './rest-nav.component';
 
@@ -8,9 +10,9 @@ describe('RestNavComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RestNavComponent ]
-    })
-    .compileComponents();
+      declarations: [RestNavComponent],
+      imports: [RouterTestingModule.withRoutes([]), HttpClientTestingModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {

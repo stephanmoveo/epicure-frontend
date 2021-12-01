@@ -2,10 +2,7 @@
   <h1 class="banner-title">THE POPULAR RESTAURANTS IN EPICURE :</h1>
   <div class="pop-row flex">
     <swiper [config]="this.swiperService.config" class="main-swiper">
-      <div
-        *ngFor="let item of rests"
-        class="swiper-slide"
-      >
+      <div *ngFor="let item of rests" class="swiper-slide">
         <app-rest-chef-card [item]="item"></app-rest-chef-card>
       </div>
     </swiper>

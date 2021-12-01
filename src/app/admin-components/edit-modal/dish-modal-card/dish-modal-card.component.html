@@ -1,0 +1,57 @@
+<article class="modal-card">
+  <label>Dish Name</label>
+  <input #dishName [value]="this.adminService.modalData.name" />
+  <label>Dish Image URL</label>
+  <input #newImage [value]="this.adminService.modalData.image" />
+  <label>Dish Description</label>
+  <input #description [value]="this.adminService.modalData.description" />
+  <label>Dish price</label>
+  <input #price [value]="this.adminService.modalData.price" />
+  <label>Dish Type</label>
+  <div class="flex checkbox-warp">
+    <label class="spicy">Spicy</label>
+    <input #spicyCheckbox type="checkbox"  [checked]="this.adminService.modalData.typeIcon.spicy"/>
+    <label class="vegan">Vegan</label>
+    <input #veganCheckbox type="checkbox" [checked]="this.adminService.modalData.typeIcon.vegan"/>
+    <label class="vegeterian">Vegeterian</label>
+    <input #vegeterianCheckbox type="checkbox" [checked]="this.adminService.modalData.typeIcon.vegeterian"/>
+  </div>
+  <div class="flex-Col">
+    <label>Valid</label>
+    <input
+      #isvalid
+      type="checkbox"
+      [checked]="this.adminService.modalData.valid"
+    />
+  </div>
+
+  <img class="ad-mdl-img" [src]="this.adminService.modalData.image" />
+  <button
+    class="btn-secondery"
+    (click)="
+      updateDish({
+        id: this.adminService.modalData._id,
+        name: dishName.value,
+        image: newImage.value,
+        description: description.value,
+        price: price.value,
+        typeIcon: {
+          spicy: spicyCheckbox.checked,
+          vegan: veganCheckbox.checked,
+          vegeterian: vegeterianCheckbox.checked
+        },
+        isvalid:isvalid.checked
+      })
+    "
+  >
+    UPDATE
+  </button>
+  <button
+    class="btn-danger"
+    (click)="deleteDish(this.adminService.modalData._id)"
+  >
+    DELETE DISH
+  </button>
+</article>
+
+<!-- <pre>{{ this.adminService.modalData | json }}</pre> -->

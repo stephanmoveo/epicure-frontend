@@ -19,25 +19,23 @@ export class SwiperService {
       this.config2 = { ...this.config2, slidesPerView: 3 };
     }
   }
+
   public config2: SwiperConfigInterface = {
     a11y: true,
     direction: 'horizontal',
-    loop: true,
-    slidesPerView: 3,
     keyboard: true,
     mousewheel: true,
     scrollbar: false,
     spaceBetween: 20,
-    pagination: true,
+    loop: true,
   };
   public config: SwiperConfigInterface = {
+    loop: true,
     a11y: true,
     direction: 'horizontal',
-    loop: true,
-    slidesPerView: 3,
+    spaceBetween: 11,
     keyboard: true,
     mousewheel: true,
     scrollbar: false,
-    pagination: true
   };
 }

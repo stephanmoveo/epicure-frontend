@@ -21,7 +21,7 @@
     "angular-bootstrap-md": "^11.1.0",
     "angular-responsive-carousel": "^2.1.2",
     "mdb-ui-kit": "^3.9.0",
-    "ngx-swiper-wrapper": "^7.2.0",
+    "ngx-swiper-wrapper": "^7.2.1",
     "rxjs": "~6.6.0",
     "swiper": "^6.4.15",
     "tslib": "^2.3.0",

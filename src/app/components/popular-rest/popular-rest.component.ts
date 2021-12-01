@@ -5,15 +5,13 @@ import { RestaurantsService } from 'src/app/services/restaurants.service';
 @Component({
   selector: 'app-popular-rest',
   templateUrl: './popular-rest.component.html',
-  styleUrls: ['./popular-rest.component.scss']
+  styleUrls: ['./popular-rest.component.scss'],
 })
 export class PopularRestComponent implements OnInit {
+  constructor(
+    public restaurantsService: RestaurantsService,
+    public iconsService: IconsService
+  ) {}
 
-  constructor(public restaurantsService: RestaurantsService, public iconsService: IconsService) { }
-
-  ngOnInit(): void {
-  }
-
-
-
+  ngOnInit(): void {}
 }

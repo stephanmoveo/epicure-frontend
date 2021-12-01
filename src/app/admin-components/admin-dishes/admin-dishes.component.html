@@ -1,0 +1,19 @@
+<div class="admin-dish-container">
+  <h1 class="t-center mg-b_t-30 bold">EDIT DISH</h1>
+  <div class="admin-dish-row">
+    <div class="admin-dish-col" *ngFor="let item of dishes">
+      <div class="rest-name font25">{{ item.name }}</div>
+      <div class="flex dishes-warp">
+        <div
+          class="dishes-item my-box-shadow"
+          *ngFor="let dish of item.dishes"
+          (click)="getItemsInModal(dish, 'dishes')"
+        >
+          {{ dish.name }}
+          <img [src]="dish.image" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-edit-modal *ngIf="this.adminService.isModal"></app-edit-modal>

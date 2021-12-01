@@ -25,7 +25,9 @@
 .t-center {
   text-align: center;
 }
-
+.mg-b_t-30 {
+  margin: 30px 0;
+}
 .wtdh80ma {
   width: 77%;
   max-width: 1102px;
@@ -43,12 +45,7 @@
   width: 50%;
   margin: auto;
 }
-// @media only screen and (max-width: 728px) {
-//     .wtdh70ma {
-//         min-width: 0;
-//     }
-//   }
-  
+
 .banner-title {
   text-align: center;
   font-size: 30px;
@@ -71,4 +68,97 @@
 .aTxtDec {
   text-decoration: none;
   color: black;
+}
+
+.admin-item {
+  background-color: aliceblue;
+  width: 25%;
+  margin: 20px 0;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Quicksand-SemiBold';
+}
+.admin-item:hover{
+  transform: scale(1.06);
+  cursor: pointer;
+  // background-color: #78baf3;
+}
+.dishes-item {
+  border-radius: 5px;
+  background-color: aliceblue;
+  width: 25%;
+  margin: 20px;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Quicksand-SemiBold';
+
+}
+.dishes-item:hover {
+  cursor: pointer;
+  transform: scale(1.06);
+}
+.btn-primary {
+  border: none;
+  background: #61b7f7;
+  padding: 10px 0;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.btn-secondery {
+  border: none;
+  background: #ffe9c8;
+  padding: 10px 0;
+  color: black;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.btn-secondery:hover {
+  background: #ffd18d;
+  cursor: pointer;
+}
+.btn-danger {
+  border: none;
+  background: red;
+  padding: 10px 0;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.btn-danger:hover {
+  background: rgb(255, 110, 110);
+  cursor: pointer;
+}
+.btn-primary:hover {
+  cursor: pointer;
+  background: #0091ff;
+}
+
+.ad-mdl-img {
+  width: 100%;
+  border-radius: 50%;
+  aspect-ratio: 300/300;
+  object-fit: cover;
+  width: 300px;
+}
+.bold {
+  font-family: Quicksand-SemiBold;
+}
+.spicy {
+  color: red;
+}
+.vegeterian {
+  color: green;
+}
+.vegan {
+  color: #1fbd42;
+}
+.my-box-shadow {
+  -webkit-box-shadow: 0px 2px 7px -3px rgba(79, 79, 79, 0.65);
+  box-shadow: 0px 2px 7px -3px rgba(79, 79, 79, 0.65);
+  // background: #ffffff;
 }

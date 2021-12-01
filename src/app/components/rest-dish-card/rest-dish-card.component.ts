@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { of } from 'rxjs';
 import { IconsService } from 'src/app/services/icons.service';
 import { RestaurantsService } from 'src/app/services/restaurants.service';
 
@@ -15,6 +16,12 @@ export class RestDishCardComponent implements OnInit {
 
   @Input() item = [] as any;
 
-  ngOnInit(): void {    
+  get filterArr() {
+    if (!this.item) return;
+    return this.item.dishes.length > 0;
+  }
+
+  ngOnInit(): void {
+    this.filterArr;
   }
 }

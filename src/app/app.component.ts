@@ -4,6 +4,8 @@ import { slider, fader } from './animations';
 import { GlobalService } from './services/global.service';
 import { RestaurantsService } from './services/restaurants.service';
 import { SwiperService } from './services/swiper.service';
+import { Router } from '@angular/router';
+import { LoginService } from './services/login.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +17,9 @@ export class AppComponent implements OnInit {
   constructor(
     public swiperService: SwiperService,
     public globalService: GlobalService,
-    public restaurantsService:RestaurantsService
+    public restaurantsService: RestaurantsService,
+    public router: Router,
+    public loginService: LoginService
   ) {}
 
   title = 'epicure-app';
@@ -30,6 +34,6 @@ export class AppComponent implements OnInit {
       );
   }
   ngOnInit() {
-    this.restaurantsService.getAllRestaurants();
+    if (this.globalService.user) this.loginService.fetchAllUserData();
   }
 }

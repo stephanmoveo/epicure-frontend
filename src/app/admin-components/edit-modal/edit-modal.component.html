@@ -1,0 +1,9 @@
+<div class="modal-backgroud fade-in " (click)="this.adminService.isModalOpen()"></div>
+<div class="edit-modal-container t-center fade-in ">
+  <div class="edit-model-row">
+    <app-modal-card *ngIf="this.adminService.isCategoryModal === 'rests'"></app-modal-card>
+    <app-dish-modal-card *ngIf="this.adminService.isCategoryModal === 'dishes'"></app-dish-modal-card>
+    <app-chef-modal-card *ngIf="this.adminService.isCategoryModal === 'chefs'"></app-chef-modal-card>
+  </div>
+  <!-- <pre>{{ this.adminService.isCategoryModal | json }}</pre> -->
+</div>

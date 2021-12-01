@@ -1,0 +1,10 @@
+<div class="admin-chefs-container">
+  <h1 class="t-center mg-b_t-30 bold">EDIT CHEF</h1>
+
+  <div class="admin-chefs-row flex">
+    <div *ngFor="let item of chefsArr" class="admin-item my-box-shadow" (click)="getItemsInModal(item, 'chefs')">
+      <div class="rest-name" >{{item.firstName}} {{item.lastName}}</div> 
+    </div>
+  </div>
+</div>
+<app-edit-modal *ngIf="this.adminService.isModal"></app-edit-modal>

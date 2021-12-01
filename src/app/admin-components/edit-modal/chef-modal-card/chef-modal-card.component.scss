@@ -1,0 +1,7 @@
+@import "../../../../assets/styles/extends";
+
+.modal-card {
+  display: grid;
+  @extend %form-margin;
+  @extend %admin-inputs;
+}

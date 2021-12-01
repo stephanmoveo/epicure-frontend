@@ -1,0 +1,20 @@
+.login-row {
+  padding: 14px;
+  margin: 100px auto;
+  display: flex;
+  width: 300px;
+  text-align: center;
+  border: 1px solid black;
+  height: 300px;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  input,
+  button {
+    margin: 5px;
+    padding: 7px;
+  }
+  .visuallyhidden{
+    display: none;
+  }
+}

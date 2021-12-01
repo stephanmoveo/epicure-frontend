@@ -1,0 +1,14 @@
+@import "../../../assets/styles/extends";
+
+.create-rest-container{
+    @extend %form-margin;
+    @extend  %admin-inputs;
+
+    .create-rest-row{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+
+    }
+}

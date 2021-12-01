@@ -30,15 +30,19 @@ export class ChefsComponent implements OnInit {
   constructor(
     public restaurantsService: RestaurantsService,
     public swiperService: SwiperService
-  ) {}
-  chefArr = [] as any;
-
-  getChef() {
-    this.restaurantsService.findChef().subscribe((data: any) => {
-      this.chefArr = data;
+  ) {
+    this.restaurantsService.$chef.subscribe((res) => {
+      this.chefArr = res;
     });
   }
-  ngOnInit(): void {
-    this.getChef();
+
+  chefArr = [] as any;
+
+  get dishes() {
+    if (this.chefArr.length === 0) return;
+    const { restaurants } = this.chefArr[0];
+    return restaurants;
   }
+
+  ngOnInit(): void {}
 }

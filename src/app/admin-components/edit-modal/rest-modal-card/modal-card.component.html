@@ -1,0 +1,38 @@
+<article class="modal-card">
+  <label>Restaurant Name</label>
+  <input #restName [value]="this.adminService.modalData.name" />
+  <label>New Image URL</label>
+  <input #newImage [value]="this.adminService.modalData.image" />
+  <label>Restaurant Chef</label>
+  <select #chefId>
+    <option [value]="this.adminService.modalData.chef._id">
+      {{ this.adminService.modalData.chef.firstName }}
+      {{ this.adminService.modalData.chef.lastName }}
+    </option>
+    <option *ngFor="let item of allChefs" [value]="item._id">
+      {{ item.firstName }} {{ item.lastName }}
+    </option>
+  </select>
+  <img class="ad-mdl-img" [src]="this.adminService.modalData.image" />
+  <button
+    class="btn-secondery"
+    (click)="
+      updateRestaurant({
+        name: restName.value,
+        image: newImage.value,
+        id: this.adminService.modalData._id,
+        chefId: chefId.value
+      })
+    "
+  >
+    UPDATE
+  </button>
+  <button
+    class="btn-danger"
+    (click)="deleteRest(this.adminService.modalData._id)"
+  >
+    DELETE REST
+  </button>
+</article>
+
+<!-- <pre>{{ this.adminService.modalData.chef| json }}</pre> -->

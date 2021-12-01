@@ -1,0 +1,12 @@
+@import "../../../assets/styles/extends";
+
+.create-chef-container {
+  @extend %form-margin;
+  @extend  %admin-inputs;
+  .create-chef-row {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+}

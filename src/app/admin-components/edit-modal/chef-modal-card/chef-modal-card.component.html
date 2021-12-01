@@ -1,0 +1,32 @@
+<article class="modal-card">
+  <label>First Name</label>
+  <input #firstName [value]="this.adminService.modalData.firstName" />
+  <label>Last Name</label>
+  <input #lastName [value]="this.adminService.modalData.lastName" />
+  <label>Chef Description</label>
+  <input #description [value]="this.adminService.modalData.description" />
+  <label>Dish Image URL</label>
+  <input #newImage [value]="this.adminService.modalData.image" />
+  <img class="ad-mdl-img" [src]="this.adminService.modalData.image" />
+  <button
+  class="btn-secondery"
+    (click)="
+      updateChef({
+        id: this.adminService.modalData._id,
+        firstName: firstName.value,
+        lastName: lastName.value,
+        description: description.value,
+        image: newImage.value
+      })
+    "
+  >
+    UPDATE
+  </button>
+  <button
+  class="btn-danger"
+  (click)="deleteChef(this.adminService.modalData._id)">
+    DELETE CHEF
+  </button>
+</article>
+
+<!-- <pre>{{ this.adminService.modalData | json }}</pre> -->

@@ -1,0 +1,40 @@
+.admin-header {
+  background-color: white;
+  z-index: 9;
+  position: sticky;
+  top: 0;
+  background-color: #78c9ff;
+
+  & .admin-nav {
+    margin: auto;
+    width: 80%;
+    & .nav-row {
+      background-color: #78c9ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      & .admin-nav-link {
+        width: 15%;
+        text-align: center;
+        background-color: #78c9ff;
+        // width: 11%;
+        padding: 15px 0;
+        // max-width: 150px;
+        color: white;
+        // margin: 0 2px;
+        font-weight: bold;
+
+        img {
+          width: 16px;
+          position: relative;
+          top: 2px;
+          margin: 0 0 0 13px;
+        }
+      }
+      .admin-nav-link:hover {
+        background-color: #23a7ff;
+      }
+    }
+  }
+}
